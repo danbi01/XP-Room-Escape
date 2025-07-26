@@ -11,6 +11,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Story.unity
     guid: 915f298dbd328d14c88d3a3b43314712
+  - enabled: 1
+    path: Assets/Scenes/EastWall.unity
+    guid: c53923d0ff2264e4e94560aec16782c7
+  - enabled: 1
+    path: Assets/Scenes/NorthWall.unity
+    guid: 20441af7cbd6c8548ae871c27966a064
+  - enabled: 1
+    path: Assets/Scenes/SouthWall.unity
+    guid: 43759f223c07b4149a265d83910d5e14
+  - enabled: 1
+    path: Assets/Scenes/WestWall.unity
+    guid: d968924d9252ccb48b438254654baaa3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

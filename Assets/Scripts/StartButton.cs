@@ -18,4 +18,9 @@ public class StartButton : MonoBehaviour
         Debug.Log("start");
         SceneManager.LoadScene("Story");
     }
+    public void StoryOkButtonClickHandler()
+    {
+        Debug.Log("StorySkip");
+        SceneManager.LoadScene("SouthWall");
+    }
 }
