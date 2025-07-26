@@ -17,7 +17,7 @@ public class InventoryManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(this.gameObject);
     }
-
+    
     // Update is called once per frame
     void Update()
     {

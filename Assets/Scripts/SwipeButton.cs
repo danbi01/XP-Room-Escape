@@ -4,14 +4,14 @@ using System.Collections.Generic;
 
 public class SwipeButton : MonoBehaviour
 {
-    private static SwipeButton Instance = null;
+    public static SwipeButton Instance = null;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     List<string> LabWallList = new List<string>() {"SouthWall", "EastWall", "NorthWall", "WestWall"};
-    int CurrentWallNumber = 0;
+    public int CurrentWallNumber = 0;
     void Awake()
     {
-        if(Instance){
+        if(Instance!=null){
             DestroyImmediate(this.gameObject);
             return;
         }

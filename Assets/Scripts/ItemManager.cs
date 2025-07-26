@@ -3,7 +3,7 @@ using UnityEngine;
 public class ItemManager : MonoBehaviour
 {
     public GameObject InventoryManagerObject;
-    bool IsInventory = false;
+    public bool IsInventory = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -28,6 +28,7 @@ public class ItemManager : MonoBehaviour
                 RectTransform rectTrans = gameObject.GetComponent<RectTransform>();
                 rectTrans.anchoredPosition = new Vector2(-459, -453);
                 this.gameObject.transform.SetParent(InventoryManagerObject.transform);
+                IsInventory = true;
             }
     }
 }
