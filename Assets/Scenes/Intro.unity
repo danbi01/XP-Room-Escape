@@ -421,6 +421,7 @@ Canvas:
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
   m_TargetDisplay: 0
 --- !u!224 &1222274677
 RectTransform:
@@ -789,6 +790,7 @@ MonoBehaviour:
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1486436826
+=======
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
