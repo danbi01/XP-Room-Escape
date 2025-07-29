@@ -6,7 +6,6 @@ public class SwipeButton : MonoBehaviour
 {
     public static SwipeButton Instance = null;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     List<string> LabWallList = new List<string>() {"SouthWall", "EastWall", "NorthWall", "WestWall"};
     public int CurrentWallNumber = 0;
     void Awake()
@@ -19,21 +18,22 @@ public class SwipeButton : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
+    // 왼쪽 화살표 버튼 눌렀을 때
     public void LeftButtonClickHandler()
     {
         CurrentWallNumber -= 1;
-        if(CurrentWallNumber < 0){
+        if (CurrentWallNumber < 0)
+        {
             CurrentWallNumber = 3;
         }
-        Debug.Log("Left"+CurrentWallNumber);
+        Debug.Log("Left" + CurrentWallNumber);
         SceneManager.LoadScene(LabWallList[CurrentWallNumber]);
     }
-
+    // 오른쪽 화살표 버튼 눌렀을 때
     public void RightButtonClickHandler()
     {
         CurrentWallNumber += 1;

@@ -5,9 +5,9 @@ using System.Collections.Generic;
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance = null;
+    // 현재 인벤토리에 있는 아이템 리스트
     public List<GameObject> ItemList = new List<GameObject>(); 
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         if(Instance){
@@ -18,7 +18,6 @@ public class InventoryManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
     
-    // Update is called once per frame
     void Update()
     {
         
