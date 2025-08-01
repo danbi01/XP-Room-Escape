@@ -43,4 +43,9 @@ public class SwipeButton : MonoBehaviour
         Debug.Log("Right"+CurrentWallNumber);
         SceneManager.LoadScene(LabWallList[CurrentWallNumber]);
     }
+    public void ComputerExitHandler()
+    {
+        Debug.Log("컴퓨터 씬 이탈");
+        SceneManager.LoadScene("WestWall");
+    }
 }
