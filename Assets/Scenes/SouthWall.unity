@@ -703,6 +703,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Key: {fileID: 8298239143443443691, guid: 793bad29f01aaf94c816835b5ebdedea, type: 3}
+  Canvas: {fileID: 0}
+  IsKeySpawned: 0
 --- !u!1 &837402251
 GameObject:
   m_ObjectHideFlags: 0
@@ -1223,7 +1225,7 @@ GameObject:
   - component: {fileID: 1990503484}
   - component: {fileID: 1990503483}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: ButtonCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
