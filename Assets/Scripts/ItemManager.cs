@@ -25,6 +25,7 @@ public class ItemManager : MonoBehaviour
             Debug.Log("add");
             // 인벤토리 내 아이템 리스트에 추가
             InventoryManager.Instance.ItemList.Add(gameObject);
+
             RectTransform rectTrans = gameObject.GetComponent<RectTransform>();
             // 인벤토리 인터페이스 내에 표시 (추후 리스트로 위치 저장해 사용?)
             rectTrans.anchoredPosition = new Vector2(-459, -453);

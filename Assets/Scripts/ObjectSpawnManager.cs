@@ -5,7 +5,7 @@ public class ObjectSpawnManager : MonoBehaviour
 {
     public GameObject Key;
     public GameObject Canvas;
-    public bool IsKeySpawned, IsExitSpawned;
+    public bool IsKeySpawned;
     public GameObject ExitButton;
     public GameObject[] Canvases = new GameObject[2];
     public static ObjectSpawnManager Instance = null;
@@ -24,7 +24,6 @@ public class ObjectSpawnManager : MonoBehaviour
 
     void Awake()
     {   
-        
         if(Instance!=null){
             DestroyImmediate(this.gameObject);
             return;
@@ -32,8 +31,6 @@ public class ObjectSpawnManager : MonoBehaviour
         Instance = this;
         //DontDestroyOnLoad(this.gameObject);
         
-
-        Debug.Log(GameObject.Find("ButtonCanvas"));
         Canvases[0] = GameObject.Find("ButtonCanvas");
         Canvases[1] = GameObject.Find("InventoryCanvas");
         
@@ -44,22 +41,18 @@ public class ObjectSpawnManager : MonoBehaviour
         }
         //컴퓨터 Exit 버튼 생성
         if(SceneManager.GetActiveScene().name=="Computer"){
-            //if(!IsExitSpawned){  // 출구가 생성되지 않았을 때
             Debug.Log("Exit 생성");
             GameObject ExitObject = Instantiate(ExitButton);
             // UI오브젝트(버튼)는 항상 Canvas 하위로 설정
             ExitObject.transform.SetParent(Canvas.transform, false);
                 
-            //}
+            
             Canvases[0].SetActive(false);
             Canvases[1].SetActive(false);
         }
         else{
-            Debug.Log(GameObject.Find("ButtonManager").transform.GetChild(0));
             GameObject.Find("ButtonManager").transform.GetChild(0).gameObject.SetActive(true);
             GameObject.Find("InventoryManager").transform.GetChild(0).gameObject.SetActive(true);
-            //Canvases[0].SetActive(true);
-            //Canvases[1].SetActive(true);
         }
 
        
@@ -67,9 +60,11 @@ public class ObjectSpawnManager : MonoBehaviour
         //key 생성
         switch(SceneManager.GetActiveScene().name){ 
             case "WestWall": // WestWall일 때
-                Debug.Log("WestWall입니다");
+            
+                Debug.Log(InventoryManager.Instance.ItemList.Contains(Key));
                 // 인벤토리에 Key가 들어있으면
-                if(InventoryManager.Instance.ItemList.Contains(Key)){
+                //if(InventoryManager.Instance.ItemList.Contains(Key)){
+                if(GameObject.Find("InventoryCanvas").transform.Find("Key(Clone)")){
                     IsKeySpawned = true;
                     break;
                 }
