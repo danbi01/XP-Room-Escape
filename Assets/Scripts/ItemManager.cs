@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class ItemManager : MonoBehaviour
 {
     public GameObject InventoryManagerObject;
@@ -31,5 +31,13 @@ public class ItemManager : MonoBehaviour
             this.gameObject.transform.SetParent(InventoryManagerObject.transform);
             IsInventory = true;
         }
+    }
+
+    public void ComputerExitHandler()
+    {
+        Debug.Log("컴퓨터 씬 이탈");
+        ObjectSpawnManager.Instance.CanvasSetActive();
+        SceneManager.LoadScene("WestWall");
+
     }
 }
