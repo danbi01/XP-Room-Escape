@@ -165,6 +165,37 @@ Transform:
   - {fileID: 1811242321}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &184243736
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 184243737}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &184243737
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184243736}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.23150635, y: -2.7129517, z: 90}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &277684855
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,8 +264,8 @@ Canvas:
   m_GameObject: {fileID: 277684855}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1902204172}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -669,7 +700,7 @@ GameObject:
   - component: {fileID: 827547599}
   - component: {fileID: 827547600}
   m_Layer: 0
-  m_Name: ItemSpawnManager
+  m_Name: ObjectSpawnManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -684,11 +715,11 @@ Transform:
   m_GameObject: {fileID: 827547598}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -269.39697, y: -36.24933, z: -5.2424636}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -2.4944458, y: -0.33563232, z: 89.95146}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1811242321}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &827547600
 MonoBehaviour:
@@ -705,6 +736,10 @@ MonoBehaviour:
   Key: {fileID: 8298239143443443691, guid: 793bad29f01aaf94c816835b5ebdedea, type: 3}
   Canvas: {fileID: 0}
   IsKeySpawned: 0
+  IsExitSpawned: 0
+  ExitButton: {fileID: 2862962121877126676, guid: 9da936fa43ffd654f8773bf5702aab9f, type: 3}
+  ButtonCanvas: {fileID: 1990503482}
+  InventoryCanvas: {fileID: 1811242320}
 --- !u!1 &837402251
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,7 +1039,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 622751106}
-  - {fileID: 827547599}
   m_Father: {fileID: 61191010}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1061,8 +1095,8 @@ Canvas:
   m_GameObject: {fileID: 1811242320}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1902204172}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1280,8 +1314,8 @@ Canvas:
   m_GameObject: {fileID: 1990503482}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1902204172}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1324,3 +1358,5 @@ SceneRoots:
   - {fileID: 277684859}
   - {fileID: 301565717}
   - {fileID: 61191010}
+  - {fileID: 184243737}
+  - {fileID: 827547599}
