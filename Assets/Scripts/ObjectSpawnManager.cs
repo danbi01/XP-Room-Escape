@@ -3,9 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class ObjectSpawnManager : MonoBehaviour
 {
-    public GameObject Key;
+    public GameObject Key,Usb;
     public GameObject Canvas;
-    public bool IsKeySpawned;
+    public bool IsKeySpawned, IsUsbSpawned;
     public GameObject ExitButton;
     public GameObject[] Canvases = new GameObject[2];
     public static ObjectSpawnManager Instance = null;
@@ -57,19 +57,47 @@ public class ObjectSpawnManager : MonoBehaviour
 
        
 
-        //key 생성
+        //Usb 생성
         switch(SceneManager.GetActiveScene().name){ 
-            case "WestWall": // WestWall일 때
+            case "SouthWall": // SouthWall일 때
             
                 Debug.Log(InventoryManager.Instance.ItemList.Contains(Key));
                 // 인벤토리에 Key가 들어있으면
                 //if(InventoryManager.Instance.ItemList.Contains(Key)){
-                if(GameObject.Find("InventoryCanvas").transform.Find("Key(Clone)")){
-                    IsKeySpawned = true;
+                if(GameObject.Find("InventoryCanvas").transform.Find("Usb(Clone)")){
+                    IsUsbSpawned = true;
                     break;
                 }
                 else{
-                    if(!IsKeySpawned){  // 키가 생성되지 않았을 때
+                    if(!IsUsbSpawned){  // 키가 생성되지 않았을 때
+                        Debug.Log("usb 생성");
+                        GameObject UsbObject = Instantiate(Usb, transform.position, transform.rotation);
+                        // UI오브젝트(버튼)는 항상 Canvas 하위로 설정
+                        UsbObject.transform.SetParent(Canvas.transform);
+                        IsUsbSpawned = true;
+                    }
+                }
+                break;
+            
+        }
+
+        //Key 생성
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "WestWall": // WestWall일 때
+
+                Debug.Log(InventoryManager.Instance.ItemList.Contains(Key));
+                // 인벤토리에 Key가 들어있으면
+                //if(InventoryManager.Instance.ItemList.Contains(Key)){
+                if (GameObject.Find("InventoryCanvas").transform.Find("Key(Clone)"))
+                {
+                    IsKeySpawned = true;
+                    break;
+                }
+                else
+                {
+                    if (!IsKeySpawned)
+                    {  // 키가 생성되지 않았을 때
                         Debug.Log("key 생성");
                         GameObject KeyObject = Instantiate(Key, transform.position, transform.rotation);
                         // UI오브젝트(버튼)는 항상 Canvas 하위로 설정
@@ -78,9 +106,12 @@ public class ObjectSpawnManager : MonoBehaviour
                     }
                 }
                 break;
-            
+
         }
+
     }
+
+
     public void CanvasSetActive(){
         Debug.Log(GameObject.Find("InventoryManager").transform.GetChild(0));
         GameObject.Find("ButtonManager").transform.GetChild(0).gameObject.SetActive(true);
