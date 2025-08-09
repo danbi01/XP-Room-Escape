@@ -13,12 +13,14 @@ public class ObjectSpawnManager : MonoBehaviour
     {
         IsKeySpawned = false;
         //Canvas RenderCamera 설정
+        
         foreach (GameObject _canvas in Canvases){
             Canvas canvas = _canvas.GetComponent<Canvas>();
             canvas.renderMode = RenderMode.ScreenSpaceCamera;
             canvas.worldCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
 
         }
+        
     }
 
 
@@ -50,9 +52,10 @@ public class ObjectSpawnManager : MonoBehaviour
             Canvases[0].SetActive(false);
             Canvases[1].SetActive(false);
         }
-        else{
+        else{/*
             GameObject.Find("ButtonManager").transform.GetChild(0).gameObject.SetActive(true);
             GameObject.Find("InventoryManager").transform.GetChild(0).gameObject.SetActive(true);
+            */
         }
 
        
@@ -61,9 +64,9 @@ public class ObjectSpawnManager : MonoBehaviour
         switch(SceneManager.GetActiveScene().name){ 
             case "SouthWall": // SouthWall일 때
             
-                Debug.Log(InventoryManager.Instance.ItemList.Contains(Key));
-                // 인벤토리에 Key가 들어있으면
-                //if(InventoryManager.Instance.ItemList.Contains(Key)){
+                Debug.Log(InventoryManager.Instance.ItemList.Contains(Usb));
+                // 인벤토리에 Usb가 들어있으면
+                //if(InventoryManager.Instance.ItemList.Contains(Usb)){
                 if(GameObject.Find("InventoryCanvas").transform.Find("Usb(Clone)")){
                     IsUsbSpawned = true;
                     break;

@@ -18,7 +18,7 @@ public class ItemManager : MonoBehaviour
     {
         if (IsKeyInInventory)
         {
-            Debug.Log("Already exist");
+            Debug.Log("이것은 열쇠다.");
         }
         else
         {
@@ -28,7 +28,7 @@ public class ItemManager : MonoBehaviour
 
             RectTransform keyRect = gameObject.GetComponent<RectTransform>();
             // 인벤토리 인터페이스 내에 표시 (추후 리스트로 위치 저장해 사용?)
-            keyRect.anchoredPosition = new Vector2(764, 402);
+            keyRect.anchoredPosition = new Vector3(764, 402, 0);
 
             //width가로
             keyRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 2);
@@ -44,7 +44,7 @@ public class ItemManager : MonoBehaviour
     {
         if (IsUsbInInventory)
         {
-            Debug.Log("Already exist");
+            Debug.Log("이것은 Usb다.");
         }
         else
         {
@@ -54,7 +54,7 @@ public class ItemManager : MonoBehaviour
 
             RectTransform UsbRect = gameObject.GetComponent<RectTransform>();
             // 인벤토리 인터페이스 내에 표시 (추후 리스트로 위치 저장해 사용?)
-            UsbRect.anchoredPosition = new Vector2(500, 402);
+            UsbRect.anchoredPosition = new Vector3(500, 402, 0);
 
             //width가로
             UsbRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 2);
