@@ -26,9 +26,15 @@ public class ItemManager : MonoBehaviour
             // 인벤토리 내 아이템 리스트에 추가
             InventoryManager.Instance.ItemList.Add(gameObject);
 
-            RectTransform rectTrans = gameObject.GetComponent<RectTransform>();
+            RectTransform keyRect= gameObject.GetComponent<RectTransform>();
             // 인벤토리 인터페이스 내에 표시 (추후 리스트로 위치 저장해 사용?)
-            rectTrans.anchoredPosition = new Vector2(-459, -453);
+            keyRect.anchoredPosition = new Vector2(764, 402);
+
+            //width가로
+            keyRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 2);
+            //height세로
+            keyRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 1);
+
             this.gameObject.transform.SetParent(InventoryManagerObject.transform);
             IsInventory = true;
         }

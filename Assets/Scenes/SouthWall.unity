@@ -378,8 +378,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0009765625, y: -443.0589}
-  m_SizeDelta: {x: 1920, y: 193.8822}
+  m_AnchoredPosition: {x: 764, y: 401}
+  m_SizeDelta: {x: 205.02, y: 193.88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &622751107
 MonoBehaviour:
@@ -736,10 +736,10 @@ MonoBehaviour:
   Key: {fileID: 8298239143443443691, guid: 793bad29f01aaf94c816835b5ebdedea, type: 3}
   Canvas: {fileID: 0}
   IsKeySpawned: 0
-  IsExitSpawned: 0
   ExitButton: {fileID: 2862962121877126676, guid: 9da936fa43ffd654f8773bf5702aab9f, type: 3}
-  ButtonCanvas: {fileID: 1990503482}
-  InventoryCanvas: {fileID: 1811242320}
+  Canvases:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &837402251
 GameObject:
   m_ObjectHideFlags: 0
