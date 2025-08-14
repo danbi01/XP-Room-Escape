@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Computer
   layers:
   - Default
   - TransparentFX
@@ -42,7 +43,7 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: UI(Canvas)
-    uniqueID: 1974907493
+    uniqueID: 3350721841
     locked: 0
   m_RenderingLayers:
   - Default
