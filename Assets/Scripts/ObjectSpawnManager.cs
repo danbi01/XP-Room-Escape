@@ -21,11 +21,8 @@ public class ObjectSpawnManager : MonoBehaviour
             Canvas canvas = _canvas.GetComponent<Canvas>();
             canvas.renderMode = RenderMode.ScreenSpaceCamera;
             canvas.worldCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-
         }
-        
     }
-
 
     void Awake()
     {   
@@ -38,7 +35,6 @@ public class ObjectSpawnManager : MonoBehaviour
         
         Canvases[0] = GameObject.Find("ButtonCanvas");
         Canvases[1] = GameObject.Find("InventoryCanvas");
-        
 
         //캔버스
         if(Canvas==null){
@@ -50,18 +46,13 @@ public class ObjectSpawnManager : MonoBehaviour
             GameObject ExitObject = Instantiate(ExitButton);
             // UI오브젝트(버튼)는 항상 Canvas 하위로 설정
             ExitObject.transform.SetParent(Canvas.transform, false);
-                
             
             Canvases[0].SetActive(false);
             Canvases[1].SetActive(false);
         }
-        else{/*
-            GameObject.Find("ButtonManager").transform.GetChild(0).gameObject.SetActive(true);
-            GameObject.Find("InventoryManager").transform.GetChild(0).gameObject.SetActive(true);
-            */
-        }
+        else{
 
-       
+        }
 
         //Usb 생성
         switch(SceneManager.GetActiveScene().name){ 
@@ -141,9 +132,7 @@ public class ObjectSpawnManager : MonoBehaviour
                 }
                 break;
         }
-
     }
-
 
     public void CanvasSetActive(){
         Debug.Log(GameObject.Find("InventoryManager").transform.GetChild(0));
