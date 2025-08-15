@@ -16,32 +16,7 @@ public class CanvasGroupController : MonoBehaviour
             SetCanvasActive(Canvases[i], i == indexToShow);
         }
     }
-    /* 코드 최적화
-    public void ShowCanvas1()
-    {
-        SetCanvasActive(MainCanvas, false);
-        SetCanvasActive(canvas1, true);
-        if(canvas2 != null){
-        SetCanvasActive(canvas2, false);
-        }
-    }
-    public void ShowCanvas2()
-    {
-        SetCanvasActive(MainCanvas, false);
-        SetCanvasActive(canvas1, false);
-        if(canvas2 != null){
-        SetCanvasActive(canvas2, true);
-        }
-    }
-    public void HideAllCanvas()
-    {
-        SetCanvasActive(MainCanvas, true);
-        SetCanvasActive(canvas1, false);
-        if(canvas2 != null){
-        SetCanvasActive(canvas2, false);
-        }
-    }
-    */
+    
     void SetCanvasActive(CanvasGroup cg, bool active)
     {
         cg.alpha = active ? 1f : 0f;

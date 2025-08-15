@@ -14,9 +14,15 @@ public class ObjectInterection : MonoBehaviour
     {
         
     }
+
     public void ComputerClickHandler()
     {
         Debug.Log("computer 클릭");
         SceneManager.LoadScene("Computer");
+    }
+
+    public void BookScroll()
+    {
+        
     }
 }
