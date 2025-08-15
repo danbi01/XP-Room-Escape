@@ -3,10 +3,18 @@ using UnityEngine.SceneManagement;
 public class ItemManager : MonoBehaviour
 {
     public GameObject InventoryManagerObject;
-    public bool IsKeyInInventory = false, IsUsbInInventory = false;
+    public bool IsKeyInInventory = false, IsUsbInInventory = false, IsTestPaperInInventory = false;
+    public static ItemManager Instance = null;
     void Start()
     {
         InventoryManagerObject = GameObject.Find("InventoryCanvas");
+    }
+    void Awake()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
     }
 
     void Update()
@@ -63,6 +71,23 @@ public class ItemManager : MonoBehaviour
 
             this.gameObject.transform.SetParent(InventoryManagerObject.transform);
             IsUsbInInventory = true;
+        }
+    }
+
+    // 시험지 클릭 시 작동 메소드 
+    public void TestPaperOnClick()
+    {
+        if (IsTestPaperInInventory)
+        {
+            Debug.Log("이것은 오류메시지입니다.");
+        }
+        else
+        {
+            Debug.Log("add");
+            // 인벤토리 내 아이템 리스트에 추가
+            InventoryManager.Instance.ItemList.Add(gameObject);
+            IsTestPaperInInventory = true;
+            Destroy(gameObject);
         }
     }
 

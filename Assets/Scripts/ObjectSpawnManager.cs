@@ -3,9 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class ObjectSpawnManager : MonoBehaviour
 {
-    public GameObject Key,Usb;
-    public GameObject Canvas;
-    public bool IsKeySpawned, IsUsbSpawned;
+    //아이템
+    public GameObject Key, Usb, TestPaper;
+    //부모 캔버스
+    public GameObject Canvas, LargeBookCase;
+    //아이템 생성여부
+    public bool IsKeySpawned, IsUsbSpawned, IsTestPaperSpawned;
     public GameObject ExitButton;
     public GameObject[] Canvases = new GameObject[2];
     public static ObjectSpawnManager Instance = null;
@@ -110,6 +113,33 @@ public class ObjectSpawnManager : MonoBehaviour
                 }
                 break;
 
+        }
+
+        //TestPaper 생성
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "EastWall": // EastWall일 때
+
+                Debug.Log(InventoryManager.Instance.ItemList.Contains(TestPaper));
+                // 인벤토리에 TestPaper가 들어있으면
+                //if(InventoryManager.Instance.ItemList.Contains(TestPaper)){
+                if (ItemManager.Instance.IsTestPaperInInventory)
+                {
+                    IsTestPaperSpawned = true;
+                    break;
+                }
+                else
+                {
+                    if (!IsTestPaperSpawned)
+                    {  // 시험지가 생성되지 않았을 때
+                        Debug.Log("TestPaper 생성");
+                        GameObject TestPaperObject = Instantiate(TestPaper, transform.position, transform.rotation);
+                        // 시험지는 LargeBookCase의 하위로 설정
+                        TestPaperObject.transform.SetParent(LargeBookCase.transform);
+                        IsTestPaperSpawned = true;
+                    }
+                }
+                break;
         }
 
     }
