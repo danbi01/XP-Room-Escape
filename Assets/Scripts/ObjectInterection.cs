@@ -21,7 +21,7 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
         originalSlot = transform.parent;
     }
 
-    //드래그 시작 시 최상위로 올림
+    //드래그 시작 시 책이 잘 보이게 최상위로 올림
     public void OnBeginDrag(PointerEventData eventData)
     {
         //대상이 책이 아니면 실행 안 함
@@ -66,33 +66,30 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
         }
     }
     
-
+    //드래그 끝나면 빈 슬롯에 들어감
     public void OnEndDrag(PointerEventData eventData)
     {
         if(!CompareTag("Book")) return;
         Transform targetSlot = GetSlotUnderPointer(eventData);
-        //슬롯에 드롭 시
-        if(targetSlot != null)
-        {
-            if(targetSlot.childCount == 0)
-            {//빈 슬롯에 드롭 시 이동
-                transform.SetParent(targetSlot);
-                transform.localPosition = Vector3.zero;
-            }
-            else
-            {//다른 책이 있으면 교환
-                Transform otherBook = targetSlot.GetChild(0);
-                otherBook.SetParent(originalSlot);
-                otherBook.localPosition = Vector3.zero;
-                transform.SetParent(targetSlot);
-                transform.localPosition = Vector3.zero;
-            }
-        }
-        //슬롯이 아닌 곳에 드롭 시 복귀
-        else
-        {
-            transform.SetParent(originalSlot);
+
+        if(targetSlot != null && targetSlot.childCount == 0)
+        {//빈 슬롯에 드롭 시 거기로 이동
+            transform.SetParent(targetSlot);
             transform.localPosition = Vector3.zero;
+        }
+        else
+        {//책이 있는 슬롯 or 슬롯 밖에다가 드롭 시 빈 슬롯으로 이동 
+            Transform emptySlot = FindEmptySlot();
+            if(emptySlot != null)
+            {
+                transform.SetParent(emptySlot);
+                transform.localPosition = Vector3.zero;
+            }
+            else //실행될 일 없지만 안전장치로 만듦
+            {//빈 슬롯이 없으면 원래 자리로 이동
+                transform.SetParent(originalSlot);
+                transform.localPosition = Vector3.zero;
+            }
         }
     }
 
