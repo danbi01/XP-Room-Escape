@@ -6,7 +6,8 @@ using System.Collections.Generic;
 public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
     #region BookDrag
-    //책 드래그 
+    //책 드래그 기능 코드
+    public List<Transform> allSlots = new List<Transform>();
     private Transform originalSlot;
     private Transform canvasRoot;
     //드래그 중 우선 렌더용
@@ -27,19 +28,8 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
         if(!CompareTag("Book")) return;
         originalSlot = transform.parent;
         transform.SetParent(canvasRoot); 
-        //transform.SetAsLastSibling();
-
-        /*
-        //드래그 중 앞쪽에 보이도록 캔버스 추가
-        overrideCanvas = gameObject.GetComponent<Canvas>();
-        if(overrideCanvas == null)
-        {
-            overrideCanvas = gameObject.AddComponent<Canvas>();
-        }
-        overrideCanvas.overrideSorting = true;
-        overrideCanvas.sortingOrder = 100;
-        */
     }
+
     //드래그 중 마우스를 따라감
     public void OnDrag(PointerEventData eventData)
     {
@@ -58,7 +48,24 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
             //변환된 값을 localPoint 변수에 담음
             out localPoint);
         transform.localPosition = localPoint;
+
+        //슬롯 체크
+        Transform hoveredSlot = GetSlotUnderPointer(eventData);
+        if(hoveredSlot != null && hoveredSlot.childCount > 0)
+        {
+            Transform otherBook = hoveredSlot.GetChild(0);
+            if(otherBook != this.transform)
+            {//드래그 중인 책이 자리를 뺏으면 빈 슬롯을 찾아 들어가기
+                Transform emptySlot = FindEmptySlot();
+                if(emptySlot != null)
+                {
+                    otherBook.SetParent(emptySlot);
+                    otherBook.localPosition = Vector3.zero;
+                }
+            }
+        }
     }
+    
 
     public void OnEndDrag(PointerEventData eventData)
     {
@@ -87,15 +94,19 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
             transform.SetParent(originalSlot);
             transform.localPosition = Vector3.zero;
         }
+    }
 
-        /*
-        //드래그 끝나면 override canvas 제거
-        if(overrideCanvas != null)
+    //빈 슬롯을 찾는 함수
+    private Transform FindEmptySlot()
+    {
+        foreach(Transform slot in allSlots)
         {
-            Destroy(overrideCanvas);
-            overrideCanvas = null;
+            if(slot.childCount == 0)
+            {
+                return slot;
+            }
         }
-        */
+        return null;
     }
 
     //드롭한 곳이 슬롯인 지 판별하는 함수
