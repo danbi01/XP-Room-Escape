@@ -111,7 +111,6 @@ public class ObjectSpawnManager : MonoBehaviour
         {
             case "EastWall": // EastWall일 때
 
-                Debug.Log(InventoryManager.Instance.ItemList.Contains(TestPaper));
                 // 인벤토리에 TestPaper가 들어있으면
                 //if(InventoryManager.Instance.ItemList.Contains(TestPaper)){
                 if (ItemManager.Instance.IsTestPaperInInventory)

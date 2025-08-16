@@ -9,6 +9,8 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
     //책 드래그 
     private Transform originalSlot;
     private Transform canvasRoot;
+    //드래그 중 우선 렌더용
+    //private Canvas overrideCanvas;
 
     void Start()
     {
@@ -25,12 +27,37 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
         if(!CompareTag("Book")) return;
         originalSlot = transform.parent;
         transform.SetParent(canvasRoot); 
+        //transform.SetAsLastSibling();
+
+        /*
+        //드래그 중 앞쪽에 보이도록 캔버스 추가
+        overrideCanvas = gameObject.GetComponent<Canvas>();
+        if(overrideCanvas == null)
+        {
+            overrideCanvas = gameObject.AddComponent<Canvas>();
+        }
+        overrideCanvas.overrideSorting = true;
+        overrideCanvas.sortingOrder = 100;
+        */
     }
     //드래그 중 마우스를 따라감
     public void OnDrag(PointerEventData eventData)
     {
         if(!CompareTag("Book")) return;
-        transform.position = Input.mousePosition;
+        //마우스/손가락 위치를 UI 좌표로 변환 
+        Vector2 localPoint;
+        //최상위 캔버스 좌표
+        RectTransform canvasRect = canvasRoot.GetComponent<RectTransform>();
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            //현재 마우스/터치 위치를 최상위 캔버스 상 좌표로 변환
+            canvasRect, 
+            //현재 마우스/터치 위치
+            Input.mousePosition, 
+            //렌더링 모드: 카메라 
+            Camera.main, 
+            //변환된 값을 localPoint 변수에 담음
+            out localPoint);
+        transform.localPosition = localPoint;
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -41,12 +68,12 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
         if(targetSlot != null)
         {
             if(targetSlot.childCount == 0)
-            {//빈 슬롯에 드롭 시
+            {//빈 슬롯에 드롭 시 이동
                 transform.SetParent(targetSlot);
                 transform.localPosition = Vector3.zero;
             }
             else
-            {//다른 책이 있으면
+            {//다른 책이 있으면 교환
                 Transform otherBook = targetSlot.GetChild(0);
                 otherBook.SetParent(originalSlot);
                 otherBook.localPosition = Vector3.zero;
@@ -54,12 +81,21 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
                 transform.localPosition = Vector3.zero;
             }
         }
-        //슬롯이 아닌 곳에 드롭 시
+        //슬롯이 아닌 곳에 드롭 시 복귀
         else
         {
             transform.SetParent(originalSlot);
             transform.localPosition = Vector3.zero;
         }
+
+        /*
+        //드래그 끝나면 override canvas 제거
+        if(overrideCanvas != null)
+        {
+            Destroy(overrideCanvas);
+            overrideCanvas = null;
+        }
+        */
     }
 
     //드롭한 곳이 슬롯인 지 판별하는 함수
