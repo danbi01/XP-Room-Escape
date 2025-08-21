@@ -33,6 +33,7 @@ public class ComputerLogin : MonoBehaviour
         }
         else
         {
+            // + 비번 틀렸을 때... 효과 넣기?
             Debug.Log("Wrong!");
         }
     }
