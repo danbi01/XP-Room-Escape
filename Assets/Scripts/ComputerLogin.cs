@@ -8,6 +8,8 @@ public class ComputerLogin : MonoBehaviour
     public TMP_InputField inputField_PW;
     private string passwordInput = "";
     private string password = "test1234";
+    public GameObject lockScreen;
+    public GameObject homeScreen;
 
     void Update()
     {
@@ -24,6 +26,10 @@ public class ComputerLogin : MonoBehaviour
         if (passwordInput == password)
         {
             Debug.Log("Correct!");
+            // + 효과음 넣기
+            // + LockScreen 천천히 사라지도록 - 시간 지연 주고, 투명도 transition (300ms?)
+            lockScreen.SetActive(false);
+            homeScreen.SetActive(true);
         }
         else
         {
