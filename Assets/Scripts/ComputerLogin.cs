@@ -11,6 +11,10 @@ public class ComputerLogin : MonoBehaviour
     public GameObject lockScreen;
     public GameObject homeScreen;
 
+    void Start()
+    {
+        homeScreen.SetActive(false);
+    }
     void Update()
     {
         // enter key down
