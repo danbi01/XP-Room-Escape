@@ -846,7 +846,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 9019923672013904885, guid: 691fcfd2335b19f46b594fe22825c8fb, type: 3}
+  m_Sprite: {fileID: 4037464678505668292, guid: 6151755cabd3e4e08b4e999f51dcdc49, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1057,7 +1057,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uBA54\uC77C"
+  m_text: "\uC804\uC790 \uBA54\uC77C"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7f0a18d7df1fa4c8fa70ddd351f88346, type: 2}
   m_sharedMaterial: {fileID: -5423594111640758931, guid: 7f0a18d7df1fa4c8fa70ddd351f88346, type: 2}
@@ -4725,8 +4725,8 @@ Transform:
   m_GameObject: {fileID: 1614004839}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.1466, z: -0.1}
-  m_LocalScale: {x: 2.4048383, y: 0.76241696, z: 1}
+  m_LocalPosition: {x: 0.212, y: -0.16134, z: -0.1}
+  m_LocalScale: {x: 2, y: 0.7328246, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1925639016}
@@ -5667,7 +5667,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1868425262
 Transform:
   m_ObjectHideFlags: 0
