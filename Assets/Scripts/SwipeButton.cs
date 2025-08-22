@@ -5,9 +5,9 @@ using System.Collections.Generic;
 public class SwipeButton : MonoBehaviour
 {
     public static SwipeButton Instance = null;
-
     List<string> LabWallList = new List<string>() {"SouthWall", "EastWall", "NorthWall", "WestWall"};
     public int CurrentWallNumber = 0;
+    
     void Awake()
     {
         if(Instance!=null){
@@ -43,4 +43,5 @@ public class SwipeButton : MonoBehaviour
         Debug.Log("Right"+CurrentWallNumber);
         SceneManager.LoadScene(LabWallList[CurrentWallNumber]);
     }
+    
 }
