@@ -61,7 +61,7 @@ public class ObjectSpawnManager : MonoBehaviour
                 Debug.Log(InventoryManager.Instance.ItemList.Contains(Usb));
                 // 인벤토리에 Usb가 들어있으면
                 //if(InventoryManager.Instance.ItemList.Contains(Usb)){
-                if(GameObject.Find("InventoryCanvas").transform.Find("Usb(Clone)")){
+                if(Canvases[1].transform.Find("Usb(Clone)")){
                     IsUsbSpawned = true;
                     break;
                 }
@@ -86,7 +86,7 @@ public class ObjectSpawnManager : MonoBehaviour
                 Debug.Log(InventoryManager.Instance.ItemList.Contains(Key));
                 // 인벤토리에 Key가 들어있으면
                 //if(InventoryManager.Instance.ItemList.Contains(Key)){
-                if (GameObject.Find("InventoryCanvas").transform.Find("Key(Clone)"))
+                if (Canvases[1].transform.Find("Key(Clone)"))
                 {
                     IsKeySpawned = true;
                     break;
