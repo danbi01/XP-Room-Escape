@@ -1,5 +1,7 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 
 
@@ -7,15 +9,68 @@ public class CanvasGroupController : MonoBehaviour
 {
     //index0은 MainCanvas
     public List<CanvasGroup> Canvases = new List<CanvasGroup>();
-    //버튼 선언
-    GameObject exitButton, leftButton, rightButton;
+    public GameObject exit, left, right; 
+    public Button exitButton;
+    public static CanvasGroupController Instance = null;
+    
+    void Awake()
+    {
+        if(Instance){
+            DestroyImmediate(this.gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(this.gameObject);
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    //씬이 전환될 때마다 실행
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("씬 로드됨");
+        //캔버스 그룹 초기화 
+        Canvases.Clear();
+        //캔버스 그룹 찾아서 Canvases에 넣기
+        CanvasGroup[] found = GameObject.FindObjectsByType<CanvasGroup>(FindObjectsSortMode.None);
+        //캔버스 그룹 정렬
+        System.Array.Sort(found, (a, b) => a.name.CompareTo(b.name));
+        Debug.Log("found는 "+found);
+        Canvases.AddRange(found);
+        //버튼 클릭 연결
+        exitButton.onClick.AddListener(() => ShowCanvas(0));
+        if(exit != null)
+        {
+            exit.SetActive(false);
+        }
+        if(Canvases != null)
+        {
+            ShowCanvas(0);
+        }
+
+        //메인캔버스에 있는 버튼 클릭 연결
+        GameObject mainCanvas = GameObject.Find("MainCanvas");
+        if(mainCanvas)
+        {
+            Button[] buttons = mainCanvas.GetComponentsInChildren<Button>();
+            for(int i=0; i<buttons.Length; i++)
+            {
+                int index = i;
+                buttons[index].onClick.RemoveAllListeners();
+                Debug.Log("버튼 연결함");
+                buttons[index].onClick.AddListener(() => ShowCanvas(index+1));
+            }
+        }
+    }
+
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
     void Start()
-    {   //버튼 할당
-        exitButton = GameObject.Find("ButtonCanvas").transform.Find("ExitButton").gameObject;
-        leftButton = GameObject.Find("ButtonCanvas").transform.Find("Left").gameObject;
-        rightButton = GameObject.Find("ButtonCanvas").transform.Find("Right").gameObject;
+    {   
         
-        ShowCanvas(0);
     }
     public void ShowCanvas(int indexToShow)
     {
@@ -45,13 +100,10 @@ public class CanvasGroupController : MonoBehaviour
     //Exit버튼 활성화하는 함수
     void ExitButtonActive(bool active)
     {
-        exitButton.SetActive(active);
-        leftButton.SetActive(!active);
-        rightButton.SetActive(!active);
+        GameObject.Find("ButtonCanvas").transform.GetChild(2).gameObject.SetActive(active); //exit
+        GameObject.Find("ButtonCanvas").transform.GetChild(0).gameObject.SetActive(!active); //left
+        GameObject.Find("ButtonCanvas").transform.GetChild(1).gameObject.SetActive(!active); //right
     }
-    /*
-    Exit버튼은 기본적으로 비활성화 상태고 버튼 매니저 자식으로 들어감
-    만약 ShowCanvas호출 시 indexToShow가 0이 아니라면 Exit버튼 활성화, 왼오른버튼 비활성화
-    Exit버튼 누를 시 ShowCanvas(0); 실행하고 비활성화, 왼오른버튼 활성화
-    */
+    
+
 }

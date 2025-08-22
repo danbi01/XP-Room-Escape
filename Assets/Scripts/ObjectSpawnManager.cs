@@ -11,6 +11,7 @@ public class ObjectSpawnManager : MonoBehaviour
     public bool IsKeySpawned, IsUsbSpawned, IsTestPaperSpawned;
     public GameObject ExitButton;
     public GameObject[] Canvases = new GameObject[2];
+    public Canvas canvasParent;
     public static ObjectSpawnManager Instance = null;
     void Start()
     {
@@ -32,6 +33,9 @@ public class ObjectSpawnManager : MonoBehaviour
         }
         Instance = this;
         //DontDestroyOnLoad(this.gameObject);
+        if(canvasParent != null){
+            //DontDestroyOnLoad(canvasParent.gameObject);
+        }
         
         Canvases[0] = GameObject.Find("ButtonCanvas");
         Canvases[1] = GameObject.Find("InventoryCanvas");
@@ -134,7 +138,6 @@ public class ObjectSpawnManager : MonoBehaviour
     }
 
     public void CanvasSetActive(){
-        Debug.Log(GameObject.Find("InventoryManager").transform.GetChild(0));
         GameObject.Find("ButtonManager").transform.GetChild(0).gameObject.SetActive(true);
         GameObject.Find("InventoryManager").transform.GetChild(0).gameObject.SetActive(true);
     }

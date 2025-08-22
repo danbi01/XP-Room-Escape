@@ -129,7 +129,6 @@ GameObject:
   m_Component:
   - component: {fileID: 61191010}
   - component: {fileID: 61191009}
-  - component: {fileID: 61191011}
   m_Layer: 0
   m_Name: InventoryManager
   m_TagString: Untagged
@@ -166,18 +165,6 @@ Transform:
   - {fileID: 1811242321}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!225 &61191011
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 61191008}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &139416331
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,7 +618,7 @@ GameObject:
   - component: {fileID: 277684856}
   - component: {fileID: 277684860}
   m_Layer: 5
-  m_Name: CanvasParent
+  m_Name: CanvasOriginalParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -711,8 +698,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 689132311}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -733,6 +719,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Canvases: []
+  exit: {fileID: 1180226041}
+  left: {fileID: 837402251}
+  right: {fileID: 689502102}
+  exitButton: {fileID: 1180226043}
 --- !u!1 &301565715
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,7 +733,6 @@ GameObject:
   m_Component:
   - component: {fileID: 301565717}
   - component: {fileID: 301565716}
-  - component: {fileID: 301565718}
   m_Layer: 0
   m_Name: ButtonManager
   m_TagString: Untagged
@@ -780,18 +769,6 @@ Transform:
   - {fileID: 1990503486}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!225 &301565718
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 301565715}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &622751105
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,16 +870,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689132310}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 277684859}
+  m_Father: {fileID: 1902861891}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 58, y: -83.68201}
-  m_SizeDelta: {x: 566.3147, y: 167.363}
+  m_AnchoredPosition: {x: -10.72, y: -18.81}
+  m_SizeDelta: {x: 496.87, y: 129.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &689132312
 MonoBehaviour:
@@ -1193,6 +1170,7 @@ MonoBehaviour:
   Canvases:
   - {fileID: 1990503482}
   - {fileID: 1811242320}
+  canvasParent: {fileID: 277684858}
 --- !u!1 &837402251
 GameObject:
   m_ObjectHideFlags: 0
@@ -1817,7 +1795,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1180226042
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1882,7 +1860,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 277684860}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CanvasGroupController, Assembly-CSharp
         m_MethodName: ShowCanvas
         m_Mode: 3
@@ -2341,6 +2319,7 @@ GameObject:
   - component: {fileID: 1902861894}
   - component: {fileID: 1902861893}
   - component: {fileID: 1902861892}
+  - component: {fileID: 1902861895}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2359,7 +2338,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 689132311}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2416,8 +2396,8 @@ Canvas:
   m_GameObject: {fileID: 1902861890}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1902204172}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -2425,11 +2405,23 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!225 &1902861895
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902861890}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1990503482
 GameObject:
   m_ObjectHideFlags: 0
@@ -2540,8 +2532,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 1902204173}
   - {fileID: 1426310629}
-  - {fileID: 1902861891}
   - {fileID: 277684859}
+  - {fileID: 1902861891}
   - {fileID: 301565717}
   - {fileID: 61191010}
   - {fileID: 184243737}

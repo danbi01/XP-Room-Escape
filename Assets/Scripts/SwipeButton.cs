@@ -30,7 +30,7 @@ public class SwipeButton : MonoBehaviour
         {
             CurrentWallNumber = 3;
         }
-        Debug.Log("Left" + CurrentWallNumber);
+        //Debug.Log("Left" + CurrentWallNumber);
         SceneManager.LoadScene(LabWallList[CurrentWallNumber]);
     }
     // 오른쪽 화살표 버튼 눌렀을 때
@@ -40,7 +40,7 @@ public class SwipeButton : MonoBehaviour
         if(CurrentWallNumber > 3){
             CurrentWallNumber = 0;
         }
-        Debug.Log("Right"+CurrentWallNumber);
+        //Debug.Log("Right"+CurrentWallNumber);
         SceneManager.LoadScene(LabWallList[CurrentWallNumber]);
     }
     

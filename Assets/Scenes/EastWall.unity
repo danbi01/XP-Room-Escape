@@ -930,7 +930,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1069863665}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CanvasGroupController, Assembly-CSharp
         m_MethodName: ShowCanvas
         m_Mode: 3
@@ -1063,7 +1063,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1069863665}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CanvasGroupController, Assembly-CSharp
         m_MethodName: ShowCanvas
         m_Mode: 3
@@ -1495,7 +1495,7 @@ GameObject:
   - component: {fileID: 674292469}
   - component: {fileID: 674292468}
   m_Layer: 5
-  m_Name: MainCanvas
+  m_Name: 0_MainCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1684,7 +1684,6 @@ GameObject:
   - component: {fileID: 1069863663}
   - component: {fileID: 1069863662}
   - component: {fileID: 1069863661}
-  - component: {fileID: 1069863665}
   m_Layer: 5
   m_Name: CanvasParent
   m_TagString: Untagged
@@ -1768,9 +1767,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 674292472}
-  - {fileID: 237495623}
   - {fileID: 1607887051}
   - {fileID: 1082791173}
+  - {fileID: 237495623}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1778,22 +1777,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1069863665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1069863660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3f0b3d8d9895d94d85e58969d3f90af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Canvases:
-  - {fileID: 674292468}
-  - {fileID: 1607887052}
-  - {fileID: 1082791174}
 --- !u!1 &1082791172
 GameObject:
   m_ObjectHideFlags: 0
@@ -1808,7 +1791,7 @@ GameObject:
   - component: {fileID: 1082791175}
   - component: {fileID: 1082791174}
   m_Layer: 5
-  m_Name: LargeWaterPurifier
+  m_Name: 2_LargeWaterPurifier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2611,6 +2594,7 @@ MonoBehaviour:
   Canvases:
   - {fileID: 0}
   - {fileID: 0}
+  canvasParent: {fileID: 0}
 --- !u!4 &1592217813
 Transform:
   m_ObjectHideFlags: 0
@@ -2640,7 +2624,7 @@ GameObject:
   - component: {fileID: 1607887054}
   - component: {fileID: 1607887052}
   m_Layer: 5
-  m_Name: LargeBookCase
+  m_Name: 1_LargeBookCase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

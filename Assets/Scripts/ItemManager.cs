@@ -85,7 +85,7 @@ public class ItemManager : MonoBehaviour
         {
             Debug.Log("add");
             // 인벤토리 내 아이템 리스트에 추가
-            InventoryManager.Instance.ItemList.Add(gameObject);
+            //InventoryManager.Instance.ItemList.Add(gameObject);
             IsTestPaperInInventory = true;
             Destroy(gameObject);
         }
