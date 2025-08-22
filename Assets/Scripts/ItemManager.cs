@@ -94,6 +94,8 @@ public class ItemManager : MonoBehaviour
     public void ComputerExitHandler()
     {
         Debug.Log("컴퓨터 씬 이탈");
+        GameManager.instance.sceneStateManager.SaveSceneState();
+        Debug.Log("SaveSceneState");
         ObjectSpawnManager.Instance.CanvasSetActive();
         SceneManager.LoadScene("WestWall");
 

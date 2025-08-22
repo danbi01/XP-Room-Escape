@@ -13,7 +13,7 @@ public class ComputerLogin : MonoBehaviour
 
     void Start()
     {
-        homeScreen.SetActive(false);
+        
     }
     void Update()
     {
