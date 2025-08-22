@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 200665935}
   - component: {fileID: 200665934}
   m_Layer: 5
-  m_Name: Table
+  m_Name: 1_Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

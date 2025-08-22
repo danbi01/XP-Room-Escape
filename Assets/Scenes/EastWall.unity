@@ -860,7 +860,7 @@ GameObject:
   - component: {fileID: 490678722}
   - component: {fileID: 490678721}
   m_Layer: 5
-  m_Name: BookCase
+  m_Name: 1_BookCase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -993,7 +993,7 @@ GameObject:
   - component: {fileID: 502994454}
   - component: {fileID: 502994453}
   m_Layer: 5
-  m_Name: WaterPurifier
+  m_Name: 2_WaterPurifier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -28,14 +28,13 @@ public class CanvasGroupController : MonoBehaviour
     //씬이 전환될 때마다 실행
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("씬 로드됨");
         //캔버스 그룹 초기화 
         Canvases.Clear();
         //캔버스 그룹 찾아서 Canvases에 넣기
         CanvasGroup[] found = GameObject.FindObjectsByType<CanvasGroup>(FindObjectsSortMode.None);
         //캔버스 그룹 정렬
         System.Array.Sort(found, (a, b) => a.name.CompareTo(b.name));
-        Debug.Log("found는 "+found);
+        //정렬된 그룹을 리스트에 추가
         Canvases.AddRange(found);
         //버튼 클릭 연결
         exitButton.onClick.AddListener(() => ShowCanvas(0));
@@ -49,16 +48,28 @@ public class CanvasGroupController : MonoBehaviour
         }
 
         //메인캔버스에 있는 버튼 클릭 연결
-        GameObject mainCanvas = GameObject.Find("MainCanvas");
+        GameObject mainCanvas = GameObject.Find("0_MainCanvas");
         if(mainCanvas)
         {
             Button[] buttons = mainCanvas.GetComponentsInChildren<Button>();
-            for(int i=0; i<buttons.Length; i++)
+            foreach(var btn in buttons)
             {
-                int index = i;
-                buttons[index].onClick.RemoveAllListeners();
-                Debug.Log("버튼 연결함");
-                buttons[index].onClick.AddListener(() => ShowCanvas(index+1));
+                //이전의 버튼 이벤트 다 지움
+                btn.onClick.RemoveAllListeners();
+                //버튼 이름을 _을 기준으로 구분함
+                string[] split = btn.name.Split('_');
+                //split[0]을 정수로 변환하여 targetIndex에 넣음
+                if(split.Length>0 && int.TryParse(split[0], out int targetIndex))
+                {
+                    btn.onClick.AddListener(() =>
+                    {
+                        ShowCanvas(targetIndex);
+                    });
+                }
+                else
+                {
+                    Debug.Log("변환 실패. 이름이 올바른지 확인.");
+                }
             }
         }
     }
@@ -72,6 +83,8 @@ public class CanvasGroupController : MonoBehaviour
     {   
         
     }
+
+    //캔버스 보여주는 함수
     public void ShowCanvas(int indexToShow)
     {
         for(int i=0; i<Canvases.Count; i++)
