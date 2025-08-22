@@ -7,7 +7,6 @@ TagManager:
   - Computer
   - Slot
   - Book
-
   layers:
   - Default
   - TransparentFX
@@ -46,7 +45,7 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: UI(Canvas)
-    uniqueID: 3350721841
+    uniqueID: 1806528791
     locked: 0
   m_RenderingLayers:
   - Default
