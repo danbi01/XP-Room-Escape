@@ -68,7 +68,33 @@ public class CanvasGroupController : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("변환 실패. 이름이 올바른지 확인.");
+                    Debug.Log("main 변환 실패. 이름이 올바른지 확인.");
+                }
+            }
+        }
+
+        //West책상에 있는 버튼 클릭 연결
+        GameObject deskCanvas = GameObject.Find("1_LargeDesk");
+        if(deskCanvas)
+        {
+            Button[] buttons = deskCanvas.GetComponentsInChildren<Button>();
+            foreach(var btn in buttons)
+            {
+                //이전의 버튼 이벤트 다 지움
+                btn.onClick.RemoveAllListeners();
+                //버튼 이름을 _을 기준으로 구분함
+                string[] split = btn.name.Split('_');
+                //split[0]을 정수로 변환하여 targetIndex에 넣음
+                if(split.Length>0 && int.TryParse(split[0], out int targetIndex))
+                {
+                    btn.onClick.AddListener(() =>
+                    {
+                        ShowCanvas(targetIndex);
+                    });
+                }
+                else
+                {
+                    Debug.Log("desk 변환 실패. 이름이 올바른지 확인.");
                 }
             }
         }
