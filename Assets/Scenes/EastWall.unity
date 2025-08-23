@@ -993,7 +993,7 @@ GameObject:
   - component: {fileID: 502994454}
   - component: {fileID: 502994453}
   m_Layer: 5
-  m_Name: 2_WaterPurifier
+  m_Name: 3_WaterPurifier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1905,8 +1905,8 @@ RectTransform:
   m_Children:
   - {fileID: 674292472}
   - {fileID: 1607887051}
-  - {fileID: 1082791173}
   - {fileID: 1077284089}
+  - {fileID: 1082791173}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1928,7 +1928,7 @@ GameObject:
   - component: {fileID: 1077284091}
   - component: {fileID: 1077284090}
   m_Layer: 5
-  m_Name: 3_LargeLocker
+  m_Name: 2_LargeLocker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2043,7 +2043,7 @@ GameObject:
   - component: {fileID: 1082791175}
   - component: {fileID: 1082791174}
   m_Layer: 5
-  m_Name: 2_LargeWaterPurifier
+  m_Name: 3_LargeWaterPurifier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3385,7 +3385,7 @@ GameObject:
   - component: {fileID: 1713112476}
   - component: {fileID: 1713112475}
   m_Layer: 5
-  m_Name: 3_Locker
+  m_Name: 2_Locker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

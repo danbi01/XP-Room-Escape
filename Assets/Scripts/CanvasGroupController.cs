@@ -3,14 +3,13 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
-
-
 public class CanvasGroupController : MonoBehaviour
 {
     //index0은 MainCanvas
     public List<CanvasGroup> Canvases = new List<CanvasGroup>();
     public GameObject exit, left, right; 
     public Button exitButton;
+    public int exitIndex;
     public static CanvasGroupController Instance = null;
     
     void Awake()
@@ -36,12 +35,25 @@ public class CanvasGroupController : MonoBehaviour
         System.Array.Sort(found, (a, b) => a.name.CompareTo(b.name));
         //정렬된 그룹을 리스트에 추가
         Canvases.AddRange(found);
-        //버튼 클릭 연결
-        exitButton.onClick.AddListener(() => ShowCanvas(0));
+
+        exitIndex = 0;
+        //exit버튼 이벤트 초기화
+        exitButton.onClick.RemoveAllListeners();
+        //exit버튼 클릭 연결
+        exitButton.onClick.AddListener(() =>{
+            if(exitIndex > 0)
+            {
+                exitIndex -= 1;
+            }
+            ShowCanvas(exitIndex);
+        });
+
+        //맨 처음에 exit버튼 비활성화
         if(exit != null)
         {
             exit.SetActive(false);
         }
+        //맨 처음에 메인캔버스 보여줌
         if(Canvases != null)
         {
             ShowCanvas(0);
@@ -62,20 +74,6 @@ public class CanvasGroupController : MonoBehaviour
                 buttons.AddRange(cwb.GetComponentsInChildren<Button>());
             }
         }
-        /*
-        if(mainCanvas)
-        {
-            buttons.AddRange(mainCanvas.GetComponentsInChildren<Button>());
-        }
-        if(deskCanvas)
-        {
-            buttons.AddRange(deskCanvas.GetComponentsInChildren<Button>());
-        }
-        if(bookcaseCanvas)
-        {
-            buttons.AddRange(bookcaseCanvas.GetComponentsInChildren<Button>());
-        }
-        */
 
         foreach(var btn in buttons)
         {
@@ -89,7 +87,9 @@ public class CanvasGroupController : MonoBehaviour
                 btn.onClick.AddListener(() =>
                 {
                     ShowCanvas(targetIndex);
+                    exitIndex += 1;
                 });
+                
             }
             else
             {

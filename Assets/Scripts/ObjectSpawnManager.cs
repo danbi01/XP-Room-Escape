@@ -58,7 +58,7 @@ public class ObjectSpawnManager : MonoBehaviour
         switch(SceneManager.GetActiveScene().name){ 
             case "SouthWall": // SouthWall일 때
             
-                Debug.Log(InventoryManager.Instance.ItemList.Contains(Usb));
+                //Debug.Log(InventoryManager.Instance.ItemList.Contains(Usb));
                 // 인벤토리에 Usb가 들어있으면
                 //if(InventoryManager.Instance.ItemList.Contains(Usb)){
                 if(Canvases[1].transform.Find("Usb(Clone)")){
@@ -83,7 +83,7 @@ public class ObjectSpawnManager : MonoBehaviour
         {
             case "WestWall": // WestWall일 때
 
-                Debug.Log(InventoryManager.Instance.ItemList.Contains(Key));
+                //Debug.Log(InventoryManager.Instance.ItemList.Contains(Key));
                 // 인벤토리에 Key가 들어있으면
                 //if(InventoryManager.Instance.ItemList.Contains(Key)){
                 if (Canvases[1].transform.Find("Key(Clone)"))
