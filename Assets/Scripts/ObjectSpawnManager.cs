@@ -113,7 +113,7 @@ public class ObjectSpawnManager : MonoBehaviour
 
                 // 인벤토리에 TestPaper가 들어있으면
                 //if(InventoryManager.Instance.ItemList.Contains(TestPaper)){
-                if (ItemManager.Instance.IsTestPaperInInventory)
+                if (InventoryManager.Instance.IsTestPaperInInventory)
                 {
                     IsTestPaperSpawned = true;
                     break;

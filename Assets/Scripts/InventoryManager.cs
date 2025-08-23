@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance = null;
+    public bool IsKeyInInventory = false, IsUsbInInventory = false, IsTestPaperInInventory = false;
     // 현재 인벤토리에 있는 아이템 리스트
     public List<GameObject> ItemList = new List<GameObject>(); 
     
