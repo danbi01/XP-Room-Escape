@@ -47,55 +47,53 @@ public class CanvasGroupController : MonoBehaviour
             ShowCanvas(0);
         }
 
-        //메인캔버스에 있는 버튼 클릭 연결
+        //메인캔버스, west책상, east책장에 있는 버튼 클릭 연결
         GameObject mainCanvas = GameObject.Find("0_MainCanvas");
-        if(mainCanvas)
+        GameObject deskCanvas = GameObject.Find("1_LargeDesk");
+        GameObject bookcaseCanvas = GameObject.Find("1_LargeBookCase");
+        List<GameObject> CanvasWithButtons = new List<GameObject>{
+            mainCanvas, deskCanvas, bookcaseCanvas
+        };
+        List<Button> buttons = new List<Button>();
+        foreach(GameObject cwb in CanvasWithButtons)
         {
-            Button[] buttons = mainCanvas.GetComponentsInChildren<Button>();
-            foreach(var btn in buttons)
+            if(cwb)
             {
-                //이전의 버튼 이벤트 다 지움
-                btn.onClick.RemoveAllListeners();
-                //버튼 이름을 _을 기준으로 구분함
-                string[] split = btn.name.Split('_');
-                //split[0]을 정수로 변환하여 targetIndex에 넣음
-                if(split.Length>0 && int.TryParse(split[0], out int targetIndex))
-                {
-                    btn.onClick.AddListener(() =>
-                    {
-                        ShowCanvas(targetIndex);
-                    });
-                }
-                else
-                {
-                    Debug.Log("main 변환 실패. 이름이 올바른지 확인.");
-                }
+                buttons.AddRange(cwb.GetComponentsInChildren<Button>());
             }
         }
-
-        //West책상에 있는 버튼 클릭 연결
-        GameObject deskCanvas = GameObject.Find("1_LargeDesk");
+        /*
+        if(mainCanvas)
+        {
+            buttons.AddRange(mainCanvas.GetComponentsInChildren<Button>());
+        }
         if(deskCanvas)
         {
-            Button[] buttons = deskCanvas.GetComponentsInChildren<Button>();
-            foreach(var btn in buttons)
+            buttons.AddRange(deskCanvas.GetComponentsInChildren<Button>());
+        }
+        if(bookcaseCanvas)
+        {
+            buttons.AddRange(bookcaseCanvas.GetComponentsInChildren<Button>());
+        }
+        */
+
+        foreach(var btn in buttons)
+        {
+            //이전의 버튼 이벤트 다 지움
+            btn.onClick.RemoveAllListeners();
+            //버튼 이름을 _을 기준으로 구분함
+            string[] split = btn.name.Split('_');
+            //split[0]을 정수로 변환하여 targetIndex에 넣음
+            if(split.Length>0 && int.TryParse(split[0], out int targetIndex))
             {
-                //이전의 버튼 이벤트 다 지움
-                btn.onClick.RemoveAllListeners();
-                //버튼 이름을 _을 기준으로 구분함
-                string[] split = btn.name.Split('_');
-                //split[0]을 정수로 변환하여 targetIndex에 넣음
-                if(split.Length>0 && int.TryParse(split[0], out int targetIndex))
+                btn.onClick.AddListener(() =>
                 {
-                    btn.onClick.AddListener(() =>
-                    {
-                        ShowCanvas(targetIndex);
-                    });
-                }
-                else
-                {
-                    Debug.Log("desk 변환 실패. 이름이 올바른지 확인.");
-                }
+                    ShowCanvas(targetIndex);
+                });
+            }
+            else
+            {
+                //Debug.Log("변환 실패. 이름이 올바른지 확인.");
             }
         }
     }
