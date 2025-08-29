@@ -12,8 +12,6 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
     public List<Transform> allSlots = new List<Transform>();
     private Transform originalSlot;
     private Transform canvasRoot;
-    //드래그 중 우선 렌더용
-    //private Canvas overrideCanvas;
 
     void Start()
     {
@@ -125,23 +123,24 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
     //책 드래그 끝
     #endregion
 
-    /*
     #region LockerInputPassword
     //금고 비밀번호 입력 기능 코드
     public Image[] leds; 
     private string input = "";
     public string correctPassword = "1234";
     public int maxLength = 4;
-    public Color ledOnColor = Color.Green;
-    public Color ledOffColor = Color.Black;
+    public Color ledOnColor = Color.green;
+    public Color ledOffColor = Color.black;
     public Color errorColor = Color.red;
 
+    //비밀번호 입력 함수
     public void OnNumberPress(string number)
     {
         if(input.Length < maxLength)
         {
             input += number;
             leds[input.Length - 1].color = ledOnColor;
+            //4개 입력 시 정답인지 확인함
             if(input.Length == maxLength)
             {
                 StartCoroutine(CheckPassword());
@@ -156,6 +155,20 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
         if(input == correctPassword)
         {
             Debug.Log("잠금 해제");
+            for(int i=1; i<4; i++)
+            {
+                foreach(var led in leds)
+                {
+                    if(i%2!=0)
+                        led.color = ledOffColor;
+                    else
+                        led.color = ledOnColor;
+                }
+                yield return new WaitForSeconds(0.3f);
+            }
+            //OpendLocker활성화, ClosedLocker비활성화
+            GameObject.Find("2_LargeLocker").transform.GetChild(1).gameObject.SetActive(true);
+            GameObject.Find("2_LargeLocker").transform.GetChild(0).gameObject.SetActive(false);
         }
         else
         {
@@ -165,12 +178,12 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
             {
                 foreach(var led in leds)
                 {
-                    if(i%2)
+                    if(i%2!=0)
                         led.color = errorColor;
                     else
                         led.color = ledOffColor;
                 }
-                yield return new WaifForSeconds(0.3f);
+                yield return new WaitForSeconds(0.3f);
             }
             ResetLeds();
         }
@@ -184,7 +197,7 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
     }
 
     #endregion
-    */
+    
     public void ComputerClickHandler()
     {
         Debug.Log("computer 클릭");
