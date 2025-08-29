@@ -6,7 +6,7 @@ public class ObjectSpawnManager : MonoBehaviour
     //아이템
     public GameObject Key, Usb, TestPaper;
     //부모 캔버스
-    public GameObject Canvas, LargeLocker;
+    public GameObject Canvas, OpendLocker;
     //아이템 생성여부
     public bool IsKeySpawned, IsUsbSpawned, IsTestPaperSpawned;
     public GameObject ExitButton;
@@ -35,6 +35,11 @@ public class ObjectSpawnManager : MonoBehaviour
         
         Canvases[0] = GameObject.Find("ButtonCanvas");
         Canvases[1] = GameObject.Find("InventoryCanvas");
+
+        //EastWall에서 OpendLocker 찾기
+        if(OpendLocker==null && SwipeButton.Instance.CurrentWallNumber==1){
+            OpendLocker = GameObject.Find("2_LargeLocker").transform.GetChild(1).gameObject;
+        }
 
         //캔버스
         if(Canvas==null){
@@ -125,7 +130,7 @@ public class ObjectSpawnManager : MonoBehaviour
                         Debug.Log("TestPaper 생성");
                         GameObject TestPaperObject = Instantiate(TestPaper, transform.position, transform.rotation);
                         // 시험지는 LargeLocker의 하위로 설정
-                        TestPaperObject.transform.SetParent(LargeLocker.transform);
+                        TestPaperObject.transform.SetParent(OpendLocker.transform);
                         IsTestPaperSpawned = true;
                     }
                 }
