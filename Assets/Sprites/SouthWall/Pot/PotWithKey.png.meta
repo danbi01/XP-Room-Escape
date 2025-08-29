@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a4aa5ec577289d243b34e98f9b7ef91d
+guid: 20c788f4aadde3d49a1b81a8aec72815
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8446887168330516354
-    second: PotwithKey_Expanded_0
+      213: 2848904254755171068
+    second: PotWithKey_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PotwithKey_Expanded_0
+      name: PotWithKey_0
       rect:
         serializedVersion: 2
         x: 445
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2874526402f593570800000000000000
-      internalID: 8446887168330516354
+      spriteID: cfae7c75357598720800000000000000
+      internalID: 2848904254755171068
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PotwithKey_Expanded_0: 8446887168330516354
+      PotWithKey_0: 2848904254755171068
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

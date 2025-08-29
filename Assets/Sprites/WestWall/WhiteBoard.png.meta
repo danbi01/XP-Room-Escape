@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ba2a445d9017f854f83e3c89376d0e88
+guid: 1ed6a660c85fbeb4ead8b579c70743e1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2876594663034456283
-    second: PotwithoutKey_Expanded_0
+      213: -5773945678570342496
+    second: WhiteBoard_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PotwithoutKey_Expanded_0
+      name: WhiteBoard_0
       rect:
         serializedVersion: 2
-        x: 445
-        y: 0
-        width: 1025
-        height: 1067
+        x: 934
+        y: 722
+        width: 664
+        height: 278
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bd804fcea97bbe720800000000000000
-      internalID: 2876594663034456283
+      spriteID: 0a7b96c3ff2dedfa0800000000000000
+      internalID: -5773945678570342496
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PotwithoutKey_Expanded_0: 2876594663034456283
+      WhiteBoard_0: -5773945678570342496
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
