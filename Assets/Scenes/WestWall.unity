@@ -457,6 +457,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allSlots: []
+  leds: []
+  correctPassword: 1234
+  maxLength: 4
+  ledOnColor: {r: 0, g: 1, b: 0, a: 1}
+  ledOffColor: {r: 0, g: 0, b: 0, a: 1}
+  errorColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &103150437
 GameObject:
   m_ObjectHideFlags: 0
@@ -1911,10 +1917,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Key: {fileID: 8298239143443443691, guid: 793bad29f01aaf94c816835b5ebdedea, type: 3}
-  Usb: {fileID: 0}
+  Usb: {fileID: 8298239143443443691, guid: 00d3f90f7eb49d940a67c5f4f142c48d, type: 3}
   TestPaper: {fileID: 0}
   Canvas: {fileID: 0}
-  LargeLocker: {fileID: 0}
+  OpendLocker: {fileID: 0}
   IsKeySpawned: 0
   IsUsbSpawned: 0
   IsTestPaperSpawned: 0
