@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 32b2d645f78ec0d4193b963bedd8f6e2
+guid: 8488108059bca4b4bb4a5f1153983df4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2093162058918212948
-    second: SwitchOff_Expanded_0
+      213: 5666896106586045801
+    second: SwitchOff_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SwitchOff_Expanded_0
+      name: SwitchOff_0
       rect:
         serializedVersion: 2
         x: 663
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: caacadc823893f2e0800000000000000
-      internalID: -2093162058918212948
+      spriteID: 96dfa140cfbd4ae40800000000000000
+      internalID: 5666896106586045801
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SwitchOff_Expanded_0: -2093162058918212948
+      SwitchOff_0: 5666896106586045801
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
