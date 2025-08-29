@@ -32,7 +32,7 @@ public class SceneStateManager : MonoBehaviour
         if (!manageThisScene) return;
 
         savedStates = new Dictionary<string, bool>();
-        var objs = FindObjectsOfType<GameObject>(true);
+        var objs = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
 
         foreach (var obj in objs)
         {
@@ -45,7 +45,7 @@ public class SceneStateManager : MonoBehaviour
     {
         if (!manageThisScene || savedStates == null) return;
 
-        var objs = FindObjectsOfType<GameObject>(true);
+        var objs = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
         foreach (var obj in objs)
         {
             string path = GetFullPath(obj.transform);
