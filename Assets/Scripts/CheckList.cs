@@ -29,21 +29,12 @@ public class CheckList : MonoBehaviour
         // 탈출 성공 시 위와 같이 
     }
     
-    public void CheckBoxClickHandler()
+    public void CheckBoxClickHandler(bool active)
     {
         Debug.Log("CheckList On");
         foreach (var CheckUI in CheckListUI)
         {
-            CheckUI.SetActive(true);
-        }
-    }
-
-    public void CheckListOff()
-    {
-        Debug.Log("CheckList Off");
-        foreach (var CheckUI in CheckListUI)
-        {
-            CheckUI.SetActive(false);
+            CheckUI.SetActive(active);
         }
     }
 }
