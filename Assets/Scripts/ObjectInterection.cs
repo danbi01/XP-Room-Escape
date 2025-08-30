@@ -10,8 +10,10 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
     #region BookDrag
     //책 드래그 기능 코드
     public List<Transform> allSlots = new List<Transform>();
+    public GameObject lockerButton;
     private Transform originalSlot;
     private Transform canvasRoot;
+    public static ObjectInterection Instance = null;
 
     void Start()
     {
@@ -91,6 +93,18 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
                 transform.localPosition = Vector3.zero;
             }
         }
+        
+        //정답이라면
+        if(IsPuzzleSolved(allSlots))
+        {
+            Debug.Log("퍼즐 완료");
+            //locker버튼 활성화
+            lockerButton.GetComponent<Button>().interactable = true;
+            lockerButton.transform.GetChild(0).gameObject.SetActive(true);
+
+            //책 비활성화
+            lockerButton.transform.parent.Find("Books").gameObject.SetActive(false);
+        }
     }
 
     //빈 슬롯을 찾는 함수
@@ -120,6 +134,36 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
         }
         return null;
     }
+
+    //정답인지 확인하는 함수
+    bool IsPuzzleSolved(List<Transform> slots)
+    {
+        foreach(Transform slot in slots)
+        {
+            Transform book = slot.GetChild(0);
+            int slotNum = GetLastNumber(slot.name);
+            int bookNum = GetLastNumber(book.name);
+            //하나라도 다르면 틀림
+            if(slotNum != bookNum) return false;
+        }
+        //모두 일치함
+        return true;
+    }
+
+    //마지막 숫자 추출하는 함수
+    int GetLastNumber(string name)
+    {
+        string numberStr = "";
+        for(int i=name.Length-1; i>=0; i--)
+        {
+            if(char.IsDigit(name[i]))
+                numberStr = name[i] + numberStr;
+            else
+                break;
+        }
+        return numberStr == ""? -1 : int.Parse(numberStr);
+    }
+
     //책 드래그 끝
     #endregion
 
