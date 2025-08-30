@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: book4
+  m_text: book1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1462,7 +1462,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: book1
+  m_text: 'book2
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2304,7 +2306,7 @@ GameObject:
   - component: {fileID: 621344417}
   - component: {fileID: 621344416}
   m_Layer: 5
-  m_Name: Book3
+  m_Name: Book4
   m_TagString: Book
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2347,6 +2349,7 @@ MonoBehaviour:
   - {fileID: 1300367628}
   - {fileID: 232139237}
   - {fileID: 1640275383}
+  lockerButton: {fileID: 1713112473}
   leds: []
   correctPassword: 1234
   maxLength: 4
@@ -2584,7 +2587,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: book3
+  m_text: book4
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4167,7 +4170,7 @@ GameObject:
   - component: {fileID: 1124247829}
   - component: {fileID: 1124247828}
   m_Layer: 5
-  m_Name: Book2
+  m_Name: Book3
   m_TagString: Book
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4210,6 +4213,7 @@ MonoBehaviour:
   - {fileID: 1300367628}
   - {fileID: 232139237}
   - {fileID: 1640275383}
+  lockerButton: {fileID: 1713112473}
   leds: []
   correctPassword: 1234
   maxLength: 4
@@ -4965,7 +4969,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1334131918
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5699,7 +5703,7 @@ GameObject:
   - component: {fileID: 1522488349}
   - component: {fileID: 1522488348}
   m_Layer: 5
-  m_Name: Book4
+  m_Name: Book1
   m_TagString: Book
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5742,6 +5746,7 @@ MonoBehaviour:
   - {fileID: 1300367628}
   - {fileID: 232139237}
   - {fileID: 1640275383}
+  lockerButton: {fileID: 1713112473}
   leds: []
   correctPassword: 1234
   maxLength: 4
@@ -6152,8 +6157,8 @@ RectTransform:
   m_Children:
   - {fileID: 714264809}
   - {fileID: 1331979800}
-  - {fileID: 178825466}
   - {fileID: 1713112474}
+  - {fileID: 178825466}
   m_Father: {fileID: 1069863664}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6414,7 +6419,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: book2
+  m_text: book3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6529,8 +6534,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -546, y: -44.915}
-  m_SizeDelta: {x: 441.98, y: 273.83}
+  m_AnchoredPosition: {x: 522.99994, y: -58.000008}
+  m_SizeDelta: {x: 400, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1713112475
 MonoBehaviour:
@@ -6557,7 +6562,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -6571,7 +6576,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1713112476}
   m_OnClick:
     m_PersistentCalls:
@@ -6644,6 +6649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allSlots: []
+  lockerButton: {fileID: 1713112473}
   leds:
   - {fileID: 771702494}
   - {fileID: 996085331}
@@ -7212,7 +7218,7 @@ GameObject:
   - component: {fileID: 2072015126}
   - component: {fileID: 2072015125}
   m_Layer: 5
-  m_Name: Book1
+  m_Name: Book2
   m_TagString: Book
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7255,6 +7261,7 @@ MonoBehaviour:
   - {fileID: 1300367628}
   - {fileID: 232139237}
   - {fileID: 1640275383}
+  lockerButton: {fileID: 1713112473}
   leds: []
   correctPassword: 1234
   maxLength: 4
