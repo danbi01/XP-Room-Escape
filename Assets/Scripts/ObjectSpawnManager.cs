@@ -32,8 +32,6 @@ public class ObjectSpawnManager : MonoBehaviour
     //씬이 전환될 때마다 실행
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("scene 전환");
-
         //Canvas RenderCamera 설정
         foreach (GameObject _canvas in Canvases){
             Canvas canvas = _canvas.GetComponent<Canvas>();
@@ -78,7 +76,6 @@ public class ObjectSpawnManager : MonoBehaviour
                 // 인벤토리에 Key가 들어있으면
                 //if(InventoryManager.Instance.ItemList.Contains(Key)){
                 if(Canvases[1].transform.Find("Key(Clone)")){
-                    //@IsKeySpawned = true;
                     break;
                 }
                 else{
@@ -104,7 +101,6 @@ public class ObjectSpawnManager : MonoBehaviour
                 //if(InventoryManager.Instance.ItemList.Contains(Usb)){
                 if (Canvases[1].transform.Find("Usb(Clone)"))
                 {
-                    //@IsUsbSpawned = true;
                     break;
                 }
                 else
@@ -131,7 +127,6 @@ public class ObjectSpawnManager : MonoBehaviour
                 //if(InventoryManager.Instance.ItemList.Contains(TestPaper)){
                 if (InventoryManager.Instance.IsTestPaperInInventory)
                 {
-                    //@IsTestPaperSpawned = true;
                     break;
                 }
                 else

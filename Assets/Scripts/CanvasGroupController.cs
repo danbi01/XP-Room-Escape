@@ -55,7 +55,8 @@ public class CanvasGroupController : MonoBehaviour
         }
         //맨 처음에 메인캔버스 보여줌
         if(Canvases != null)
-        {
+        {   
+            Debug.Log("메인캔버스 보여줌");
             ShowCanvas(0);
         }
 

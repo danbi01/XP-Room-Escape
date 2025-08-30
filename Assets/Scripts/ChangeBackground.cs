@@ -2,39 +2,30 @@ using UnityEngine;
 
 public class ChangeBackground : MonoBehaviour
 {
-    public GameObject onebackground;
-    public GameObject twobackground;
-    public bool istwobackground = false;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject[] backgrounds = new GameObject[2];
+    public bool isTwoBackground = false;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    void Awake()
     {
         
     }
 
-    //¹è°æÀüÈ¯
-    public void BackGroundChanger()
+    //í† ê¸€
+    public void ToggleSwitch()
     {
-        //2¹øÂ° ¹è°æÈ­¸éÀÌ ²¨Á®ÀÖ´Â°æ¿ì
-        if (istwobackground == false)
-        {
-            onebackground.SetActive(false); //1¹ø ¹è°æÈ­¸éÀ» ²û
-            twobackground.SetActive(true);  //2¹ø ¹è°æÈ­¸éÀ» Å´
-            istwobackground = true; // »óÅÂ¸¦ true·Î º¯°æÇÏ°í 2¹ø ¹è°æÈ­¸éÀÓÀ» ±â·ÏÇÔ.
-        } 
-        
-        else
-        {
-            //¹İ´ë·Î 2¹ø ¹è°æÈ­¸éÀÌ ÄÑÁ®ÀÖ´Â °æ¿ì
-            onebackground.SetActive(true); //1¹ø ¹è°æÈ­¸éÀ» Å´
-            twobackground.SetActive(false); //2¹ø ¹è°æÈ­¸éÀ» ²û
-            istwobackground = false; // »óÅÂ¸¦ false·Î º¯°æÇÏ°í ²¨Á®ÀÖÀ½À» ±â·ÏÇÔ.
-        }
-        
+        isTwoBackground = !isTwoBackground;
+        BackGroundChanger(isTwoBackground);
+    }
+
+    //ë°°ê²½ ë°”ê¾¸ëŠ” í•¨ìˆ˜
+    public void BackGroundChanger(bool active)
+    {
+        backgrounds[0].SetActive(!active);
+        backgrounds[1].SetActive(active);
     }
 }
