@@ -6,7 +6,7 @@ public class ObjectSpawnManager : MonoBehaviour
     //아이템
     public GameObject Key, Usb, TestPaper;
     //부모 캔버스
-    public GameObject Canvas, OpendLocker;
+    public GameObject Canvas, OpenedLocker;
     //아이템 생성여부
     public bool IsKeySpawned, IsUsbSpawned, IsTestPaperSpawned;
     public GameObject ExitButton;
@@ -46,8 +46,8 @@ public class ObjectSpawnManager : MonoBehaviour
         Canvases[1] = GameObject.Find("InventoryCanvas");
 
         //EastWall에서 OpendLocker 찾기
-        if(OpendLocker==null && SwipeButton.Instance.CurrentWallNumber==1){
-            OpendLocker = GameObject.Find("2_LargeLocker").transform.GetChild(1).gameObject;
+        if(OpenedLocker==null && SwipeButton.Instance.CurrentWallNumber==1){
+            OpenedLocker = GameObject.Find("2_LargeLocker").transform.GetChild(1).gameObject;
         }
 
         //캔버스
@@ -83,7 +83,7 @@ public class ObjectSpawnManager : MonoBehaviour
                         Debug.Log("Key 생성");
                         GameObject keyObject = Instantiate(Key, transform.position, transform.rotation);
                         // UI오브젝트(버튼)는 항상 Canvas 하위로 설정
-                        keyObject.transform.SetParent(Canvas.transform);
+                        keyObject.transform.SetParent(GameObject.Find("1_LargePot").GetComponent<Canvas>().transform);
                         IsKeySpawned = true;
                     }
                 }
@@ -110,7 +110,7 @@ public class ObjectSpawnManager : MonoBehaviour
                         Debug.Log("Usb 생성");
                         GameObject usbObject = Instantiate(Usb, transform.position, transform.rotation);
                         // UI오브젝트(버튼)는 항상 Canvas 하위로 설정
-                        usbObject.transform.SetParent(Canvas.transform);
+                        usbObject.transform.SetParent(GameObject.Find("3_LargeDrawer").GetComponent<Canvas>().transform);
                         IsUsbSpawned = true;
                     }
                 }
@@ -136,7 +136,7 @@ public class ObjectSpawnManager : MonoBehaviour
                         Debug.Log("TestPaper 생성");
                         GameObject TestPaperObject = Instantiate(TestPaper, transform.position, transform.rotation);
                         // 시험지는 LargeLocker의 하위로 설정
-                        TestPaperObject.transform.SetParent(OpendLocker.transform);
+                        TestPaperObject.transform.SetParent(OpenedLocker.transform);
                         IsTestPaperSpawned = true;
                     }
                 }
