@@ -11,6 +11,7 @@ public class CanvasGroupController : MonoBehaviour
     public Button exitButton;
     public int exitIndex;
     public static CanvasGroupController Instance = null;
+    public Sprite[] switchImg = new Sprite[2];
     
     void Awake()
     {
@@ -61,12 +62,15 @@ public class CanvasGroupController : MonoBehaviour
         }
 
         //메인캔버스, west책상, east책장에 있는 버튼 클릭 연결
-        GameObject mainCanvas = GameObject.Find("0_MainCanvas");
-        GameObject deskCanvas = GameObject.Find("1_LargeDesk");
-        GameObject bookcaseCanvas = GameObject.Find("1_LargeBookCase");
-        List<GameObject> CanvasWithButtons = new List<GameObject>{
-            mainCanvas, deskCanvas, bookcaseCanvas
-        };
+        // GameObject mainCanvas = GameObject.Find("0_MainCanvas");
+        // GameObject deskCanvas = GameObject.Find("1_LargeDesk");
+        // GameObject bookcaseCanvas = GameObject.Find("1_LargeBookCase");
+        // List<GameObject> CanvasWithButtons = new List<GameObject>{
+        //     mainCanvas, deskCanvas, bookcaseCanvas
+        // };
+
+        GameObject CanvasParent = GameObject.Find("CanvasParent");
+        List<GameObject> CanvasWithButtons = new List<GameObject> {CanvasParent};
         List<Button> buttons = new List<Button>();
         foreach(GameObject cwb in CanvasWithButtons)
         {
@@ -83,18 +87,26 @@ public class CanvasGroupController : MonoBehaviour
             //버튼 이름을 _을 기준으로 구분함
             string[] split = btn.name.Split('_');
             //split[0]을 정수로 변환하여 targetIndex에 넣음
-            if(split.Length>0 && int.TryParse(split[0], out int targetIndex))
+            if (split.Length > 0 && int.TryParse(split[0], out int targetIndex))
             {
                 btn.onClick.AddListener(() =>
                 {
                     ShowCanvas(targetIndex);
                     exitIndex += 1;
                 });
-                
             }
             else
             {
                 //Debug.Log("변환 실패. 이름이 올바른지 확인.");
+                if (btn.name == "SwitchButton")
+                {
+                    btn.onClick.AddListener(() =>
+                    {
+                        Debug.Log(btn.gameObject);
+                        Image switchImage = btn.gameObject.GetComponent<Image>();
+                        switchImage.sprite = switchImage.sprite == switchImg[0] ? switchImg[1] : switchImg[0];
+                    });
+                }
             }
         }
     }
