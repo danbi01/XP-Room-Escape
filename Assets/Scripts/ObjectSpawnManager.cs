@@ -14,24 +14,35 @@ public class ObjectSpawnManager : MonoBehaviour
     public static ObjectSpawnManager Instance = null;
     void Start()
     {
-        IsKeySpawned = false;
-        //Canvas RenderCamera 설정
         
+    }
+
+    void Awake()
+    {   
+        if(Instance){
+            DestroyImmediate(this.gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(this.gameObject);
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    //씬이 전환될 때마다 실행
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("scene 전환");
+
+        //Canvas RenderCamera 설정
         foreach (GameObject _canvas in Canvases){
             Canvas canvas = _canvas.GetComponent<Canvas>();
             canvas.renderMode = RenderMode.ScreenSpaceCamera;
             canvas.worldCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         }
-    }
 
-    void Awake()
-    {   
-        if(Instance!=null){
-            DestroyImmediate(this.gameObject);
-            return;
-        }
-        Instance = this;
-        //DontDestroyOnLoad(this.gameObject);
+        //변수 값 초기화
+        IsKeySpawned = IsUsbSpawned = IsTestPaperSpawned = false;
         
         Canvases[0] = GameObject.Find("ButtonCanvas");
         Canvases[1] = GameObject.Find("InventoryCanvas");
@@ -67,7 +78,7 @@ public class ObjectSpawnManager : MonoBehaviour
                 // 인벤토리에 Key가 들어있으면
                 //if(InventoryManager.Instance.ItemList.Contains(Key)){
                 if(Canvases[1].transform.Find("Key(Clone)")){
-                    IsKeySpawned = true;
+                    //@IsKeySpawned = true;
                     break;
                 }
                 else{
@@ -93,7 +104,7 @@ public class ObjectSpawnManager : MonoBehaviour
                 //if(InventoryManager.Instance.ItemList.Contains(Usb)){
                 if (Canvases[1].transform.Find("Usb(Clone)"))
                 {
-                    IsUsbSpawned = true;
+                    //@IsUsbSpawned = true;
                     break;
                 }
                 else
@@ -120,7 +131,7 @@ public class ObjectSpawnManager : MonoBehaviour
                 //if(InventoryManager.Instance.ItemList.Contains(TestPaper)){
                 if (InventoryManager.Instance.IsTestPaperInInventory)
                 {
-                    IsTestPaperSpawned = true;
+                    //@IsTestPaperSpawned = true;
                     break;
                 }
                 else
@@ -136,6 +147,11 @@ public class ObjectSpawnManager : MonoBehaviour
                 }
                 break;
         }
+    }
+
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     public void CanvasSetActive(){
