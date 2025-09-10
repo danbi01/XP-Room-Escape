@@ -106,11 +106,13 @@ public class ObjectSpawnManager : MonoBehaviour
                 else
                 {
                     if (!IsUsbSpawned)
-                    {  // 키가 생성되지 않았을 때
+                    {  // usb가 생성되지 않았을 때
                         Debug.Log("Usb 생성");
                         GameObject usbObject = Instantiate(Usb, transform.position, transform.rotation);
-                        // UI오브젝트(버튼)는 항상 Canvas 하위로 설정
-                        usbObject.transform.SetParent(GameObject.Find("3_LargeDrawer").GetComponent<Canvas>().transform);
+                        // UI오브젝트(버튼)는 drawer_open 하위로 설정
+                        //usbObject.transform.SetParent(GameObject.Find("Drawer_Open").GetComponent<Canvas>().transform);
+                        usbObject.transform.SetParent(GameObject.Find("3_LargeDrawer").transform.GetChild(1));
+            
                         IsUsbSpawned = true;
                     }
                 }

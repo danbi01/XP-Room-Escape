@@ -37,11 +37,12 @@ public class CanvasGroupController : MonoBehaviour
         //정렬된 그룹을 리스트에 추가
         Canvases.AddRange(found);
 
-        exitIndex = 0;
+        //exitIndex = 0;
         //exit버튼 이벤트 초기화
-        exitButton.onClick.RemoveAllListeners();
+        //exitButton.onClick.RemoveAllListeners();
         //exit버튼 클릭 연결
         exitButton.onClick.AddListener(() =>{
+            Debug.Log("exit누름");
             if(exitIndex > 0)
             {
                 exitIndex -= 1;
@@ -91,8 +92,9 @@ public class CanvasGroupController : MonoBehaviour
             {
                 btn.onClick.AddListener(() =>
                 {
-                    ShowCanvas(targetIndex);
                     exitIndex += 1;
+                    ShowCanvas(targetIndex);
+                    
                 });
             }
             else
@@ -105,6 +107,19 @@ public class CanvasGroupController : MonoBehaviour
                         Debug.Log(btn.gameObject);
                         Image switchImage = btn.gameObject.GetComponent<Image>();
                         switchImage.sprite = switchImage.sprite == switchImg[0] ? switchImg[1] : switchImg[0];
+                    });
+                }
+                if(btn.name == "KeyHole")
+                {
+                    btn.onClick.AddListener(() =>
+                    {
+                        if(InventoryManager.Instance.IsKeyInInventory)
+                        {
+                            Destroy(ObjectSpawnManager.Instance.Key);
+                            ObjectSpawnManager.Instance.Key = null;
+                            GameObject.Find("3_LargeDrawer").transform.GetChild(1).gameObject.SetActive(true);
+                            GameObject.Find("3_LargeDrawer").transform.GetChild(0).gameObject.SetActive(false);
+                        }
                     });
                 }
             }
@@ -138,6 +153,7 @@ public class CanvasGroupController : MonoBehaviour
         {   
             ExitButtonActive(false);
         }
+        Debug.Log("exitIndex"+exitIndex);
     }
     
     void SetCanvasActive(CanvasGroup cg, bool active)
