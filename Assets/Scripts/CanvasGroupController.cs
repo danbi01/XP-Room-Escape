@@ -39,7 +39,7 @@ public class CanvasGroupController : MonoBehaviour
 
         //exitIndex = 0;
         //exit버튼 이벤트 초기화
-        //exitButton.onClick.RemoveAllListeners();
+        exitButton.onClick.RemoveAllListeners();
         //exit버튼 클릭 연결
         exitButton.onClick.AddListener(() =>{
             Debug.Log("exit누름");
@@ -49,7 +49,7 @@ public class CanvasGroupController : MonoBehaviour
             }
             ShowCanvas(exitIndex);
         });
-
+        
         //맨 처음에 exit버튼 비활성화
         if(exit != null)
         {
@@ -112,13 +112,14 @@ public class CanvasGroupController : MonoBehaviour
                 if(btn.name == "KeyHole")
                 {
                     btn.onClick.AddListener(() =>
-                    {
-                        if(InventoryManager.Instance.IsKeyInInventory)
+                    {//키를 갖고 있고 인벤토리를 눌러뒀을 경우
+                        if(InventoryManager.Instance.IsKeyInInventory && ItemManager.Instance.toggleInventory)
                         {
                             Destroy(ObjectSpawnManager.Instance.Key);
                             ObjectSpawnManager.Instance.Key = null;
                             GameObject.Find("3_LargeDrawer").transform.GetChild(1).gameObject.SetActive(true);
                             GameObject.Find("3_LargeDrawer").transform.GetChild(0).gameObject.SetActive(false);
+                            InventoryManager.Instance.IsKeyInInventory=false;
                         }
                     });
                 }
@@ -153,7 +154,7 @@ public class CanvasGroupController : MonoBehaviour
         {   
             ExitButtonActive(false);
         }
-        Debug.Log("exitIndex"+exitIndex);
+        
     }
     
     void SetCanvasActive(CanvasGroup cg, bool active)

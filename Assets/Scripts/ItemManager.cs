@@ -1,12 +1,16 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class ItemManager : MonoBehaviour
 {
     public GameObject InventoryManagerObject;
     public static ItemManager Instance = null;
+    GameObject obj;
+    public bool toggleInventory = false;
     void Start()
     {
         InventoryManagerObject = GameObject.Find("InventoryCanvas");
+        obj = GameObject.Find("Inventory");
     }
     void Awake()
     {
@@ -25,11 +29,11 @@ public class ItemManager : MonoBehaviour
     {
         if (InventoryManager.Instance.IsKeyInInventory)
         {
-            Debug.Log("이것은 열쇠다.");
+            InventoryOnClick();
         }
         else
         {
-            Debug.Log("add");
+            Debug.Log("key add");
             // 인벤토리 내 아이템 리스트에 추가
             InventoryManager.Instance.ItemList.Add(gameObject);
 
@@ -90,6 +94,20 @@ public class ItemManager : MonoBehaviour
         }
     }
 
+    public void InventoryOnClick()
+    {
+        Image inventorySlot = obj.GetComponent<Image>();
+        toggleInventory = !toggleInventory;
+        if(toggleInventory)
+        {
+            inventorySlot.color = Color.gray;
+        }
+        else
+        {
+            inventorySlot.color = Color.white;
+        }
+    }
+
     public void ComputerExitHandler()
     {
         Debug.Log("컴퓨터 씬 이탈");
@@ -99,4 +117,5 @@ public class ItemManager : MonoBehaviour
         SceneManager.LoadScene("WestWall");
 
     }
+
 }
