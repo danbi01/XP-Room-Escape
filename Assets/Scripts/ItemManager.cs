@@ -6,7 +6,7 @@ public class ItemManager : MonoBehaviour
     public GameObject InventoryManagerObject;
     public static ItemManager Instance = null;
     GameObject obj;
-    public bool toggleInventory = false;
+    
     void Start()
     {
         InventoryManagerObject = GameObject.Find("InventoryCanvas");
@@ -49,7 +49,7 @@ public class ItemManager : MonoBehaviour
             this.gameObject.transform.SetParent(InventoryManagerObject.transform);
             InventoryManager.Instance.IsKeyInInventory = true;
             Button keyButton = this.gameObject.GetComponent<Button>();
-            keyButton.interactable=false;
+            //keyButton.interactable=false;
         }    
     }
     // Usb 클릭 시 작동 메소드 
@@ -100,8 +100,8 @@ public class ItemManager : MonoBehaviour
     {
         Debug.Log("인벤토리 누름");
         Image inventorySlot = obj.GetComponent<Image>();
-        toggleInventory = !toggleInventory;
-        if(toggleInventory)
+        InventoryManager.Instance.toggleInventory = !InventoryManager.Instance.toggleInventory;
+        if(InventoryManager.Instance.toggleInventory)
         {
             inventorySlot.color = Color.gray;
         }

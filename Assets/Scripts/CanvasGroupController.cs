@@ -13,7 +13,7 @@ public class CanvasGroupController : MonoBehaviour
     public int exitIndex;
     public static CanvasGroupController Instance = null;
     public Sprite[] switchImg = new Sprite[2];
-    
+
     void Awake()
     {
         if(Instance){
@@ -116,7 +116,7 @@ public class CanvasGroupController : MonoBehaviour
                     {//키를 갖고 있고 인벤토리를 눌러뒀을 경우
                         if(InventoryManager.Instance.IsKeyInInventory)
                         {
-                            if(ItemManager.Instance.toggleInventory)
+                            if(InventoryManager.Instance.toggleInventory)
                             {
                                 RectTransform key = inventory.transform.GetChild(2).gameObject.GetComponent<RectTransform>();
                                 key.anchoredPosition = new Vector3(1300, 0, 0);
