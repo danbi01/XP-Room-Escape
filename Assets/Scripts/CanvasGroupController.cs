@@ -92,6 +92,7 @@ public class CanvasGroupController : MonoBehaviour
             {
                 btn.onClick.AddListener(() =>
                 {
+                    Debug.Log("ExitButton 초기화");
                     exitIndex += 1;
                     ShowCanvas(targetIndex);
                     
@@ -100,6 +101,7 @@ public class CanvasGroupController : MonoBehaviour
             else
             {
                 //Debug.Log("변환 실패. 이름이 올바른지 확인.");
+                //스위치 누르면 이미지 변경
                 if (btn.name == "SwitchButton")
                 {
                     btn.onClick.AddListener(() =>
