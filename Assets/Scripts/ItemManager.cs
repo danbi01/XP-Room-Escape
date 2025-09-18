@@ -48,6 +48,8 @@ public class ItemManager : MonoBehaviour
 
             this.gameObject.transform.SetParent(InventoryManagerObject.transform);
             InventoryManager.Instance.IsKeyInInventory = true;
+            Button keyButton = this.gameObject.GetComponent<Button>();
+            keyButton.interactable=false;
         }    
     }
     // Usb 클릭 시 작동 메소드 
@@ -55,7 +57,7 @@ public class ItemManager : MonoBehaviour
     {
         if (InventoryManager.Instance.IsUsbInInventory)
         {
-            Debug.Log("이것은 Usb다.");
+            InventoryOnClick();
         }
         else
         {
@@ -65,7 +67,7 @@ public class ItemManager : MonoBehaviour
 
             RectTransform UsbRect = gameObject.GetComponent<RectTransform>();
             // 인벤토리 인터페이스 내에 표시 (추후 리스트로 위치 저장해 사용?)
-            UsbRect.anchoredPosition = new Vector3(870, 450, 0);
+            UsbRect.anchoredPosition = new Vector3(910, 450, 0);
 
             //width가로
             UsbRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 146.6f);
@@ -96,6 +98,7 @@ public class ItemManager : MonoBehaviour
 
     public void InventoryOnClick()
     {
+        Debug.Log("인벤토리 누름");
         Image inventorySlot = obj.GetComponent<Image>();
         toggleInventory = !toggleInventory;
         if(toggleInventory)

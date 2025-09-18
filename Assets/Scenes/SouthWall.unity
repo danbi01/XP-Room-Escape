@@ -1213,6 +1213,7 @@ MonoBehaviour:
   exit: {fileID: 1180226041}
   left: {fileID: 837402251}
   right: {fileID: 689502102}
+  inventory: {fileID: 1811242320}
   exitButton: {fileID: 1180226043}
   exitIndex: 0
   switchImg:
