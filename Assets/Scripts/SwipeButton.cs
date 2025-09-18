@@ -25,6 +25,8 @@ public class SwipeButton : MonoBehaviour
     // 왼쪽 화살표 버튼 눌렀을 때
     public void LeftButtonClickHandler()
     {
+        GameManager.instance.sceneStateManager.SaveSceneState();
+        Debug.Log("SaveSceneState");
         CurrentWallNumber -= 1;
         if (CurrentWallNumber < 0)
         {
@@ -36,6 +38,8 @@ public class SwipeButton : MonoBehaviour
     // 오른쪽 화살표 버튼 눌렀을 때
     public void RightButtonClickHandler()
     {
+        GameManager.instance.sceneStateManager.SaveSceneState();
+        Debug.Log("SaveSceneState");
         CurrentWallNumber += 1;
         if(CurrentWallNumber > 3){
             CurrentWallNumber = 0;

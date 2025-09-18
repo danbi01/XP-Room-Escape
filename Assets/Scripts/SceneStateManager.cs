@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SceneStateManager : MonoBehaviour
 {
-    private static Dictionary<string, bool> savedStates;
+    private static Dictionary<string, Dictionary<string, bool>> savedStates
+        = new Dictionary<string, Dictionary<string, bool>>();
 
     [SerializeField] private bool manageThisScene = true;
 
@@ -20,39 +21,45 @@ public class SceneStateManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "Computer")
-        {
-            RestoreSceneState();
-        }
+        RestoreSceneState(scene.name);
     }
 
-    public void SaveSceneState()
+    public void SaveSceneState(string sceneName = null)
     {
-        if (!manageThisScene) return;
+        if (sceneName == null)
+            sceneName = SceneManager.GetActiveScene().name;
 
-        savedStates = new Dictionary<string, bool>();
+        var state = new Dictionary<string, bool>();
         var objs = FindObjectsOfType<GameObject>(true);
 
         foreach (var obj in objs)
         {
             string path = GetFullPath(obj.transform);
-            savedStates[path] = obj.activeSelf;
-            Debug.Log("saving " + path + " as... " + obj.activeSelf);
+            state[path] = obj.activeSelf;
+            // Debug.Log($"[Save] {sceneName} :: {path} = {obj.activeSelf}");
         }
+
+        savedStates[sceneName] = state;
     }
 
-    public void RestoreSceneState()
+    public void RestoreSceneState(string sceneName = null)
     {
-        if (!manageThisScene || savedStates == null) return;
+        if (sceneName == null)
+            sceneName = SceneManager.GetActiveScene().name;
 
+        if (!savedStates.ContainsKey(sceneName))
+            return;
+
+        var state = savedStates[sceneName];
         var objs = FindObjectsOfType<GameObject>(true);
+
         foreach (var obj in objs)
         {
             string path = GetFullPath(obj.transform);
-            if (savedStates.ContainsKey(path))
+            if (state.ContainsKey(path))
             {
-                obj.SetActive(savedStates[path]);
-                Debug.Log("restoring "+path + " as... " + savedStates[path]);
+                obj.SetActive(state[path]);
+                // Debug.Log($"[Restore] {sceneName} :: {path} = {state[path]}");
             }
         }
     }

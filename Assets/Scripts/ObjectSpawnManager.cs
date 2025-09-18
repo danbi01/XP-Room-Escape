@@ -41,9 +41,12 @@ public class ObjectSpawnManager : MonoBehaviour
 
         //변수 값 초기화
         IsKeySpawned = IsUsbSpawned = IsTestPaperSpawned = false;
-        
-        Canvases[0] = GameObject.Find("ButtonCanvas");
-        Canvases[1] = GameObject.Find("InventoryCanvas");
+
+        if (SceneManager.GetActiveScene().name!="Computer")
+        {
+            Canvases[0] = GameObject.Find("ButtonCanvas");
+            Canvases[1] = GameObject.Find("InventoryCanvas");
+        }
 
         //EastWall에서 OpendLocker 찾기
         if(OpenedLocker==null && SwipeButton.Instance.CurrentWallNumber==1){
