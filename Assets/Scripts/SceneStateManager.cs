@@ -22,7 +22,6 @@ public class SceneStateManager : MonoBehaviour
     {
         if (scene.name == "Computer")
         {
-            Debug.Log("Restoring scene state for Computer scene");
             RestoreSceneState();
         }
     }
@@ -32,12 +31,13 @@ public class SceneStateManager : MonoBehaviour
         if (!manageThisScene) return;
 
         savedStates = new Dictionary<string, bool>();
-        var objs = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
+        var objs = FindObjectsOfType<GameObject>(true);
 
         foreach (var obj in objs)
         {
             string path = GetFullPath(obj.transform);
             savedStates[path] = obj.activeSelf;
+            Debug.Log("saving " + path + " as... " + obj.activeSelf);
         }
     }
 
@@ -45,14 +45,16 @@ public class SceneStateManager : MonoBehaviour
     {
         if (!manageThisScene || savedStates == null) return;
 
-        var objs = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
+        var objs = FindObjectsOfType<GameObject>(true);
         foreach (var obj in objs)
         {
             string path = GetFullPath(obj.transform);
             if (savedStates.ContainsKey(path))
+            {
                 obj.SetActive(savedStates[path]);
+                Debug.Log("restoring "+path + " as... " + savedStates[path]);
+            }
         }
-        Debug.Log("RestoreSceneState 실행됨");
     }
 
     private string GetFullPath(Transform t)
