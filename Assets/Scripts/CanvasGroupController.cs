@@ -7,12 +7,13 @@ public class CanvasGroupController : MonoBehaviour
 {
     //index0은 MainCanvas
     public List<CanvasGroup> Canvases = new List<CanvasGroup>();
-    public GameObject exit, left, right; 
+    public GameObject exit, left, right;
+    public GameObject inventory;
     public Button exitButton;
     public int exitIndex;
     public static CanvasGroupController Instance = null;
     public Sprite[] switchImg = new Sprite[2];
-    
+
     void Awake()
     {
         if(Instance){
@@ -39,7 +40,7 @@ public class CanvasGroupController : MonoBehaviour
 
         //exitIndex = 0;
         //exit버튼 이벤트 초기화
-        //exitButton.onClick.RemoveAllListeners();
+        exitButton.onClick.RemoveAllListeners();
         //exit버튼 클릭 연결
         exitButton.onClick.AddListener(() =>{
             Debug.Log("exit누름");
@@ -49,7 +50,7 @@ public class CanvasGroupController : MonoBehaviour
             }
             ShowCanvas(exitIndex);
         });
-
+        
         //맨 처음에 exit버튼 비활성화
         if(exit != null)
         {
@@ -92,7 +93,6 @@ public class CanvasGroupController : MonoBehaviour
             {
                 btn.onClick.AddListener(() =>
                 {
-                    Debug.Log("ExitButton 초기화");
                     exitIndex += 1;
                     ShowCanvas(targetIndex);
                     
@@ -100,7 +100,6 @@ public class CanvasGroupController : MonoBehaviour
             }
             else
             {
-                //Debug.Log("변환 실패. 이름이 올바른지 확인.");
                 //스위치 누르면 이미지 변경
                 if (btn.name == "SwitchButton")
                 {
@@ -114,13 +113,28 @@ public class CanvasGroupController : MonoBehaviour
                 if(btn.name == "KeyHole")
                 {
                     btn.onClick.AddListener(() =>
-                    {
+                    {//키를 갖고 있고 인벤토리를 눌러뒀을 경우
                         if(InventoryManager.Instance.IsKeyInInventory)
                         {
-                            Destroy(ObjectSpawnManager.Instance.Key);
-                            ObjectSpawnManager.Instance.Key = null;
-                            GameObject.Find("3_LargeDrawer").transform.GetChild(1).gameObject.SetActive(true);
-                            GameObject.Find("3_LargeDrawer").transform.GetChild(0).gameObject.SetActive(false);
+                            if(InventoryManager.Instance.toggleInventory)
+                            {
+                                RectTransform key = inventory.transform.GetChild(2).gameObject.GetComponent<RectTransform>();
+                                key.anchoredPosition = new Vector3(1300, 0, 0);
+                                //Drawer_Closed 비활성화 Open활성화
+                                GameObject.Find("3_LargeDrawer").transform.GetChild(1).gameObject.SetActive(true);
+                                GameObject.Find("3_LargeDrawer").transform.GetChild(0).gameObject.SetActive(false);
+                                InventoryManager.Instance.IsKeyInInventory=false;
+                                ItemManager.Instance.InventoryOnClick();
+                            }
+                            else
+                            {
+                                Debug.Log("인벤토리를 눌러 아이템 활성화");
+                            }
+                            
+                        }
+                        else
+                        {
+                            Debug.Log("열쇠가 필요하다");
                         }
                     });
                 }
@@ -155,7 +169,7 @@ public class CanvasGroupController : MonoBehaviour
         {   
             ExitButtonActive(false);
         }
-        Debug.Log("exitIndex"+exitIndex);
+        
     }
     
     void SetCanvasActive(CanvasGroup cg, bool active)

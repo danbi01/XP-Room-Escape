@@ -8,7 +8,8 @@ public class InventoryManager : MonoBehaviour
     public bool IsKeyInInventory = false, IsUsbInInventory = false, IsTestPaperInInventory = false;
     // 현재 인벤토리에 있는 아이템 리스트
     public List<GameObject> ItemList = new List<GameObject>(); 
-    
+    public bool toggleInventory = false;
+
     void Awake()
     {
         if(Instance){
