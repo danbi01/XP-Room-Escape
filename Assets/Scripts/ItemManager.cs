@@ -48,8 +48,6 @@ public class ItemManager : MonoBehaviour
 
             this.gameObject.transform.SetParent(InventoryManagerObject.transform);
             InventoryManager.Instance.IsKeyInInventory = true;
-            Button keyButton = this.gameObject.GetComponent<Button>();
-            //keyButton.interactable=false;
         }    
     }
     // Usb 클릭 시 작동 메소드 

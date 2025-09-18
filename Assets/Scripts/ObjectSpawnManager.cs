@@ -105,7 +105,7 @@ public class ObjectSpawnManager : MonoBehaviour
                 }
                 else
                 {
-                    if (!IsUsbSpawned)
+                    if (!IsUsbSpawned && !CanvasGroupController.Instance.usbConnected)
                     {  // usb가 생성되지 않았을 때
                         Debug.Log("Usb 생성");
                         GameObject usbObject = Instantiate(Usb, transform.position, transform.rotation);

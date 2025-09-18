@@ -13,6 +13,7 @@ public class CanvasGroupController : MonoBehaviour
     public int exitIndex;
     public static CanvasGroupController Instance = null;
     public Sprite[] switchImg = new Sprite[2];
+    public bool usbConnected = false;
 
     void Awake()
     {
@@ -136,6 +137,34 @@ public class CanvasGroupController : MonoBehaviour
                         {
                             Debug.Log("열쇠가 필요하다");
                         }
+                    });
+                }
+                if(btn.name == "UsbPort")
+                {
+                    btn.onClick.AddListener(() =>
+                    {//usb를 갖고 있고 인벤토리를 눌러뒀을 경우
+                        if(InventoryManager.Instance.IsUsbInInventory)
+                        {
+                            if(InventoryManager.Instance.toggleInventory)
+                            {
+                                GameObject usbObject = inventory.transform.GetChild(3).gameObject;
+                                RectTransform Usb = usbObject.gameObject.GetComponent<RectTransform>();
+                                Usb.anchoredPosition = new Vector3(-50, 200, 0);
+                                usbObject.transform.SetParent(GameObject.Find("2_LargeComputerCase").transform);
+                                InventoryManager.Instance.IsUsbInInventory=false;
+                                usbConnected = true;
+                                ItemManager.Instance.InventoryOnClick();
+                            }
+                            else
+                            {
+                                Debug.Log("인벤토리를 눌러 아이템 활성화");
+                            }
+                        }
+                        else
+                        {
+                            Debug.Log("usb가 필요하다");
+                        }
+
                     });
                 }
             }
