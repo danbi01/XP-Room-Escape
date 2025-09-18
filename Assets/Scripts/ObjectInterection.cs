@@ -1,6 +1,8 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using System.Collections;
 using System.Collections.Generic;
 
 public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
@@ -8,10 +10,10 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
     #region BookDrag
     //책 드래그 기능 코드
     public List<Transform> allSlots = new List<Transform>();
+    public GameObject lockerButton;
     private Transform originalSlot;
     private Transform canvasRoot;
-    //드래그 중 우선 렌더용
-    //private Canvas overrideCanvas;
+    public static ObjectInterection Instance = null;
 
     void Start()
     {
@@ -91,6 +93,18 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
                 transform.localPosition = Vector3.zero;
             }
         }
+        
+        //정답이라면
+        if(IsPuzzleSolved(allSlots))
+        {
+            Debug.Log("퍼즐 완료");
+            //locker버튼 활성화
+            lockerButton.GetComponent<Button>().interactable = true;
+            lockerButton.transform.GetChild(0).gameObject.SetActive(true);
+
+            //책 비활성화
+            lockerButton.transform.parent.Find("Books").gameObject.SetActive(false);
+        }
     }
 
     //빈 슬롯을 찾는 함수
@@ -120,14 +134,114 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
         }
         return null;
     }
+
+    //정답인지 확인하는 함수
+    bool IsPuzzleSolved(List<Transform> slots)
+    {
+        foreach(Transform slot in slots)
+        {
+            Transform book = slot.GetChild(0);
+            int slotNum = GetLastNumber(slot.name);
+            int bookNum = GetLastNumber(book.name);
+            //하나라도 다르면 틀림
+            if(slotNum != bookNum) return false;
+        }
+        //모두 일치함
+        return true;
+    }
+
+    //마지막 숫자 추출하는 함수
+    int GetLastNumber(string name)
+    {
+        string numberStr = "";
+        for(int i=name.Length-1; i>=0; i--)
+        {
+            if(char.IsDigit(name[i]))
+                numberStr = name[i] + numberStr;
+            else
+                break;
+        }
+        return numberStr == ""? -1 : int.Parse(numberStr);
+    }
+
     //책 드래그 끝
     #endregion
 
-    void Update()
+    #region LockerInputPassword
+    //금고 비밀번호 입력 기능 코드
+    public Image[] leds; 
+    private string input = "";
+    public string correctPassword = "1234";
+    public int maxLength = 4;
+    public Color ledOnColor = Color.green;
+    public Color ledOffColor = Color.black;
+    public Color errorColor = Color.red;
+
+    //비밀번호 입력 함수
+    public void OnNumberPress(string number)
     {
-        
+        if(input.Length < maxLength)
+        {
+            input += number;
+            leds[input.Length - 1].color = ledOnColor;
+            //4개 입력 시 정답인지 확인함
+            if(input.Length == maxLength)
+            {
+                StartCoroutine(CheckPassword());
+            }
+        }
     }
 
+    IEnumerator CheckPassword()
+    {
+        //0.3초 딜레이
+        yield return new WaitForSeconds(0.3f);
+        if(input == correctPassword)
+        {
+            Debug.Log("잠금 해제");
+            for(int i=1; i<4; i++)
+            {
+                foreach(var led in leds)
+                {
+                    if(i%2!=0)
+                        led.color = ledOffColor;
+                    else
+                        led.color = ledOnColor;
+                }
+                yield return new WaitForSeconds(0.3f);
+            }
+            //OpendLocker활성화, ClosedLocker비활성화
+            GameObject.Find("2_LargeLocker").transform.GetChild(1).gameObject.SetActive(true);
+            GameObject.Find("2_LargeLocker").transform.GetChild(0).gameObject.SetActive(false);
+        }
+        else
+        {
+            Debug.Log("틀림");
+            //빨검빨검
+            for(int i=1; i<5; i++)
+            {
+                foreach(var led in leds)
+                {
+                    if(i%2!=0)
+                        led.color = errorColor;
+                    else
+                        led.color = ledOffColor;
+                }
+                yield return new WaitForSeconds(0.3f);
+            }
+            ResetLeds();
+        }
+        input = "";
+    }
+
+    void ResetLeds()
+    {
+        foreach(var led in leds)
+            led.color = ledOffColor;
+    }
+
+    #endregion
+    
     public void ComputerClickHandler()
     {
         Debug.Log("computer 클릭");
