@@ -1,5 +1,7 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class CanvasGroupController : MonoBehaviour
 {
@@ -61,13 +63,7 @@ public class CanvasGroupController : MonoBehaviour
             ShowCanvas(0);
         }
 
-        //메인캔버스, west책상, east책장에 있는 버튼 클릭 연결
-        // GameObject mainCanvas = GameObject.Find("0_MainCanvas");
-        // GameObject deskCanvas = GameObject.Find("1_LargeDesk");
-        // GameObject bookcaseCanvas = GameObject.Find("1_LargeBookCase");
-        // List<GameObject> CanvasWithButtons = new List<GameObject>{
-        //     mainCanvas, deskCanvas, bookcaseCanvas
-        // };
+        //버튼 클릭 연결
 
         GameObject CanvasParent = GameObject.Find("CanvasParent");
         List<GameObject> CanvasWithButtons = new List<GameObject> {CanvasParent};
@@ -175,15 +171,28 @@ public class CanvasGroupController : MonoBehaviour
     }
 
     void Start()
-    {
-        ShowCanvas(0);
+    {   
+        
     }
+
+    //캔버스 보여주는 함수
     public void ShowCanvas(int indexToShow)
     {
         for(int i=0; i<Canvases.Count; i++)
         {
             SetCanvasActive(Canvases[i], i == indexToShow);
         }
+
+        //Exit버튼 활성화 여부
+        if(indexToShow != 0)
+        {   
+            ExitButtonActive(true);
+        }
+        else
+        {   
+            ExitButtonActive(false);
+        }
+        
     }
     
     void SetCanvasActive(CanvasGroup cg, bool active)
@@ -192,4 +201,15 @@ public class CanvasGroupController : MonoBehaviour
         cg.interactable = active;
         cg.blocksRaycasts = active;
     }
+
+    //Exit버튼 활성화하는 함수
+    void ExitButtonActive(bool active)
+    {
+        if (SceneManager.GetActiveScene().name == "Computer") return;
+        GameObject.Find("ButtonCanvas").transform.GetChild(2).gameObject.SetActive(active); //exit
+        GameObject.Find("ButtonCanvas").transform.GetChild(0).gameObject.SetActive(!active); //left
+        GameObject.Find("ButtonCanvas").transform.GetChild(1).gameObject.SetActive(!active); //right
+    }
+    
+
 }

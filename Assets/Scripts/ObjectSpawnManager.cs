@@ -6,7 +6,7 @@ public class ObjectSpawnManager : MonoBehaviour
     //아이템
     public GameObject Key, Usb, TestPaper;
     //부모 캔버스
-    public GameObject Canvas, LargeBookCase;
+    public GameObject Canvas, OpenedLocker;
     //아이템 생성여부
     public bool IsKeySpawned, IsUsbSpawned, IsTestPaperSpawned;
     public GameObject ExitButton;
@@ -14,15 +14,30 @@ public class ObjectSpawnManager : MonoBehaviour
     public static ObjectSpawnManager Instance = null;
     void Start()
     {
-        IsKeySpawned = false;
-        //Canvas RenderCamera 설정
         
+    }
+
+    void Awake()
+    {   
+        if(Instance){
+            DestroyImmediate(this.gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(this.gameObject);
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    //씬이 전환될 때마다 실행
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        //Canvas RenderCamera 설정
         foreach (GameObject _canvas in Canvases){
             Canvas canvas = _canvas.GetComponent<Canvas>();
             canvas.renderMode = RenderMode.ScreenSpaceCamera;
             canvas.worldCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         }
-    }
 
         //변수 값 초기화
         IsKeySpawned = IsUsbSpawned = IsTestPaperSpawned = false;
@@ -37,11 +52,6 @@ public class ObjectSpawnManager : MonoBehaviour
         if(OpenedLocker==null && SwipeButton.Instance.CurrentWallNumber==1){
             OpenedLocker = GameObject.Find("2_SafeExpanded").transform.GetChild(1).gameObject;
         }
-        Instance = this;
-        //DontDestroyOnLoad(this.gameObject);
-        
-        Canvases[0] = GameObject.Find("ButtonCanvas");
-        Canvases[1] = GameObject.Find("InventoryCanvas");
 
         //캔버스
         if(Canvas==null){
@@ -65,11 +75,10 @@ public class ObjectSpawnManager : MonoBehaviour
         switch(SceneManager.GetActiveScene().name){ 
             case "SouthWall": // SouthWall일 때
             
-                Debug.Log(InventoryManager.Instance.ItemList.Contains(Usb));
-                // 인벤토리에 Usb가 들어있으면
-                //if(InventoryManager.Instance.ItemList.Contains(Usb)){
-                if(GameObject.Find("InventoryCanvas").transform.Find("Usb(Clone)")){
-                    IsUsbSpawned = true;
+                //Debug.Log(InventoryManager.Instance.ItemList.Contains(Key));
+                // 인벤토리에 Key가 들어있으면
+                //if(InventoryManager.Instance.ItemList.Contains(Key)){
+                if(Canvases[1].transform.Find("Key(Clone)")){
                     break;
                 }
                 else{
@@ -85,17 +94,16 @@ public class ObjectSpawnManager : MonoBehaviour
             
         }
 
-        //Key 생성
+        //Usb 생성
         switch (SceneManager.GetActiveScene().name)
         {
             case "WestWall": // WestWall일 때
 
-                Debug.Log(InventoryManager.Instance.ItemList.Contains(Key));
-                // 인벤토리에 Key가 들어있으면
-                //if(InventoryManager.Instance.ItemList.Contains(Key)){
-                if (GameObject.Find("InventoryCanvas").transform.Find("Key(Clone)"))
+                //Debug.Log(InventoryManager.Instance.ItemList.Contains(Usb));
+                // 인벤토리에 Usb가 들어있으면
+                //if(InventoryManager.Instance.ItemList.Contains(Usb)){
+                if (Canvases[1].transform.Find("Usb(Clone)"))
                 {
-                    IsKeySpawned = true;
                     break;
                 }
                 else
@@ -122,9 +130,8 @@ public class ObjectSpawnManager : MonoBehaviour
 
                 // 인벤토리에 TestPaper가 들어있으면
                 //if(InventoryManager.Instance.ItemList.Contains(TestPaper)){
-                if (ItemManager.Instance.IsTestPaperInInventory)
+                if (InventoryManager.Instance.IsTestPaperInInventory)
                 {
-                    IsTestPaperSpawned = true;
                     break;
                 }
                 else
@@ -133,8 +140,8 @@ public class ObjectSpawnManager : MonoBehaviour
                     {  // 시험지가 생성되지 않았을 때
                         Debug.Log("TestPaper 생성");
                         GameObject TestPaperObject = Instantiate(TestPaper, transform.position, transform.rotation);
-                        // 시험지는 LargeBookCase의 하위로 설정
-                        TestPaperObject.transform.SetParent(LargeBookCase.transform);
+                        // 시험지는 LargeLocker의 하위로 설정
+                        TestPaperObject.transform.SetParent(OpenedLocker.transform);
                         IsTestPaperSpawned = true;
                     }
                 }
@@ -142,8 +149,12 @@ public class ObjectSpawnManager : MonoBehaviour
         }
     }
 
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
     public void CanvasSetActive(){
-        Debug.Log(GameObject.Find("InventoryManager").transform.GetChild(0));
         GameObject.Find("ButtonManager").transform.GetChild(0).gameObject.SetActive(true);
         GameObject.Find("InventoryManager").transform.GetChild(0).gameObject.SetActive(true);
     }
