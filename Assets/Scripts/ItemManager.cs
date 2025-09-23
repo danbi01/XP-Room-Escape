@@ -38,8 +38,18 @@ public class ItemManager : MonoBehaviour
             InventoryManager.Instance.ItemList.Add(gameObject);
 
             RectTransform keyRect = gameObject.GetComponent<RectTransform>();
+            Button keyButtonComponent = gameObject.GetComponent<Button>();
             // 인벤토리 인터페이스 내에 표시
             keyRect.anchoredPosition = new Vector3(870, 450, 0);
+
+            //알파 1로 수정
+            ColorBlock cb = keyButtonComponent.colors;
+            cb.normalColor = FixAlpha(cb.normalColor);
+            cb.highlightedColor = FixAlpha(cb.highlightedColor);
+            cb.pressedColor = FixAlpha(cb.pressedColor);
+            cb.selectedColor = FixAlpha(cb.selectedColor);
+            cb.disabledColor = FixAlpha(cb.disabledColor);
+            keyButtonComponent.colors = cb;
 
             //width가로
             keyRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 114.2f);
@@ -48,6 +58,9 @@ public class ItemManager : MonoBehaviour
 
             this.gameObject.transform.SetParent(InventoryManagerObject.transform);
             InventoryManager.Instance.IsKeyInInventory = true;
+            //키 없는 화분 활성화
+            GameObject.Find("1_PotExpanded").transform.GetChild(1).gameObject.SetActive(true);
+            GameObject.Find("1_PotExpanded").transform.GetChild(0).gameObject.SetActive(false);
         }    
     }
     // Usb 클릭 시 작동 메소드 
@@ -97,10 +110,10 @@ public class ItemManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    
+    //인벤토리 토글
     public void InventoryOnClick()
     {
-        Debug.Log("인벤토리 누름");
         Image inventorySlot = obj.GetComponent<Image>();
         InventoryManager.Instance.toggleInventory = !InventoryManager.Instance.toggleInventory;
         if(InventoryManager.Instance.toggleInventory)
@@ -112,6 +125,14 @@ public class ItemManager : MonoBehaviour
             inventorySlot.color = Color.white;
         }
     }
+
+    private Color FixAlpha(Color c)
+    {
+        if (c.a == 0f)
+            c.a = 1f;  // 1 = 255
+        return c;
+    }
+
 
     public void ComputerExitHandler()
     {
