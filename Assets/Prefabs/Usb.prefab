@@ -37,7 +37,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -248, y: 0}
-  m_SizeDelta: {x: 728, y: 574}
+  m_SizeDelta: {x: 728, y: 575}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4206331146678033459
 CanvasRenderer:
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8909960197485554810, guid: ba2a0d01d40a76146a19e9f4fce32446, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ba2a0d01d40a76146a19e9f4fce32446, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -146,6 +146,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InventoryManagerObject: {fileID: 0}
-  IsKeyInInventory: 0
-  IsUsbInInventory: 0
-  IsTestPaperInInventory: 0

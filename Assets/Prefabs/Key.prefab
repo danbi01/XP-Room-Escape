@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1694913177206695654, guid: dc58df268e1513445a89d35196c07ad3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dc58df268e1513445a89d35196c07ad3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -146,4 +146,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InventoryManagerObject: {fileID: 0}
-  toggleInventory: 0
