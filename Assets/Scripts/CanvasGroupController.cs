@@ -1,7 +1,5 @@
 using UnityEngine;
-using UnityEngine.UI;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 
 public class CanvasGroupController : MonoBehaviour
 {
@@ -176,28 +174,15 @@ public class CanvasGroupController : MonoBehaviour
     }
 
     void Start()
-    {   
-        
+    {
+        ShowCanvas(0);
     }
-
-    //캔버스 보여주는 함수
     public void ShowCanvas(int indexToShow)
     {
         for(int i=0; i<Canvases.Count; i++)
         {
             SetCanvasActive(Canvases[i], i == indexToShow);
         }
-
-        //Exit버튼 활성화 여부
-        if(indexToShow != 0)
-        {   
-            ExitButtonActive(true);
-        }
-        else
-        {   
-            ExitButtonActive(false);
-        }
-        
     }
     
     void SetCanvasActive(CanvasGroup cg, bool active)
@@ -206,15 +191,4 @@ public class CanvasGroupController : MonoBehaviour
         cg.interactable = active;
         cg.blocksRaycasts = active;
     }
-
-    //Exit버튼 활성화하는 함수
-    void ExitButtonActive(bool active)
-    {
-        if (SceneManager.GetActiveScene().name == "Computer") return;
-        GameObject.Find("ButtonCanvas").transform.GetChild(2).gameObject.SetActive(active); //exit
-        GameObject.Find("ButtonCanvas").transform.GetChild(0).gameObject.SetActive(!active); //left
-        GameObject.Find("ButtonCanvas").transform.GetChild(1).gameObject.SetActive(!active); //right
-    }
-    
-
 }

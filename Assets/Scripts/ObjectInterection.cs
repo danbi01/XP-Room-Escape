@@ -1,8 +1,6 @@
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
-using System.Collections;
 using System.Collections.Generic;
 
 public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
@@ -10,10 +8,10 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
     #region BookDrag
     //책 드래그 기능 코드
     public List<Transform> allSlots = new List<Transform>();
-    public GameObject lockerButton;
     private Transform originalSlot;
     private Transform canvasRoot;
-    public static ObjectInterection Instance = null;
+    //드래그 중 우선 렌더용
+    //private Canvas overrideCanvas;
 
     void Start()
     {
@@ -134,62 +132,12 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
         }
         return null;
     }
-
-    //정답인지 확인하는 함수
-    bool IsPuzzleSolved(List<Transform> slots)
-    {
-        foreach(Transform slot in slots)
-        {
-            Transform book = slot.GetChild(0);
-            int slotNum = GetLastNumber(slot.name);
-            int bookNum = GetLastNumber(book.name);
-            //하나라도 다르면 틀림
-            if(slotNum != bookNum) return false;
-        }
-        //모두 일치함
-        return true;
-    }
-
-    //마지막 숫자 추출하는 함수
-    int GetLastNumber(string name)
-    {
-        string numberStr = "";
-        for(int i=name.Length-1; i>=0; i--)
-        {
-            if(char.IsDigit(name[i]))
-                numberStr = name[i] + numberStr;
-            else
-                break;
-        }
-        return numberStr == ""? -1 : int.Parse(numberStr);
-    }
-
     //책 드래그 끝
     #endregion
 
-    #region LockerInputPassword
-    //금고 비밀번호 입력 기능 코드
-    public Image[] leds; 
-    private string input = "";
-    public string correctPassword = "1234";
-    public int maxLength = 4;
-    public Color ledOnColor = Color.green;
-    public Color ledOffColor = Color.black;
-    public Color errorColor = Color.red;
-
-    //비밀번호 입력 함수
-    public void OnNumberPress(string number)
+    void Update()
     {
-        if(input.Length < maxLength)
-        {
-            input += number;
-            leds[input.Length - 1].color = ledOnColor;
-            //4개 입력 시 정답인지 확인함
-            if(input.Length == maxLength)
-            {
-                StartCoroutine(CheckPassword());
-            }
-        }
+        
     }
 
     IEnumerator CheckPassword()
