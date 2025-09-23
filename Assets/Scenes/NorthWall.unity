@@ -720,6 +720,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: -3606638591618280860, guid: 9604b10cca6016542b89bf13293a5fb7, type: 3}
+  m_Sprite: {fileID: -3606638591618280860, guid: 9604b10cca6016542b89bf13293a5fb7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1040,6 +1041,7 @@ RectTransform:
   m_Children:
   - {fileID: 200665933}
   - {fileID: 1161714272}
+  - {fileID: 1161714272}
   m_Father: {fileID: 2120730470}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1357,6 +1359,7 @@ RectTransform:
   - {fileID: 603598160}
   - {fileID: 1651639688}
   - {fileID: 1340546106}
+  - {fileID: 851670897}
   - {fileID: 851670897}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

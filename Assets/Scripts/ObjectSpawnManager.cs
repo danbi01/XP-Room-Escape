@@ -84,7 +84,7 @@ public class ObjectSpawnManager : MonoBehaviour
                 else{
                     if(!IsKeySpawned){  // 키가 생성되지 않았을 때
                         Debug.Log("Key 생성");
-                        GameObject keyObject = Instantiate(Key, transform.position, transform.rotation);
+                        GameObject keyObject = Instantiate(Key, transform.position+new Vector3(4.2f, -0.5f, 0f), transform.rotation);
                         // UI오브젝트(버튼)는 항상 Canvas 하위로 설정
                         keyObject.transform.SetParent(GameObject.Find("1_PotExpanded").GetComponent<Canvas>().transform);
                         IsKeySpawned = true;
