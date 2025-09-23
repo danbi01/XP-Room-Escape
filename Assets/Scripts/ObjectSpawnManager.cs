@@ -50,7 +50,7 @@ public class ObjectSpawnManager : MonoBehaviour
 
         //EastWall에서 OpendLocker 찾기
         if(OpenedLocker==null && SwipeButton.Instance.CurrentWallNumber==1){
-            OpenedLocker = GameObject.Find("2_LargeLocker").transform.GetChild(1).gameObject;
+            OpenedLocker = GameObject.Find("2_SafeExpanded").transform.GetChild(1).gameObject;
         }
 
         //캔버스
@@ -70,7 +70,7 @@ public class ObjectSpawnManager : MonoBehaviour
         else{
 
         }
-
+        
         //Key 생성
         switch(SceneManager.GetActiveScene().name){ 
             case "SouthWall": // SouthWall일 때
@@ -84,9 +84,9 @@ public class ObjectSpawnManager : MonoBehaviour
                 else{
                     if(!IsKeySpawned){  // 키가 생성되지 않았을 때
                         Debug.Log("Key 생성");
-                        GameObject keyObject = Instantiate(Key, transform.position, transform.rotation);
+                        GameObject keyObject = Instantiate(Key, transform.position+new Vector3(4.2f, -0.5f, 0f), transform.rotation);
                         // UI오브젝트(버튼)는 항상 Canvas 하위로 설정
-                        keyObject.transform.SetParent(GameObject.Find("1_LargePot").GetComponent<Canvas>().transform);
+                        keyObject.transform.SetParent(GameObject.Find("1_PotExpanded").GetComponent<Canvas>().transform);
                         IsKeySpawned = true;
                     }
                 }
@@ -108,13 +108,13 @@ public class ObjectSpawnManager : MonoBehaviour
                 }
                 else
                 {
-                    if (!IsUsbSpawned)
+                    if (!IsUsbSpawned && !CanvasGroupController.Instance.usbConnected)
                     {  // usb가 생성되지 않았을 때
                         Debug.Log("Usb 생성");
                         GameObject usbObject = Instantiate(Usb, transform.position, transform.rotation);
                         // UI오브젝트(버튼)는 drawer_open 하위로 설정
                         //usbObject.transform.SetParent(GameObject.Find("Drawer_Open").GetComponent<Canvas>().transform);
-                        usbObject.transform.SetParent(GameObject.Find("3_LargeDrawer").transform.GetChild(1));
+                        usbObject.transform.SetParent(GameObject.Find("3_DrawerExpanded").transform.GetChild(1));
             
                         IsUsbSpawned = true;
                     }
