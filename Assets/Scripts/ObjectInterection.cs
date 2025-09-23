@@ -241,11 +241,4 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
     }
 
     #endregion
-    
-    public void ComputerClickHandler()
-    {
-        Debug.Log("computer 클릭");
-        SceneManager.LoadScene("Computer");
-    }
-
 }

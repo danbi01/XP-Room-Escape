@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8713992705dfa0e4285d8b2198bbb9d8
+guid: 5227aa91200ccca489cbc39079d139cb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 828029300715024448
-    second: WaterPurifier_0
+      213: -1952966661223641086
+    second: Schedule_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -48,7 +48,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WaterPurifier_0
+      name: Schedule_0
       rect:
         serializedVersion: 2
-        x: 1411
-        y: 47
-        width: 271
-        height: 714
+        x: 0
+        y: 0
+        width: 3509
+        height: 2481
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 040fbbc0340cd7b00800000000000000
-      internalID: 828029300715024448
+      spriteID: 200959b3b2ba5e4e0800000000000000
+      internalID: -1952966661223641086
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      WaterPurifier_0: 828029300715024448
+      Schedule_0: -1952966661223641086
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

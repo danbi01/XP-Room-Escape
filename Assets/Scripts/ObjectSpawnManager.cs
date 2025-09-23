@@ -48,9 +48,9 @@ public class ObjectSpawnManager : MonoBehaviour
             Canvases[1] = GameObject.Find("InventoryCanvas");
         }
 
-        //EastWall에서 OpendLocker 찾기
+        //EastWall에서 OpenedLocker 찾기
         if(OpenedLocker==null && SwipeButton.Instance.CurrentWallNumber==1){
-            OpenedLocker = GameObject.Find("2_SafeExpanded").transform.GetChild(1).gameObject;
+            OpenedLocker = GameObject.Find("1_SafeExpanded").transform.GetChild(3).gameObject;
         }
 
         //캔버스
@@ -114,7 +114,7 @@ public class ObjectSpawnManager : MonoBehaviour
                         GameObject usbObject = Instantiate(Usb, transform.position, transform.rotation);
                         // UI오브젝트(버튼)는 drawer_open 하위로 설정
                         //usbObject.transform.SetParent(GameObject.Find("Drawer_Open").GetComponent<Canvas>().transform);
-                        usbObject.transform.SetParent(GameObject.Find("3_LargeDrawer").transform.GetChild(1));
+                        usbObject.transform.SetParent(GameObject.Find("3_DrawerExpanded").transform.GetChild(1));
             
                         IsUsbSpawned = true;
                     }

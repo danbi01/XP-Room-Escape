@@ -95,7 +95,6 @@ public class CanvasGroupController : MonoBehaviour
                 {
                     exitIndex += 1;
                     ShowCanvas(targetIndex);
-                    
                 });
             }
             else
@@ -110,27 +109,36 @@ public class CanvasGroupController : MonoBehaviour
                         switchImage.sprite = switchImage.sprite == switchImg[0] ? switchImg[1] : switchImg[0];
                     });
                 }
-                if(btn.name == "KeyHole")
+                if (btn.name.StartsWith("Monitor"))
+                {
+                    btn.onClick.AddListener(() =>
+                    {
+                        //computer씬 오류로 잠시 주석처리
+                        //SceneManager.LoadScene("Computer");
+                        Debug.Log("컴퓨터 씬 이동~~");
+                    });
+                }
+                if (btn.name == "KeyHole")
                 {
                     btn.onClick.AddListener(() =>
                     {//키를 갖고 있고 인벤토리를 눌러뒀을 경우
-                        if(InventoryManager.Instance.IsKeyInInventory)
+                        if (InventoryManager.Instance.IsKeyInInventory)
                         {
-                            if(InventoryManager.Instance.toggleInventory)
+                            if (InventoryManager.Instance.toggleInventory)
                             {
                                 RectTransform key = inventory.transform.GetChild(2).gameObject.GetComponent<RectTransform>();
                                 key.anchoredPosition = new Vector3(1300, 0, 0);
                                 //Drawer_Closed 비활성화 Open활성화
-                                GameObject.Find("3_LargeDrawer").transform.GetChild(1).gameObject.SetActive(true);
-                                GameObject.Find("3_LargeDrawer").transform.GetChild(0).gameObject.SetActive(false);
-                                InventoryManager.Instance.IsKeyInInventory=false;
+                                GameObject.Find("3_DrawerExpanded").transform.GetChild(1).gameObject.SetActive(true);
+                                GameObject.Find("3_DrawerExpanded").transform.GetChild(0).gameObject.SetActive(false);
+                                InventoryManager.Instance.IsKeyInInventory = false;
                                 ItemManager.Instance.InventoryOnClick();
                             }
                             else
                             {
                                 Debug.Log("인벤토리를 눌러 아이템 활성화");
                             }
-                            
+
                         }
                         else
                         {
@@ -149,7 +157,7 @@ public class CanvasGroupController : MonoBehaviour
                                 GameObject usbObject = inventory.transform.GetChild(3).gameObject;
                                 RectTransform Usb = usbObject.gameObject.GetComponent<RectTransform>();
                                 Usb.anchoredPosition = new Vector3(-50, 200, 0);
-                                usbObject.transform.SetParent(GameObject.Find("2_LargeComputerCase").transform);
+                                usbObject.transform.SetParent(GameObject.Find("2_TowerExpanded").transform);
                                 InventoryManager.Instance.IsUsbInInventory=false;
                                 usbConnected = true;
                                 ItemManager.Instance.InventoryOnClick();

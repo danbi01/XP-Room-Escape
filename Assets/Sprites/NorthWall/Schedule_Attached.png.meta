@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9b03655c561ba5c47885197531ce7490
+guid: e5c1a82288fdf38479574f1e8478001c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8211897445712017496
-    second: MonitorLeft_0
+      213: -3130362215406960931
+    second: Schedule_Attached_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MonitorLeft_0
+      name: Schedule_Attached_0
       rect:
         serializedVersion: 2
-        x: 1476
-        y: 364
-        width: 175
-        height: 258
+        x: 193
+        y: 739
+        width: 433
+        height: 303
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8a7c56818ca790e80800000000000000
-      internalID: -8211897445712017496
+      spriteID: ddefc548628be84d0800000000000000
+      internalID: -3130362215406960931
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MonitorLeft_0: -8211897445712017496
+      Schedule_Attached_0: -3130362215406960931
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
