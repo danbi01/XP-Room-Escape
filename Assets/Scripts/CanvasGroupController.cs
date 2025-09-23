@@ -108,6 +108,7 @@ public class CanvasGroupController : MonoBehaviour
                         switchImage.sprite = switchImage.sprite == switchImg[0] ? switchImg[1] : switchImg[0];
                     });
                 }
+                
                 if(btn.name == "KeyHole")
                 {
                     btn.onClick.AddListener(() =>

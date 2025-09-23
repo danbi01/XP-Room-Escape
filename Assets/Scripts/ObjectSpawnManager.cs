@@ -60,8 +60,8 @@ public class ObjectSpawnManager : MonoBehaviour
         else{
 
         }
-
-        //Usb 생성
+        
+        //Key 생성
         switch(SceneManager.GetActiveScene().name){ 
             case "SouthWall": // SouthWall일 때
             
@@ -73,9 +73,9 @@ public class ObjectSpawnManager : MonoBehaviour
                     break;
                 }
                 else{
-                    if(!IsUsbSpawned){  // 키가 생성되지 않았을 때
-                        Debug.Log("usb 생성");
-                        GameObject UsbObject = Instantiate(Usb, transform.position, transform.rotation);
+                    if(!IsKeySpawned){  // 키가 생성되지 않았을 때
+                        Debug.Log("Key 생성");
+                        GameObject keyObject = Instantiate(Key, transform.position+new Vector3(4.2f, -0.5f, 0f), transform.rotation);
                         // UI오브젝트(버튼)는 항상 Canvas 하위로 설정
                         keyObject.transform.SetParent(GameObject.Find("1_PotExpanded").GetComponent<Canvas>().transform);
                         IsKeySpawned = true;
@@ -100,13 +100,15 @@ public class ObjectSpawnManager : MonoBehaviour
                 }
                 else
                 {
-                    if (!IsKeySpawned)
-                    {  // 키가 생성되지 않았을 때
-                        Debug.Log("key 생성");
-                        GameObject KeyObject = Instantiate(Key, transform.position, transform.rotation);
-                        // UI오브젝트(버튼)는 항상 Canvas 하위로 설정
-                        KeyObject.transform.SetParent(Canvas.transform);
-                        IsKeySpawned = true;
+                    if (!IsUsbSpawned && !CanvasGroupController.Instance.usbConnected)
+                    {  // usb가 생성되지 않았을 때
+                        Debug.Log("Usb 생성");
+                        GameObject usbObject = Instantiate(Usb, transform.position, transform.rotation);
+                        // UI오브젝트(버튼)는 drawer_open 하위로 설정
+                        //usbObject.transform.SetParent(GameObject.Find("Drawer_Open").GetComponent<Canvas>().transform);
+                        usbObject.transform.SetParent(GameObject.Find("3_DrawerExpanded").transform.GetChild(1));
+            
+                        IsUsbSpawned = true;
                     }
                 }
                 break;
