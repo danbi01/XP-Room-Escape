@@ -86,7 +86,7 @@ public class ObjectSpawnManager : MonoBehaviour
                         Debug.Log("Key 생성");
                         GameObject keyObject = Instantiate(Key, transform.position, transform.rotation);
                         // UI오브젝트(버튼)는 항상 Canvas 하위로 설정
-                        keyObject.transform.SetParent(GameObject.Find("1_LargePot").GetComponent<Canvas>().transform);
+                        keyObject.transform.SetParent(GameObject.Find("1_PotExpanded").GetComponent<Canvas>().transform);
                         IsKeySpawned = true;
                     }
                 }
