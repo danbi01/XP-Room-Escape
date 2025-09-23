@@ -103,7 +103,7 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
             lockerButton.transform.GetChild(0).gameObject.SetActive(true);
 
             //책 비활성화
-            lockerButton.transform.parent.Find("Books").gameObject.SetActive(false);
+            lockerButton.transform.parent.Find("Book").gameObject.SetActive(false);
         }
     }
 
@@ -211,8 +211,8 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
                 yield return new WaitForSeconds(0.3f);
             }
             //OpendLocker활성화, ClosedLocker비활성화
-            GameObject.Find("2_LargeLocker").transform.GetChild(1).gameObject.SetActive(true);
-            GameObject.Find("2_LargeLocker").transform.GetChild(0).gameObject.SetActive(false);
+            GameObject.Find("2_SafeExpanded").transform.GetChild(1).gameObject.SetActive(true);
+            GameObject.Find("2_SafeExpanded").transform.GetChild(0).gameObject.SetActive(false);
         }
         else
         {
