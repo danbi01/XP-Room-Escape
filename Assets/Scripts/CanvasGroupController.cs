@@ -44,7 +44,6 @@ public class CanvasGroupController : MonoBehaviour
         exitButton.onClick.RemoveAllListeners();
         //exit버튼 클릭 연결
         exitButton.onClick.AddListener(() =>{
-            Debug.Log("exit누름");
             if(exitIndex > 0)
             {
                 exitIndex -= 1;
