@@ -70,10 +70,7 @@ public class ItemManager : MonoBehaviour
         {
             InventoryOnClick();
         }
-        else if(CanvasGroupController.Instance.usbConnected)
-        {
-            Debug.Log("본체에 꽃혀있다.");
-        }
+        
         else
         {
             Debug.Log("add");
@@ -82,7 +79,7 @@ public class ItemManager : MonoBehaviour
 
             RectTransform UsbRect = gameObject.GetComponent<RectTransform>();
             // 인벤토리 인터페이스 내에 표시 (추후 리스트로 위치 저장해 사용?)
-            UsbRect.anchoredPosition = new Vector3(910, 450, 0);
+            UsbRect.anchoredPosition = new Vector3(870, 450, 0);
 
             //width가로
             UsbRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 146.6f);

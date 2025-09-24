@@ -151,28 +151,35 @@ public class CanvasGroupController : MonoBehaviour
                 {
                     btn.onClick.AddListener(() =>
                     {//usb를 갖고 있고 인벤토리를 눌러뒀을 경우
-                        if(InventoryManager.Instance.IsUsbInInventory)
+                        if(usbConnected)
                         {
-                            if(InventoryManager.Instance.toggleInventory)
-                            {
-                                GameObject usbObject = inventory.transform.GetChild(3).gameObject;
-                                RectTransform Usb = usbObject.gameObject.GetComponent<RectTransform>();
-                                Usb.anchoredPosition = new Vector3(-50, 200, 0);
-                                usbObject.transform.SetParent(GameObject.Find("2_TowerExpanded").transform);
-                                InventoryManager.Instance.IsUsbInInventory=false;
-                                usbConnected = true;
-                                ItemManager.Instance.InventoryOnClick();
-                            }
-                            else
-                            {
-                                Debug.Log("인벤토리를 눌러 아이템 활성화");
-                            }
+                            Debug.Log("본체에 꽃혀있다.");
                         }
                         else
                         {
-                            Debug.Log("usb가 필요하다");
+                            if(InventoryManager.Instance.IsUsbInInventory)
+                            {
+                                if(InventoryManager.Instance.toggleInventory)
+                                {
+                                    GameObject usbObject = inventory.transform.GetChild(3).gameObject;
+                                    RectTransform Usb = usbObject.gameObject.GetComponent<RectTransform>();
+                                    Usb.anchoredPosition = new Vector3(1300, 0, 0);
+                                    usbObject.transform.SetParent(GameObject.Find("2_TowerExpanded").transform);
+                                    InventoryManager.Instance.IsUsbInInventory=false;
+                                    usbConnected = true;
+                                    GameObject.Find("2_TowerExpanded").transform.GetChild(1).gameObject.SetActive(true);
+                                    ItemManager.Instance.InventoryOnClick();
+                                }
+                                else
+                                {
+                                    Debug.Log("인벤토리를 눌러 아이템 활성화");
+                                }
+                            }
+                            else
+                            {
+                                Debug.Log("usb가 필요하다");
+                            }
                         }
-
                     });
                 }
             }
