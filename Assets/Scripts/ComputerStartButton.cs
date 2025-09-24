@@ -33,7 +33,7 @@ public class ComputerStartButton : MonoBehaviour
         folder.SetActive(true);
         listPanel.SetActive(false);
         buttonPanel.SetActive(false);
-        stickyNotes.SetActive(false); //TODO: FolderExitButton에서 stickyNotes True로해줘야됨.
+        stickyNotes.SetActive(false);
         Debug.Log("파일탐색기버튼클릭됨");
     }
 
