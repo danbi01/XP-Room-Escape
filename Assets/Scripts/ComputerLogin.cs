@@ -7,7 +7,7 @@ public class ComputerLogin : MonoBehaviour
 
     public TMP_InputField inputField_PW;
     private string passwordInput = "";
-    private string password = "test1234";
+    private string password = "xp725";
     public GameObject lockScreen;
     public GameObject homeScreen;
 
