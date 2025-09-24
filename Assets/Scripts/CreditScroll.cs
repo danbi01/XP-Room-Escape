@@ -9,6 +9,7 @@ public class CreditScroll : MonoBehaviour
     void Start()
     {
         rect = GetComponent<RectTransform>();
+        
     }
 
     void Update()

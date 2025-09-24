@@ -71,10 +71,7 @@ public class ItemManager : MonoBehaviour
         {
             InventoryOnClick();
         }
-        else if(CanvasGroupController.Instance.usbConnected)
-        {
-            Debug.Log("본체에 꽃혀있다.");
-        }
+        
         else
         {
             Debug.Log("add");
