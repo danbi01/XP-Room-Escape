@@ -9,6 +9,7 @@ public class CanvasGroupController : MonoBehaviour
     public List<CanvasGroup> Canvases = new List<CanvasGroup>();
     public GameObject exit, left, right;
     public GameObject inventory;
+    public Image SwitchOverlay;
     public Button exitButton;
     public int exitIndex;
     public static CanvasGroupController Instance = null;
@@ -104,9 +105,15 @@ public class CanvasGroupController : MonoBehaviour
                 {
                     btn.onClick.AddListener(() =>
                     {
-                        Debug.Log(btn.gameObject);
                         Image switchImage = btn.gameObject.GetComponent<Image>();
                         switchImage.sprite = switchImage.sprite == switchImg[0] ? switchImg[1] : switchImg[0];
+                        SwitchOverlay = GameObject.Find("BackgroundOverlay").GetComponent<Image>();
+                        SwitchOverlay.color = new Color(10f / 255f, 10f / 255f, 25f / 255f, SwitchOverlay.color.a == 0.7f ? 0 : 0.7f);
+                        SwitchOverlay.transform.SetParent(null);
+                        DontDestroyOnLoad(SwitchOverlay.gameObject);
+                        SwitchOverlay.transform.SetParent(GameObject.Find("InventoryCanvas").transform);
+                        SwitchOverlay.transform.SetAsFirstSibling();
+                        //SwitchOverlay.SetActive(!SwitchOverlay.activeSelf);
                     });
                 }
                 if (btn.name.StartsWith("Monitor"))
@@ -191,7 +198,7 @@ public class CanvasGroupController : MonoBehaviour
     //캔버스 보여주는 함수
     public void ShowCanvas(int indexToShow)
     {
-        for(int i=0; i<Canvases.Count; i++)
+        for(int i=1; i<Canvases.Count; i++)
         {
             SetCanvasActive(Canvases[i], i == indexToShow);
         }
