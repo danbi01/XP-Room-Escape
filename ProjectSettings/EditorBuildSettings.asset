@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Computer.unity
     guid: 77b1c7639ab524442a730fb843398268
   - enabled: 1
-    path: Assets/Scenes/EndingScene.unity
+    path: Assets/Scenes/Epilogue.unity
     guid: 6bce6a73fa54f7543bbbe8e5d26ba61c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
