@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class SwipeButton : MonoBehaviour
 {
     public static SwipeButton Instance = null;
-    List<string> LabWallList = new List<string>() {"SouthWall", "EastWall", "NorthWall", "WestWall"};
+    List<string> LabWallList = new List<string>() {"SouthWall", "WestWall", "NorthWall", "EastWall"};
     public int CurrentWallNumber = 0;
     
     void Awake()

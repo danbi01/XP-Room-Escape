@@ -49,7 +49,7 @@ public class ObjectSpawnManager : MonoBehaviour
         }
 
         //EastWall에서 OpenedLocker 찾기
-        if(OpenedLocker==null && SwipeButton.Instance.CurrentWallNumber==1){
+        if(OpenedLocker==null && SwipeButton.Instance.CurrentWallNumber==3){
             OpenedLocker = GameObject.Find("1_SafeExpanded").transform.GetChild(2).gameObject;
         }
 
