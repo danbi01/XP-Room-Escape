@@ -3358,6 +3358,7 @@ GameObject:
   - component: {fileID: 178735560}
   - component: {fileID: 178735563}
   - component: {fileID: 178735562}
+  - component: {fileID: 178735564}
   - component: {fileID: 178735561}
   m_Layer: 5
   m_Name: ExitButton
@@ -3428,7 +3429,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 178735562}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 178735564}
+        m_TargetAssemblyTypeName: ComputerStartButton, Assembly-CSharp
+        m_MethodName: OnFolderExitButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &178735562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3467,6 +3480,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 178735559}
   m_CullTransparentMesh: 1
+--- !u!114 &178735564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178735559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc201a709f4f4c94289696404749f58c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startButton: {fileID: 234483743}
+  listPanel: {fileID: 167001221}
+  buttonPanel: {fileID: 805230062}
+  fileExplorerButton: {fileID: 2052398083}
+  folder: {fileID: 386933894}
+  binFolder: {fileID: 1271103763}
+  stickyNotes: {fileID: 1833613375}
 --- !u!1 &185252885
 GameObject:
   m_ObjectHideFlags: 0
@@ -4324,6 +4356,7 @@ MonoBehaviour:
   buttonPanel: {fileID: 805230062}
   fileExplorerButton: {fileID: 2052398083}
   folder: {fileID: 386933894}
+  binFolder: {fileID: 0}
   stickyNotes: {fileID: 1833613375}
 --- !u!114 &234483743
 MonoBehaviour:
@@ -8880,7 +8913,7 @@ Transform:
   m_GameObject: {fileID: 460635091}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.1}
   m_LocalScale: {x: 16, y: 9, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -14880,6 +14913,7 @@ GameObject:
   - component: {fileID: 815672745}
   - component: {fileID: 815672748}
   - component: {fileID: 815672747}
+  - component: {fileID: 815672749}
   - component: {fileID: 815672746}
   m_Layer: 5
   m_Name: FSButton
@@ -14951,7 +14985,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 815672747}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 815672749}
+        m_TargetAssemblyTypeName: ComputerStartButton, Assembly-CSharp
+        m_MethodName: OnFileExplorerButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &815672747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14990,6 +15036,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 815672744}
   m_CullTransparentMesh: 1
+--- !u!114 &815672749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815672744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc201a709f4f4c94289696404749f58c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startButton: {fileID: 234483743}
+  listPanel: {fileID: 167001221}
+  buttonPanel: {fileID: 805230062}
+  fileExplorerButton: {fileID: 2052398083}
+  folder: {fileID: 386933894}
+  binFolder: {fileID: 1271103763}
+  stickyNotes: {fileID: 1833613375}
 --- !u!1 &816536088
 GameObject:
   m_ObjectHideFlags: 0
@@ -19278,8 +19343,8 @@ Transform:
   - {fileID: 2017680174}
   - {fileID: 1180158488}
   - {fileID: 1547389671}
-  - {fileID: 2004262446}
   - {fileID: 460635092}
+  - {fileID: 2004262446}
   - {fileID: 1272591772}
   m_Father: {fileID: 1271103764}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24147,6 +24212,8 @@ GameObject:
   - component: {fileID: 1289505416}
   - component: {fileID: 1289505418}
   - component: {fileID: 1289505417}
+  - component: {fileID: 1289505420}
+  - component: {fileID: 1289505419}
   m_Layer: 5
   m_Name: TrashButton
   m_TagString: Untagged
@@ -24212,6 +24279,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1289505415}
   m_CullTransparentMesh: 1
+--- !u!114 &1289505419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289505415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1289505417}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1289505420}
+        m_TargetAssemblyTypeName: ComputerStartButton, Assembly-CSharp
+        m_MethodName: OnTrashButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1289505420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289505415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc201a709f4f4c94289696404749f58c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startButton: {fileID: 234483743}
+  listPanel: {fileID: 167001221}
+  buttonPanel: {fileID: 805230062}
+  fileExplorerButton: {fileID: 2052398083}
+  folder: {fileID: 386933894}
+  binFolder: {fileID: 1271103763}
+  stickyNotes: {fileID: 1833613375}
 --- !u!1 &1299287230
 GameObject:
   m_ObjectHideFlags: 0
@@ -28477,7 +28619,7 @@ Transform:
   m_GameObject: {fileID: 1518268846}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.42, y: 1.5458001, z: 0.1}
+  m_LocalPosition: {x: 4.42, y: 1.5458001, z: 0.5}
   m_LocalScale: {x: 0.8705191, y: 0.87763506, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30250,6 +30392,7 @@ GameObject:
   - component: {fileID: 1582291962}
   - component: {fileID: 1582291965}
   - component: {fileID: 1582291964}
+  - component: {fileID: 1582291966}
   - component: {fileID: 1582291963}
   m_Layer: 5
   m_Name: BinButton
@@ -30321,7 +30464,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1582291964}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1582291966}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1582291964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30360,6 +30515,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1582291961}
   m_CullTransparentMesh: 1
+--- !u!114 &1582291966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582291961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc201a709f4f4c94289696404749f58c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startButton: {fileID: 234483743}
+  listPanel: {fileID: 167001221}
+  buttonPanel: {fileID: 805230062}
+  fileExplorerButton: {fileID: 2052398083}
+  folder: {fileID: 386933894}
+  binFolder: {fileID: 1271103763}
+  stickyNotes: {fileID: 1833613375}
 --- !u!1 &1585627025
 GameObject:
   m_ObjectHideFlags: 0
@@ -36055,6 +36229,7 @@ GameObject:
   - component: {fileID: 1943577406}
   - component: {fileID: 1943577409}
   - component: {fileID: 1943577408}
+  - component: {fileID: 1943577410}
   - component: {fileID: 1943577407}
   m_Layer: 5
   m_Name: BinButton
@@ -36126,7 +36301,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1943577408}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1943577410}
+        m_TargetAssemblyTypeName: ComputerStartButton, Assembly-CSharp
+        m_MethodName: OnTrashButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1943577408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36165,6 +36352,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1943577405}
   m_CullTransparentMesh: 1
+--- !u!114 &1943577410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943577405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc201a709f4f4c94289696404749f58c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startButton: {fileID: 234483743}
+  listPanel: {fileID: 167001221}
+  buttonPanel: {fileID: 805230062}
+  fileExplorerButton: {fileID: 2052398083}
+  folder: {fileID: 386933894}
+  binFolder: {fileID: 1271103763}
+  stickyNotes: {fileID: 1833613375}
 --- !u!1 &1945663556
 GameObject:
   m_ObjectHideFlags: 0
@@ -38114,7 +38320,7 @@ GameObject:
   - component: {fileID: 2052398083}
   - component: {fileID: 2052398086}
   m_Layer: 5
-  m_Name: Button
+  m_Name: FsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38251,6 +38457,7 @@ MonoBehaviour:
   buttonPanel: {fileID: 805230062}
   fileExplorerButton: {fileID: 2052398083}
   folder: {fileID: 386933894}
+  binFolder: {fileID: 1271103763}
   stickyNotes: {fileID: 1833613375}
 --- !u!1 &2057051769
 GameObject:
@@ -38793,6 +39000,7 @@ MonoBehaviour:
   buttonPanel: {fileID: 805230062}
   fileExplorerButton: {fileID: 2052398083}
   folder: {fileID: 386933894}
+  binFolder: {fileID: 0}
   stickyNotes: {fileID: 1833613375}
 --- !u!1 &2078960302
 GameObject:

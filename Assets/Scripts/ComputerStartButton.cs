@@ -9,6 +9,7 @@ public class ComputerStartButton : MonoBehaviour
 
     public Button fileExplorerButton;
     public GameObject folder;
+    public GameObject binFolder;
 
     public GameObject stickyNotes;
 
@@ -31,15 +32,26 @@ public class ComputerStartButton : MonoBehaviour
     public void OnFileExplorerButtonClick()
     {
         folder.SetActive(true);
+        binFolder.SetActive(false);
         listPanel.SetActive(false);
         buttonPanel.SetActive(false);
         stickyNotes.SetActive(false);
         Debug.Log("파일탐색기버튼클릭됨");
     }
+    public void OnTrashButtonClick()
+    {
+        binFolder.SetActive(true);
+        folder.SetActive(false);
+        listPanel.SetActive(false);
+        buttonPanel.SetActive(false);
+        stickyNotes.SetActive(false);
+        Debug.Log("휴지통버튼클릭됨");
+    }
 
     public void OnFolderExitButtonClick()
     {
         folder.SetActive(false);
+        binFolder.SetActive(false);
         stickyNotes.SetActive(true);
         Debug.Log("FolderExitButton버튼클릭됨");
     }
