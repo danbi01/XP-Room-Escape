@@ -78,6 +78,13 @@ public class CanvasGroupController : MonoBehaviour
             }
         }
 
+        //불꺼지면 비밀번호 보임
+        if (scene.name == "EastWall" && SwitchOverlay.IsActive())
+        {
+            GameObject pwd = CanvasParent.transform.GetChild(2).gameObject;
+            pwd.SetActive(!pwd.activeSelf);
+        }
+
         foreach(var btn in buttons)
         {
             //이전의 버튼 이벤트 다 지움
@@ -150,22 +157,21 @@ public class CanvasGroupController : MonoBehaviour
                         }
                     });
                 }
-                if(btn.name == "USBPort")
+                if (btn.name == "USBPort")
                 {
                     btn.onClick.AddListener(() =>
                     {//usb를 갖고 있고 인벤토리를 눌러뒀을 경우
-                        if(usbConnected)
+                        if (usbConnected)
                         {
-                            if(InventoryManager.Instance.toggleInventory)
+                            if (InventoryManager.Instance.toggleInventory)
                             {
                                 /*GameObject usbObject = inventory.transform.GetChild(3).gameObject;
                                 RectTransform Usb = usbObject.gameObject.GetComponent<RectTransform>();
                                 Usb.anchoredPosition = new Vector3(-50, 200, 0);
                                 usbObject.transform.SetParent(GameObject.Find("2_TowerExpanded").transform);*/
-                                GameObject.Find("Usb(Clone)").SetActive(false);
-                                btn.transform.GetChild(0).gameObject.SetActive(true);
+                                
 
-                                InventoryManager.Instance.IsUsbInInventory=false;
+                                InventoryManager.Instance.IsUsbInInventory = false;
                                 usbConnected = true;
                                 ItemManager.Instance.InventoryOnClick();
                             }
@@ -176,15 +182,18 @@ public class CanvasGroupController : MonoBehaviour
                         }
                         else
                         {
-                            if(InventoryManager.Instance.IsUsbInInventory)
+                            if (InventoryManager.Instance.IsUsbInInventory)
                             {
-                                if(InventoryManager.Instance.toggleInventory)
+                                if (InventoryManager.Instance.toggleInventory)
                                 {
-                                    GameObject usbObject = inventory.transform.GetChild(3).gameObject;
+                                    /*GameObject usbObject = inventory.transform.GetChild(3).gameObject;
                                     RectTransform Usb = usbObject.gameObject.GetComponent<RectTransform>();
                                     Usb.anchoredPosition = new Vector3(1300, 0, 0);
-                                    usbObject.transform.SetParent(GameObject.Find("2_TowerExpanded").transform);
-                                    InventoryManager.Instance.IsUsbInInventory=false;
+                                    usbObject.transform.SetParent(GameObject.Find("2_TowerExpanded").transform);*/
+                                    GameObject.Find("Usb(Clone)").SetActive(false);
+                                    btn.transform.GetChild(0).gameObject.SetActive(true);
+                                    
+                                    InventoryManager.Instance.IsUsbInInventory = false;
                                     usbConnected = true;
                                     GameObject.Find("2_TowerExpanded").transform.GetChild(1).gameObject.SetActive(true);
                                     ItemManager.Instance.InventoryOnClick();
@@ -198,6 +207,17 @@ public class CanvasGroupController : MonoBehaviour
                             {
                                 Debug.Log("usb가 필요하다");
                             }
+                        }
+                    });
+                }
+                if (btn.name == "Door")
+                {
+                    btn.onClick.AddListener(() =>
+                    {
+                        if (SecureLabLogin.secureLabUnlocked)
+                        {
+                            btn.GetComponent<Image>().color = new Color(0, 0, 0);
+                            SceneManager.LoadScene("Epilogue");
                         }
                     });
                 }

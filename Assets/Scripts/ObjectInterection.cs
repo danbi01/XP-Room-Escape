@@ -171,7 +171,7 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
     //금고 비밀번호 입력 기능 코드
     public Image[] leds; 
     private string input = "";
-    public string correctPassword = "3206";
+    public string correctPassword = "0318";
     public int maxLength = 4;
     public Color ledOnColor = new Color(82/255, 204/255, 7/255);
     public Color ledOffColor = Color.gray;
