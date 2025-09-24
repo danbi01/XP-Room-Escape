@@ -503,7 +503,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &56370492
 Transform:
   m_ObjectHideFlags: 0
@@ -1604,7 +1604,7 @@ Transform:
   m_GameObject: {fileID: 114489711}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.1}
   m_LocalScale: {x: 16, y: 9, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4356,7 +4356,7 @@ MonoBehaviour:
   buttonPanel: {fileID: 805230062}
   fileExplorerButton: {fileID: 2052398083}
   folder: {fileID: 386933894}
-  binFolder: {fileID: 0}
+  binFolder: {fileID: 1271103763}
   stickyNotes: {fileID: 1833613375}
 --- !u!114 &234483743
 MonoBehaviour:
@@ -23880,7 +23880,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1271103764
 Transform:
   m_ObjectHideFlags: 0
@@ -39137,7 +39137,7 @@ MonoBehaviour:
   buttonPanel: {fileID: 805230062}
   fileExplorerButton: {fileID: 2052398083}
   folder: {fileID: 386933894}
-  binFolder: {fileID: 0}
+  binFolder: {fileID: 1271103763}
   stickyNotes: {fileID: 1833613375}
 --- !u!1 &2078960302
 GameObject:
