@@ -9,18 +9,18 @@ public class DoorButtonClick : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //Image ÄÄÆ÷³ÍÆ® °¡Á®¿À±â
+        //Image ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         buttonImage = GetComponent<Image>();
-        //Button ÄÄÆ÷³ÍÆ®¿¡¼­ Å¬¸¯ ÀÌº¥Æ® µî·Ï
+        //Button ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ ï¿½Ìºï¿½Æ® ï¿½ï¿½ï¿½
         GetComponent<Button>().onClick.AddListener(OnDoorClick);
     }
-    //¹® Å¬¸¯ ÇÔ¼ö
+    //ï¿½ï¿½ Å¬ï¿½ï¿½ ï¿½Ô¼ï¿½
     void OnDoorClick()
     {
-        //¹® Å¬¸¯½Ã °ËÀº»ö ¹è°æÈ­¸éÀ¸·Î ±³Ã¼
+        //ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼
         buttonImage.sprite = openedDoorSprite;
-        //¿£µù ¾ÀÀ¸·Î ÀüÈ¯
-        SceneManager.LoadScene("EndingScene");
+        //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
+        SceneManager.LoadScene("Epilogue");
     }
 
     // Update is called once per frame

@@ -218,7 +218,7 @@ public class CanvasGroupController : MonoBehaviour
     //Exit버튼 활성화하는 함수
     void ExitButtonActive(bool active)
     {
-        if (SceneManager.GetActiveScene().name == "Computer") return;
+        if (SceneManager.GetActiveScene().name == "Computer"||SceneManager.GetActiveScene().name == "Epilogue") return;
         GameObject.Find("ButtonCanvas").transform.GetChild(2).gameObject.SetActive(active); //exit
         GameObject.Find("ButtonCanvas").transform.GetChild(0).gameObject.SetActive(!active); //left
         GameObject.Find("ButtonCanvas").transform.GetChild(1).gameObject.SetActive(!active); //right
