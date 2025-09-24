@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d2f984002579c794e949278d2559312c
+guid: a7cb715b5d4f295498c33422a47570af
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6190330601515713404
-    second: BookShelf_0
+      213: -8659843438924038958
+    second: FileCase_3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -48,7 +48,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BookShelf_0
+      name: FileCase_3_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1100
-        height: 950
+        y: 6
+        width: 314
+        height: 816
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c73039162e878e550800000000000000
-      internalID: 6190330601515713404
+      spriteID: 2dc7f6c264e02d780800000000000000
+      internalID: -8659843438924038958
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BookShelf_0: 6190330601515713404
+      FileCase_3_0: -8659843438924038958
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

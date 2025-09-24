@@ -24,7 +24,7 @@ public class ItemManager : MonoBehaviour
     {
         
     }
-    // 키 클릭 시 작동 메소드 (터치로 수정 필요)
+    // 키 클릭 시 작동 메소드
     public void KeyOnClick()
     {
         if (InventoryManager.Instance.IsKeyInInventory)
@@ -40,7 +40,7 @@ public class ItemManager : MonoBehaviour
             RectTransform keyRect = gameObject.GetComponent<RectTransform>();
             Button keyButtonComponent = gameObject.GetComponent<Button>();
             // 인벤토리 인터페이스 내에 표시
-            keyRect.anchoredPosition = new Vector3(870, 450, 0);
+            keyRect.anchoredPosition = new Vector3(865, 450, 0);
 
             //알파 1로 수정
             ColorBlock cb = keyButtonComponent.colors;
@@ -51,10 +51,11 @@ public class ItemManager : MonoBehaviour
             cb.disabledColor = FixAlpha(cb.disabledColor);
             keyButtonComponent.colors = cb;
 
-            //width가로
+            keyRect.localScale = new Vector3(0.15f, 0.15f, 0.15f);
+            /*//width가로
             keyRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 114.2f);
             //height세로
-            keyRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 100.8f);
+            keyRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 100.8f);*/
 
             this.gameObject.transform.SetParent(InventoryManagerObject.transform);
             InventoryManager.Instance.IsKeyInInventory = true;
@@ -79,12 +80,13 @@ public class ItemManager : MonoBehaviour
 
             RectTransform UsbRect = gameObject.GetComponent<RectTransform>();
             // 인벤토리 인터페이스 내에 표시 (추후 리스트로 위치 저장해 사용?)
-            UsbRect.anchoredPosition = new Vector3(870, 450, 0);
+            UsbRect.anchoredPosition = new Vector3(865, 450, 0);
+            UsbRect.localScale = new Vector3(0.12f, 0.12f, 0.12f);
 
-            //width가로
+            /*//width가로
             UsbRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 146.6f);
             //height세로
-            UsbRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 114.8f);
+            UsbRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 114.8f);*/
 
             this.gameObject.transform.SetParent(InventoryManagerObject.transform);
             InventoryManager.Instance.IsUsbInInventory = true;

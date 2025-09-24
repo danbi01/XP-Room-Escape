@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 5744c98418ddd4e45aca5a6c184ee3b2
+guid: 8982cb870c116d2488445dbaf2bf11b4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5338088374736617664
-    second: Safe_Open_0
-  - first:
-      213: -8941308173208205381
-    second: Safe_Open_1
+      213: -95526184967613952
+    second: LED_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Safe_Open_0
+      name: LED_0
       rect:
         serializedVersion: 2
-        x: 1405
-        y: 1021
-        width: 11
-        height: 6
+        x: 0
+        y: 0
+        width: 77
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 04f7e24d7ec4be5b0800000000000000
-      internalID: -5338088374736617664
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Safe_Open_1
-      rect:
-        serializedVersion: 2
-        x: 339
-        y: 66
-        width: 1429
-        height: 765
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bb7c0ace6971ae380800000000000000
-      internalID: -8941308173208205381
+      spriteID: 002d14ed07f9caef0800000000000000
+      internalID: -95526184967613952
       vertices: []
       indices: 
       edges: []
@@ -173,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Safe_Open_0: -5338088374736617664
-      Safe_Open_1: -8941308173208205381
+      LED_0: -95526184967613952
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
