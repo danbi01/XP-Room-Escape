@@ -1,0 +1,2795 @@
+fileFormatVersion: 2
+guid: 22574953697c84851bbb1b8be892131c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4574850654800338026
+    second: sticky_hint_0
+  - first:
+      213: -6421269641693554132
+    second: sticky_hint_1
+  - first:
+      213: 6765330170086245093
+    second: sticky_hint_2
+  - first:
+      213: -9119941141281409142
+    second: sticky_hint_3
+  - first:
+      213: 2119776971545518901
+    second: sticky_hint_4
+  - first:
+      213: 39463389295199874
+    second: sticky_hint_5
+  - first:
+      213: -6327348014719012627
+    second: sticky_hint_6
+  - first:
+      213: 3476916107462275846
+    second: sticky_hint_7
+  - first:
+      213: -7491870061693106939
+    second: sticky_hint_8
+  - first:
+      213: -4020336729884020475
+    second: sticky_hint_9
+  - first:
+      213: -4487739863229324056
+    second: sticky_hint_10
+  - first:
+      213: -7597483384742322719
+    second: sticky_hint_11
+  - first:
+      213: -977957812242327152
+    second: sticky_hint_12
+  - first:
+      213: 1875160595081886125
+    second: sticky_hint_13
+  - first:
+      213: -134381011105191219
+    second: sticky_hint_14
+  - first:
+      213: 1066936072289658955
+    second: sticky_hint_15
+  - first:
+      213: -3752161610580019214
+    second: sticky_hint_16
+  - first:
+      213: 3376482260780964276
+    second: sticky_hint_17
+  - first:
+      213: -2119880733749604740
+    second: sticky_hint_18
+  - first:
+      213: -7995130732918676454
+    second: sticky_hint_19
+  - first:
+      213: -4296193079649235624
+    second: sticky_hint_20
+  - first:
+      213: 4065697234586623437
+    second: sticky_hint_21
+  - first:
+      213: -5205321600108451746
+    second: sticky_hint_22
+  - first:
+      213: -583075775525002276
+    second: sticky_hint_23
+  - first:
+      213: 6760579441994133781
+    second: sticky_hint_24
+  - first:
+      213: 8899780228544725126
+    second: sticky_hint_25
+  - first:
+      213: 5264242196170715270
+    second: sticky_hint_26
+  - first:
+      213: 3201025059972613393
+    second: sticky_hint_27
+  - first:
+      213: 4782289945708789091
+    second: sticky_hint_28
+  - first:
+      213: 4037400196760385947
+    second: sticky_hint_29
+  - first:
+      213: -3992198585379275369
+    second: sticky_hint_30
+  - first:
+      213: -5050074631383142687
+    second: sticky_hint_31
+  - first:
+      213: -743587546555980581
+    second: sticky_hint_32
+  - first:
+      213: -6486805970240034649
+    second: sticky_hint_33
+  - first:
+      213: -4825444250024284689
+    second: sticky_hint_34
+  - first:
+      213: 1586079624702218258
+    second: sticky_hint_35
+  - first:
+      213: 8702923802114622111
+    second: sticky_hint_36
+  - first:
+      213: -6513074652291271076
+    second: sticky_hint_37
+  - first:
+      213: 6875453658706838418
+    second: sticky_hint_38
+  - first:
+      213: 1165606540340115535
+    second: sticky_hint_39
+  - first:
+      213: 1694057907362097362
+    second: sticky_hint_40
+  - first:
+      213: 3604063498787580762
+    second: sticky_hint_41
+  - first:
+      213: -8059152947883309237
+    second: sticky_hint_42
+  - first:
+      213: -3679999582341066996
+    second: sticky_hint_43
+  - first:
+      213: -7442098284510898802
+    second: sticky_hint_44
+  - first:
+      213: -474635284849108266
+    second: sticky_hint_45
+  - first:
+      213: -5148920024513191538
+    second: sticky_hint_46
+  - first:
+      213: -3437153706540592634
+    second: sticky_hint_47
+  - first:
+      213: 6401061067253715973
+    second: sticky_hint_48
+  - first:
+      213: 1136476034155474094
+    second: sticky_hint_49
+  - first:
+      213: -79043059302634006
+    second: sticky_hint_50
+  - first:
+      213: 2526437597688397042
+    second: sticky_hint_51
+  - first:
+      213: 4667198047074551784
+    second: sticky_hint_52
+  - first:
+      213: 8725253103678545342
+    second: sticky_hint_53
+  - first:
+      213: -6167876114375565162
+    second: sticky_hint_54
+  - first:
+      213: 1897173769402504994
+    second: sticky_hint_55
+  - first:
+      213: 8342063311877519089
+    second: sticky_hint_56
+  - first:
+      213: 1177322356887560888
+    second: sticky_hint_57
+  - first:
+      213: -2272185092174823876
+    second: sticky_hint_58
+  - first:
+      213: 982711458045759522
+    second: sticky_hint_59
+  - first:
+      213: -8711435638523901698
+    second: sticky_hint_60
+  - first:
+      213: 8399648992005140052
+    second: sticky_hint_61
+  - first:
+      213: -7799738837233934995
+    second: sticky_hint_62
+  - first:
+      213: -8264885929235445238
+    second: sticky_hint_63
+  - first:
+      213: -4516306025869865419
+    second: sticky_hint_64
+  - first:
+      213: -3311900269002437881
+    second: sticky_hint_65
+  - first:
+      213: 9031655636729103630
+    second: sticky_hint_66
+  - first:
+      213: -5371864988042783445
+    second: sticky_hint_67
+  - first:
+      213: -4744689602131979271
+    second: sticky_hint_68
+  - first:
+      213: 3306745245057348414
+    second: sticky_hint_69
+  - first:
+      213: -2660599836486106348
+    second: sticky_hint_70
+  - first:
+      213: 7826322742468210791
+    second: sticky_hint_71
+  - first:
+      213: -4182083141446399398
+    second: sticky_hint_72
+  - first:
+      213: 659268214859207651
+    second: sticky_hint_73
+  - first:
+      213: -3389397439118527655
+    second: sticky_hint_74
+  - first:
+      213: -8727161957833599216
+    second: sticky_hint_75
+  - first:
+      213: -4060376292503901499
+    second: sticky_hint_76
+  - first:
+      213: 3048226231017694629
+    second: sticky_hint_77
+  - first:
+      213: 2930271935728711498
+    second: sticky_hint_78
+  - first:
+      213: 4533850697925977250
+    second: sticky_hint_79
+  - first:
+      213: -381041803604657774
+    second: sticky_hint_80
+  - first:
+      213: -671506923915831822
+    second: sticky_hint_81
+  - first:
+      213: -5808338374157803728
+    second: sticky_hint_82
+  - first:
+      213: -8427885684815795307
+    second: sticky_hint_83
+  - first:
+      213: -2462873445407907413
+    second: sticky_hint_84
+  - first:
+      213: -702742357188717145
+    second: sticky_hint_85
+  - first:
+      213: 891883046754842950
+    second: sticky_hint_86
+  - first:
+      213: 3702602550060352892
+    second: sticky_hint_87
+  - first:
+      213: -8307657562762984414
+    second: sticky_hint_88
+  - first:
+      213: -3802093692110018056
+    second: sticky_hint_89
+  - first:
+      213: -5407835248173139087
+    second: sticky_hint_90
+  - first:
+      213: 528965820858289287
+    second: sticky_hint_91
+  - first:
+      213: 7517370029868186424
+    second: sticky_hint_92
+  - first:
+      213: -3901070431385274376
+    second: sticky_hint_93
+  - first:
+      213: -4247110934542793005
+    second: sticky_hint_94
+  - first:
+      213: -5981020626490335389
+    second: sticky_hint_95
+  - first:
+      213: 3573547425735745924
+    second: sticky_hint_96
+  - first:
+      213: -5380828157693219485
+    second: sticky_hint_97
+  - first:
+      213: 4650753031634123368
+    second: sticky_hint_98
+  - first:
+      213: -139733236658452678
+    second: sticky_hint_99
+  - first:
+      213: 5416047958041994108
+    second: sticky_hint_100
+  - first:
+      213: -8914972584899373319
+    second: sticky_hint_101
+  - first:
+      213: 1547072569094153388
+    second: sticky_hint_102
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 3000
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sticky_hint_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6509
+        width: 281
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 693a92c619dd280c0800000000000000
+      internalID: -4574850654800338026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_1
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 6439
+        width: 282
+        height: 561
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2a1bdf384113e6a0800000000000000
+      internalID: -6421269641693554132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_2
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 6439
+        width: 282
+        height: 561
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e2493802f743ed50800000000000000
+      internalID: 6765330170086245093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_3
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 6439
+        width: 282
+        height: 561
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a87737df9d57f6180800000000000000
+      internalID: -9119941141281409142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_4
+      rect:
+        serializedVersion: 2
+        x: 1749
+        y: 6439
+        width: 282
+        height: 561
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5332600bce5fa6d10800000000000000
+      internalID: 2119776971545518901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_5
+      rect:
+        serializedVersion: 2
+        x: 2449
+        y: 6649
+        width: 632
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 286c2945eb33c8000800000000000000
+      internalID: 39463389295199874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_6
+      rect:
+        serializedVersion: 2
+        x: 2519
+        y: 6789
+        width: 492
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de0766c118eb038a0800000000000000
+      internalID: -6327348014719012627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_7
+      rect:
+        serializedVersion: 2
+        x: 3149
+        y: 6649
+        width: 352
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6037f1b37cc704030800000000000000
+      internalID: 3476916107462275846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_8
+      rect:
+        serializedVersion: 2
+        x: 3639
+        y: 6649
+        width: 72
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 505066d5fd7870890800000000000000
+      internalID: -7491870061693106939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_9
+      rect:
+        serializedVersion: 2
+        x: 4199
+        y: 6649
+        width: 632
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 501bec97b05e438c0800000000000000
+      internalID: -4020336729884020475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_10
+      rect:
+        serializedVersion: 2
+        x: 4269
+        y: 6789
+        width: 492
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e42bd71f5858b1c0800000000000000
+      internalID: -4487739863229324056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_11
+      rect:
+        serializedVersion: 2
+        x: 4899
+        y: 6649
+        width: 352
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ed50816d11509690800000000000000
+      internalID: -7597483384742322719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_12
+      rect:
+        serializedVersion: 2
+        x: 5389
+        y: 6649
+        width: 142
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0995afb1d889d62f0800000000000000
+      internalID: -977957812242327152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_13
+      rect:
+        serializedVersion: 2
+        x: 5599
+        y: 6719
+        width: 352
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da97aae40a8e50a10800000000000000
+      internalID: 1875160595081886125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_14
+      rect:
+        serializedVersion: 2
+        x: 6089
+        y: 6719
+        width: 72
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dca6480be25922ef0800000000000000
+      internalID: -134381011105191219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_15
+      rect:
+        serializedVersion: 2
+        x: 2519
+        y: 6369
+        width: 492
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4820e274b48ece00800000000000000
+      internalID: 1066936072289658955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_16
+      rect:
+        serializedVersion: 2
+        x: 3219
+        y: 6369
+        width: 492
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f7358d15e4adebc0800000000000000
+      internalID: -3752161610580019214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_17
+      rect:
+        serializedVersion: 2
+        x: 4269
+        y: 6369
+        width: 492
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b9d1401abcabde20800000000000000
+      internalID: 3376482260780964276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_18
+      rect:
+        serializedVersion: 2
+        x: 4969
+        y: 6369
+        width: 492
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7e09aa44bba492e0800000000000000
+      internalID: -2119880733749604740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_19
+      rect:
+        serializedVersion: 2
+        x: 5669
+        y: 6369
+        width: 492
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a14e29b55f69b0190800000000000000
+      internalID: -7995130732918676454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4689
+        width: 281
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85d0401082bd064c0800000000000000
+      internalID: -4296193079649235624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_21
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 4619
+        width: 142
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcdd2d708124c6830800000000000000
+      internalID: 4065697234586623437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_22
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 4619
+        width: 282
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e582edb659bf2c7b0800000000000000
+      internalID: -5205321600108451746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_23
+      rect:
+        serializedVersion: 2
+        x: 1469
+        y: 4549
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd362b2ebaf78e7f0800000000000000
+      internalID: -583075775525002276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_24
+      rect:
+        serializedVersion: 2
+        x: 2099
+        y: 4619
+        width: 282
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5117ed3fe2762dd50800000000000000
+      internalID: 6760579441994133781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_25
+      rect:
+        serializedVersion: 2
+        x: 2519
+        y: 4549
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 680047df6fe528b70800000000000000
+      internalID: 8899780228544725126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_26
+      rect:
+        serializedVersion: 2
+        x: 3219
+        y: 4619
+        width: 142
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 680b062e2685e0940800000000000000
+      internalID: 5264242196170715270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_27
+      rect:
+        serializedVersion: 2
+        x: 3499
+        y: 4619
+        width: 282
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1158ac015535c6c20800000000000000
+      internalID: 3201025059972613393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_28
+      rect:
+        serializedVersion: 2
+        x: 3919
+        y: 4549
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36df4e23e5b1e5240800000000000000
+      internalID: 4782289945708789091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_29
+      rect:
+        serializedVersion: 2
+        x: 4619
+        y: 4619
+        width: 142
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b99beff761ab70830800000000000000
+      internalID: 4037400196760385947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_30
+      rect:
+        serializedVersion: 2
+        x: 4899
+        y: 4619
+        width: 282
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79db6a5c98cd898c0800000000000000
+      internalID: -3992198585379275369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_31
+      rect:
+        serializedVersion: 2
+        x: 5319
+        y: 4549
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ee223311e78ae9b0800000000000000
+      internalID: -5050074631383142687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_32
+      rect:
+        serializedVersion: 2
+        x: 6019
+        y: 4619
+        width: 142
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd4602ce01f3ea5f0800000000000000
+      internalID: -743587546555980581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_33
+      rect:
+        serializedVersion: 2
+        x: 6299
+        y: 4619
+        width: 282
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a8a5f0b65c3af5a0800000000000000
+      internalID: -6486805970240034649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_34
+      rect:
+        serializedVersion: 2
+        x: 6719
+        y: 4549
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fede9d95504980db0800000000000000
+      internalID: -4825444250024284689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_35
+      rect:
+        serializedVersion: 2
+        x: 7349
+        y: 4619
+        width: 282
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2105cd7e303e20610800000000000000
+      internalID: 1586079624702218258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_36
+      rect:
+        serializedVersion: 2
+        x: 7699
+        y: 4619
+        width: 282
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f928554861ff6c870800000000000000
+      internalID: 8702923802114622111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_37
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 3639
+        width: 212
+        height: 632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c56f39a8c19ec95a0800000000000000
+      internalID: -6513074652291271076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_38
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 3709
+        width: 282
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29381e4cca48a6f50800000000000000
+      internalID: 6875453658706838418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_39
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 3989
+        width: 282
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4838d809f01d2010800000000000000
+      internalID: 1165606540340115535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_40
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 3709
+        width: 282
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d86245f0b0828710800000000000000
+      internalID: 1694057907362097362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_41
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 3709
+        width: 282
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5b6f2138a4340230800000000000000
+      internalID: 3604063498787580762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_42
+      rect:
+        serializedVersion: 2
+        x: 2449
+        y: 3639
+        width: 282
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b478fd6d713282090800000000000000
+      internalID: -8059152947883309237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_43
+      rect:
+        serializedVersion: 2
+        x: 2799
+        y: 3989
+        width: 282
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0f89f890e30eecc0800000000000000
+      internalID: -3679999582341066996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_44
+      rect:
+        serializedVersion: 2
+        x: 3219
+        y: 3709
+        width: 142
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e851f284a0b58b890800000000000000
+      internalID: -7442098284510898802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_45
+      rect:
+        serializedVersion: 2
+        x: 3499
+        y: 3709
+        width: 282
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dad3b029b1c969f0800000000000000
+      internalID: -474635284849108266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_46
+      rect:
+        serializedVersion: 2
+        x: 3849
+        y: 3639
+        width: 212
+        height: 632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e81eef1948c5b88b0800000000000000
+      internalID: -5148920024513191538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_47
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 3849
+        width: 282
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6021b3b2ae6cc40d0800000000000000
+      internalID: -3437153706540592634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_48
+      rect:
+        serializedVersion: 2
+        x: 2799
+        y: 3849
+        width: 282
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5049d3b502325d850800000000000000
+      internalID: 6401061067253715973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_49
+      rect:
+        serializedVersion: 2
+        x: 1819
+        y: 3639
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eace4978ee295cf00800000000000000
+      internalID: 1136476034155474094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1959
+        width: 281
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aed6e40a1ce27eef0800000000000000
+      internalID: -79043059302634006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_51
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 1889
+        width: 352
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fc78650c95bf0320800000000000000
+      internalID: 2526437597688397042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_52
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 1819
+        width: 142
+        height: 632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e7864c55e735c040800000000000000
+      internalID: 4667198047074551784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_53
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 1889
+        width: 422
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebd522c2873561970800000000000000
+      internalID: 8725253103678545342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_54
+      rect:
+        serializedVersion: 2
+        x: 1889
+        y: 1819
+        width: 142
+        height: 632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69027005a5d476aa0800000000000000
+      internalID: -6167876114375565162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_55
+      rect:
+        serializedVersion: 2
+        x: 2099
+        y: 1889
+        width: 352
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 227dc6add7d145a10800000000000000
+      internalID: 1897173769402504994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_56
+      rect:
+        serializedVersion: 2
+        x: 2589
+        y: 1819
+        width: 142
+        height: 632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f6374e4266f4c370800000000000000
+      internalID: 8342063311877519089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_57
+      rect:
+        serializedVersion: 2
+        x: 2799
+        y: 1889
+        width: 352
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b2a8642270b65010800000000000000
+      internalID: 1177322356887560888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_58
+      rect:
+        serializedVersion: 2
+        x: 3289
+        y: 1819
+        width: 142
+        height: 632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3e3bfc72b39770e0800000000000000
+      internalID: -2272185092174823876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_59
+      rect:
+        serializedVersion: 2
+        x: 3499
+        y: 1889
+        width: 352
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 220168d4dda43ad00800000000000000
+      internalID: 982711458045759522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_60
+      rect:
+        serializedVersion: 2
+        x: 3989
+        y: 1819
+        width: 142
+        height: 632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef8ca122173ca1780800000000000000
+      internalID: -8711435638523901698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_61
+      rect:
+        serializedVersion: 2
+        x: 4269
+        y: 1819
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45e2f66414c819470800000000000000
+      internalID: 8399648992005140052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_62
+      rect:
+        serializedVersion: 2
+        x: 4899
+        y: 1889
+        width: 282
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6d5ad13ad2c1c390800000000000000
+      internalID: -7799738837233934995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_63
+      rect:
+        serializedVersion: 2
+        x: 5249
+        y: 1889
+        width: 282
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0a0cce590a3d4d80800000000000000
+      internalID: -8264885929235445238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_64
+      rect:
+        serializedVersion: 2
+        x: 5599
+        y: 1889
+        width: 282
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53e021f099bd251c0800000000000000
+      internalID: -4516306025869865419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_65
+      rect:
+        serializedVersion: 2
+        x: 5949
+        y: 1889
+        width: 282
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70bc696a044c902d0800000000000000
+      internalID: -3311900269002437881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_66
+      rect:
+        serializedVersion: 2
+        x: 6299
+        y: 1889
+        width: 282
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0584e823f2e65d70800000000000000
+      internalID: 9031655636729103630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_67
+      rect:
+        serializedVersion: 2
+        x: 6719
+        y: 1819
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b251a56314d4375b0800000000000000
+      internalID: -5371864988042783445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_68
+      rect:
+        serializedVersion: 2
+        x: 7349
+        y: 1819
+        width: 632
+        height: 632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f31f6ff1f9772eb0800000000000000
+      internalID: -4744689602131979271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_69
+      rect:
+        serializedVersion: 2
+        x: 8049
+        y: 1819
+        width: 282
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e33fa5ec74be3ed20800000000000000
+      internalID: 3306745245057348414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_70
+      rect:
+        serializedVersion: 2
+        x: 8469
+        y: 1889
+        width: 211
+        height: 492
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41388c09b86a31bd0800000000000000
+      internalID: -2660599836486106348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_71
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1469
+        width: 282
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 760f062911fac9c60800000000000000
+      internalID: 7826322742468210791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_72
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 1469
+        width: 282
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5a00fc5a8146f5c0800000000000000
+      internalID: -4182083141446399398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_73
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 909
+        width: 632
+        height: 632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e3936ec2f0362900800000000000000
+      internalID: 659268214859207651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_74
+      rect:
+        serializedVersion: 2
+        x: 3149
+        y: 979
+        width: 282
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 953b8b6acf076f0d0800000000000000
+      internalID: -3389397439118527655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_75
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 909
+        width: 561
+        height: 492
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01796061074e2e680800000000000000
+      internalID: -8727161957833599216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_76
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 909
+        width: 632
+        height: 492
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ca23e65645a6a7c0800000000000000
+      internalID: -4060376292503901499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_77
+      rect:
+        serializedVersion: 2
+        x: 2799
+        y: 979
+        width: 282
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a566de5b997d4a20800000000000000
+      internalID: 3048226231017694629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_78
+      rect:
+        serializedVersion: 2
+        x: 3499
+        y: 979
+        width: 282
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a47f760ecca6aa820800000000000000
+      internalID: 2930271935728711498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_79
+      rect:
+        serializedVersion: 2
+        x: 3849
+        y: 979
+        width: 282
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a4e88a30397bee30800000000000000
+      internalID: 4533850697925977250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_80
+      rect:
+        serializedVersion: 2
+        x: 4199
+        y: 839
+        width: 282
+        height: 492
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 299f19b9f7446baf0800000000000000
+      internalID: -381041803604657774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_81
+      rect:
+        serializedVersion: 2
+        x: 6253
+        y: 1256
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f518cfa2045ea6f0800000000000000
+      internalID: -671506923915831822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_82
+      rect:
+        serializedVersion: 2
+        x: 6910
+        y: 909
+        width: 73
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03fdd09c503a46fa0800000000000000
+      internalID: -5808338374157803728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_83
+      rect:
+        serializedVersion: 2
+        x: 5256
+        y: 633
+        width: 1571
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59b64fc5f922a0b80800000000000000
+      internalID: -8427885684815795307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_84
+      rect:
+        serializedVersion: 2
+        x: 6206
+        y: 1179
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba128b776ad12ddd0800000000000000
+      internalID: -2462873445407907413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_85
+      rect:
+        serializedVersion: 2
+        x: 6301
+        y: 1179
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a55527ac8b5f36f0800000000000000
+      internalID: -702742357188717145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_86
+      rect:
+        serializedVersion: 2
+        x: 6466
+        y: 1179
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 649f307d7ea906c00800000000000000
+      internalID: 891883046754842950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_87
+      rect:
+        serializedVersion: 2
+        x: 6562
+        y: 1179
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c758dcce669426330800000000000000
+      internalID: 3702602550060352892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_88
+      rect:
+        serializedVersion: 2
+        x: 2169
+        y: 909
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 224cce7667545bc80800000000000000
+      internalID: -8307657562762984414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_89
+      rect:
+        serializedVersion: 2
+        x: 4619
+        y: 909
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f9670f6eef3c3bc0800000000000000
+      internalID: -3802093692110018056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_90
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 0
+        width: 212
+        height: 631
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17bbdc46e7283f4b0800000000000000
+      internalID: -5407835248173139087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_91
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 69
+        width: 282
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78cc49a8c93475700800000000000000
+      internalID: 528965820858289287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_92
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 69
+        width: 282
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83bf573a630135860800000000000000
+      internalID: 7517370029868186424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_93
+      rect:
+        serializedVersion: 2
+        x: 1819
+        y: 0
+        width: 212
+        height: 631
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f730858c1d9cd9c0800000000000000
+      internalID: -3901070431385274376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_94
+      rect:
+        serializedVersion: 2
+        x: 2099
+        y: 69
+        width: 352
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d646e07b1b3f05c0800000000000000
+      internalID: -4247110934542793005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_95
+      rect:
+        serializedVersion: 2
+        x: 2589
+        y: 0
+        width: 142
+        height: 631
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36f52c3dd652ffca0800000000000000
+      internalID: -5981020626490335389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_96
+      rect:
+        serializedVersion: 2
+        x: 2799
+        y: 279
+        width: 352
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 481adf2437ac79130800000000000000
+      internalID: 3573547425735745924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_97
+      rect:
+        serializedVersion: 2
+        x: 3289
+        y: 209
+        width: 72
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36da647ac457355b0800000000000000
+      internalID: -5380828157693219485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_98
+      rect:
+        serializedVersion: 2
+        x: 3569
+        y: 349
+        width: 492
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86a7f94dd3bca8040800000000000000
+      internalID: 4650753031634123368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_99
+      rect:
+        serializedVersion: 2
+        x: 4199
+        y: 0
+        width: 212
+        height: 631
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3748a19c519f0ef0800000000000000
+      internalID: -139733236658452678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_100
+      rect:
+        serializedVersion: 2
+        x: 4549
+        y: 0
+        width: 212
+        height: 631
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c73a2912ceaa92b40800000000000000
+      internalID: 5416047958041994108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_101
+      rect:
+        serializedVersion: 2
+        x: 2869
+        y: 0
+        width: 492
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f61ab6eaa7a74480800000000000000
+      internalID: -8914972584899373319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sticky_hint_102
+      rect:
+        serializedVersion: 2
+        x: 3499
+        y: 0
+        width: 632
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca4ab9a0e4e487510800000000000000
+      internalID: 1547072569094153388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sticky_hint_0: -4574850654800338026
+      sticky_hint_1: -6421269641693554132
+      sticky_hint_10: -4487739863229324056
+      sticky_hint_100: 5416047958041994108
+      sticky_hint_101: -8914972584899373319
+      sticky_hint_102: 1547072569094153388
+      sticky_hint_11: -7597483384742322719
+      sticky_hint_12: -977957812242327152
+      sticky_hint_13: 1875160595081886125
+      sticky_hint_14: -134381011105191219
+      sticky_hint_15: 1066936072289658955
+      sticky_hint_16: -3752161610580019214
+      sticky_hint_17: 3376482260780964276
+      sticky_hint_18: -2119880733749604740
+      sticky_hint_19: -7995130732918676454
+      sticky_hint_2: 6765330170086245093
+      sticky_hint_20: -4296193079649235624
+      sticky_hint_21: 4065697234586623437
+      sticky_hint_22: -5205321600108451746
+      sticky_hint_23: -583075775525002276
+      sticky_hint_24: 6760579441994133781
+      sticky_hint_25: 8899780228544725126
+      sticky_hint_26: 5264242196170715270
+      sticky_hint_27: 3201025059972613393
+      sticky_hint_28: 4782289945708789091
+      sticky_hint_29: 4037400196760385947
+      sticky_hint_3: -9119941141281409142
+      sticky_hint_30: -3992198585379275369
+      sticky_hint_31: -5050074631383142687
+      sticky_hint_32: -743587546555980581
+      sticky_hint_33: -6486805970240034649
+      sticky_hint_34: -4825444250024284689
+      sticky_hint_35: 1586079624702218258
+      sticky_hint_36: 8702923802114622111
+      sticky_hint_37: -6513074652291271076
+      sticky_hint_38: 6875453658706838418
+      sticky_hint_39: 1165606540340115535
+      sticky_hint_4: 2119776971545518901
+      sticky_hint_40: 1694057907362097362
+      sticky_hint_41: 3604063498787580762
+      sticky_hint_42: -8059152947883309237
+      sticky_hint_43: -3679999582341066996
+      sticky_hint_44: -7442098284510898802
+      sticky_hint_45: -474635284849108266
+      sticky_hint_46: -5148920024513191538
+      sticky_hint_47: -3437153706540592634
+      sticky_hint_48: 6401061067253715973
+      sticky_hint_49: 1136476034155474094
+      sticky_hint_5: 39463389295199874
+      sticky_hint_50: -79043059302634006
+      sticky_hint_51: 2526437597688397042
+      sticky_hint_52: 4667198047074551784
+      sticky_hint_53: 8725253103678545342
+      sticky_hint_54: -6167876114375565162
+      sticky_hint_55: 1897173769402504994
+      sticky_hint_56: 8342063311877519089
+      sticky_hint_57: 1177322356887560888
+      sticky_hint_58: -2272185092174823876
+      sticky_hint_59: 982711458045759522
+      sticky_hint_6: -6327348014719012627
+      sticky_hint_60: -8711435638523901698
+      sticky_hint_61: 8399648992005140052
+      sticky_hint_62: -7799738837233934995
+      sticky_hint_63: -8264885929235445238
+      sticky_hint_64: -4516306025869865419
+      sticky_hint_65: -3311900269002437881
+      sticky_hint_66: 9031655636729103630
+      sticky_hint_67: -5371864988042783445
+      sticky_hint_68: -4744689602131979271
+      sticky_hint_69: 3306745245057348414
+      sticky_hint_7: 3476916107462275846
+      sticky_hint_70: -2660599836486106348
+      sticky_hint_71: 7826322742468210791
+      sticky_hint_72: -4182083141446399398
+      sticky_hint_73: 659268214859207651
+      sticky_hint_74: -3389397439118527655
+      sticky_hint_75: -8727161957833599216
+      sticky_hint_76: -4060376292503901499
+      sticky_hint_77: 3048226231017694629
+      sticky_hint_78: 2930271935728711498
+      sticky_hint_79: 4533850697925977250
+      sticky_hint_8: -7491870061693106939
+      sticky_hint_80: -381041803604657774
+      sticky_hint_81: -671506923915831822
+      sticky_hint_82: -5808338374157803728
+      sticky_hint_83: -8427885684815795307
+      sticky_hint_84: -2462873445407907413
+      sticky_hint_85: -702742357188717145
+      sticky_hint_86: 891883046754842950
+      sticky_hint_87: 3702602550060352892
+      sticky_hint_88: -8307657562762984414
+      sticky_hint_89: -3802093692110018056
+      sticky_hint_9: -4020336729884020475
+      sticky_hint_90: -5407835248173139087
+      sticky_hint_91: 528965820858289287
+      sticky_hint_92: 7517370029868186424
+      sticky_hint_93: -3901070431385274376
+      sticky_hint_94: -4247110934542793005
+      sticky_hint_95: -5981020626490335389
+      sticky_hint_96: 3573547425735745924
+      sticky_hint_97: -5380828157693219485
+      sticky_hint_98: 4650753031634123368
+      sticky_hint_99: -139733236658452678
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

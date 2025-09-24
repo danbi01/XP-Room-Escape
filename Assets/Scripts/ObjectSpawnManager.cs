@@ -48,9 +48,9 @@ public class ObjectSpawnManager : MonoBehaviour
             Canvases[1] = GameObject.Find("InventoryCanvas");
         }
 
-        //EastWall에서 OpendLocker 찾기
-        if(OpenedLocker==null && SwipeButton.Instance.CurrentWallNumber==1){
-            OpenedLocker = GameObject.Find("2_SafeExpanded").transform.GetChild(1).gameObject;
+        //EastWall에서 OpenedLocker 찾기
+        if(OpenedLocker==null && SwipeButton.Instance.CurrentWallNumber==3){
+            OpenedLocker = GameObject.Find("1_SafeExpanded").transform.GetChild(2).gameObject;
         }
 
         //캔버스
@@ -70,7 +70,7 @@ public class ObjectSpawnManager : MonoBehaviour
         else{
 
         }
-        
+
         //Key 생성
         switch(SceneManager.GetActiveScene().name){ 
             case "SouthWall": // SouthWall일 때
@@ -141,7 +141,7 @@ public class ObjectSpawnManager : MonoBehaviour
                         Debug.Log("TestPaper 생성");
                         GameObject TestPaperObject = Instantiate(TestPaper, transform.position, transform.rotation);
                         // 시험지는 LargeLocker의 하위로 설정
-                        TestPaperObject.transform.SetParent(OpenedLocker.transform);
+                        TestPaperObject.transform.SetParent(OpenedLocker.transform, false);
                         IsTestPaperSpawned = true;
                     }
                 }

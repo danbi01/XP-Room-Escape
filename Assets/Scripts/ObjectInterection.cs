@@ -211,8 +211,8 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
                 yield return new WaitForSeconds(0.3f);
             }
             //OpendLocker활성화, ClosedLocker비활성화
-            GameObject.Find("2_SafeExpanded").transform.GetChild(1).gameObject.SetActive(true);
-            GameObject.Find("2_SafeExpanded").transform.GetChild(0).gameObject.SetActive(false);
+            GameObject.Find("1_SafeExpanded").transform.GetChild(2).gameObject.SetActive(true);
+            GameObject.Find("1_SafeExpanded").transform.GetChild(3).gameObject.SetActive(false);
         }
         else
         {
@@ -241,11 +241,4 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
     }
 
     #endregion
-    
-    public void ComputerClickHandler()
-    {
-        Debug.Log("computer 클릭");
-        SceneManager.LoadScene("Computer");
-    }
-
 }
