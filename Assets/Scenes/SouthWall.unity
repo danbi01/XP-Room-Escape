@@ -2367,8 +2367,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1114239750}
         m_TargetAssemblyTypeName: CheckList, Assembly-CSharp
-        m_MethodName: CheckBoxClickHandler
-        m_Mode: 6
+        m_MethodName: CheckListOff
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2834,7 +2834,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1114239750}
         m_TargetAssemblyTypeName: CheckList, Assembly-CSharp
         m_MethodName: CheckBoxClickHandler
-        m_Mode: 6
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2896,12 +2896,6 @@ MonoBehaviour:
   CheckListUI:
   - {fileID: 857959304}
   - {fileID: 1381187324}
-  Check_testpaper:
-  - {fileID: 1371149218}
-  - {fileID: 108221589}
-  Check_escape:
-  - {fileID: 258536903}
-  - {fileID: 2028589238}
 --- !u!1 &1180226041
 GameObject:
   m_ObjectHideFlags: 0

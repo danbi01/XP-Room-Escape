@@ -114,7 +114,7 @@ public class CanvasGroupController : MonoBehaviour
                     btn.onClick.AddListener(() =>
                     {
                         //computer씬 오류로 잠시 주석처리
-                        //SceneManager.LoadScene("Computer");
+                        SceneManager.LoadScene("Computer");
                         Debug.Log("컴퓨터 씬 이동~~");
                     });
                 }
