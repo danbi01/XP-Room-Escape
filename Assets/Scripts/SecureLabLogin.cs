@@ -12,6 +12,12 @@ public class SecureLabLogin : MonoBehaviour
     private string SLPasswordInput = "";
     private string SLPassword = "23997";
 
+    public GameObject secureLabInnerCanvas;
+    public GameObject secureLabInnerCanvas_Unlock;
+    public GameObject secureLabInnerCanvas_Unlocked;
+
+    public static bool secureLabUnlocked = false;
+
     void Start()
     {
 
@@ -32,6 +38,8 @@ public class SecureLabLogin : MonoBehaviour
         if (SLIDInput == SLID && SLPasswordInput == SLPassword)
         {
             Debug.Log("Yay!\nLogged in! Let's go and open the door!");
+            secureLabInnerCanvas.SetActive(false); // 로그인 화면 없어지고 
+            secureLabInnerCanvas_Unlock.SetActive(true); // 문 조작 화면 (예: 잠금 해제!)
         }
         else
         {
@@ -49,5 +57,11 @@ public class SecureLabLogin : MonoBehaviour
     {
         SLIDInput = inputField_SLID.text;
         SLPasswordInput = inputField_SLPW.text;
+    }
+    public void Unlock()
+    {
+        secureLabUnlocked = true;
+        secureLabInnerCanvas_Unlock.SetActive(false); // 문 조작 화면 없어지고
+        secureLabInnerCanvas_Unlocked.SetActive(true); // 해제완료되었다는 메시지 띄우기
     }
 }
