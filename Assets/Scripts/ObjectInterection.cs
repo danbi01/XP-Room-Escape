@@ -10,7 +10,7 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
     #region BookDrag
     //책 드래그 기능 코드
     public List<Transform> allSlots = new List<Transform>();
-    public GameObject lockerButton;
+    public GameObject KeyPad;
     private Transform originalSlot;
     private Transform canvasRoot;
     public static ObjectInterection Instance = null;
@@ -99,11 +99,11 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
         {
             Debug.Log("퍼즐 완료");
             //locker버튼 활성화
-            lockerButton.GetComponent<Button>().interactable = true;
-            lockerButton.transform.GetChild(0).gameObject.SetActive(true);
+            KeyPad.GetComponent<Button>().interactable = true;
+            KeyPad.transform.GetChild(0).gameObject.SetActive(true);
 
             //책 비활성화
-            lockerButton.transform.parent.Find("Book").gameObject.SetActive(false);
+            KeyPad.transform.parent.Find("Book").gameObject.SetActive(false);
         }
     }
 
@@ -171,11 +171,11 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
     //금고 비밀번호 입력 기능 코드
     public Image[] leds; 
     private string input = "";
-    public string correctPassword = "1234";
+    public string correctPassword = "3206";
     public int maxLength = 4;
-    public Color ledOnColor = Color.green;
-    public Color ledOffColor = Color.black;
-    public Color errorColor = Color.red;
+    public Color ledOnColor = new Color(82/255, 204/255, 7/255);
+    public Color ledOffColor = Color.gray;
+    public Color errorColor = new Color(255/255, 44/255, 0/255);
 
     //비밀번호 입력 함수
     public void OnNumberPress(string number)

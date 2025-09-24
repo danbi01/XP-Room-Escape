@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class CanvasGroupController : MonoBehaviour
 {
@@ -127,8 +128,10 @@ public class CanvasGroupController : MonoBehaviour
                         {
                             if (InventoryManager.Instance.toggleInventory)
                             {
-                                RectTransform key = inventory.transform.GetChild(2).gameObject.GetComponent<RectTransform>();
-                                key.anchoredPosition = new Vector3(1300, 0, 0);
+                                GameObject.Find("Key(Clone)").SetActive(false);
+                                /*RectTransform key = inventory.transform.GetChild(2).gameObject.GetComponent<RectTransform>();
+                                key.anchoredPosition = new Vector3(1300, 0, 0);*/
+
                                 //Drawer_Closed 비활성화 Open활성화
                                 GameObject.Find("3_DrawerExpanded").transform.GetChild(1).gameObject.SetActive(true);
                                 GameObject.Find("3_DrawerExpanded").transform.GetChild(0).gameObject.SetActive(false);
@@ -147,7 +150,7 @@ public class CanvasGroupController : MonoBehaviour
                         }
                     });
                 }
-                if(btn.name == "UsbPort")
+                if(btn.name == "USBPort")
                 {
                     btn.onClick.AddListener(() =>
                     {//usb를 갖고 있고 인벤토리를 눌러뒀을 경우
@@ -155,10 +158,13 @@ public class CanvasGroupController : MonoBehaviour
                         {
                             if(InventoryManager.Instance.toggleInventory)
                             {
-                                GameObject usbObject = inventory.transform.GetChild(3).gameObject;
+                                /*GameObject usbObject = inventory.transform.GetChild(3).gameObject;
                                 RectTransform Usb = usbObject.gameObject.GetComponent<RectTransform>();
                                 Usb.anchoredPosition = new Vector3(-50, 200, 0);
-                                usbObject.transform.SetParent(GameObject.Find("2_TowerExpanded").transform);
+                                usbObject.transform.SetParent(GameObject.Find("2_TowerExpanded").transform);*/
+                                GameObject.Find("Usb(Clone)").SetActive(false);
+                                btn.transform.GetChild(0).gameObject.SetActive(true);
+
                                 InventoryManager.Instance.IsUsbInInventory=false;
                                 usbConnected = true;
                                 ItemManager.Instance.InventoryOnClick();
