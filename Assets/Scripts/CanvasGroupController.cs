@@ -64,13 +64,7 @@ public class CanvasGroupController : MonoBehaviour
             ShowCanvas(0);
         }
 
-        //메인캔버스, west책상, east책장에 있는 버튼 클릭 연결
-        // GameObject mainCanvas = GameObject.Find("0_MainCanvas");
-        // GameObject deskCanvas = GameObject.Find("1_LargeDesk");
-        // GameObject bookcaseCanvas = GameObject.Find("1_LargeBookCase");
-        // List<GameObject> CanvasWithButtons = new List<GameObject>{
-        //     mainCanvas, deskCanvas, bookcaseCanvas
-        // };
+        //버튼 클릭 연결
 
         GameObject CanvasParent = GameObject.Find("CanvasParent");
         List<GameObject> CanvasWithButtons = new List<GameObject> {CanvasParent};
