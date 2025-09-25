@@ -22,6 +22,16 @@ public class SceneStateManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         RestoreSceneState(scene.name);
+
+        GameObject bluePrintPrefab = Resources.Load<GameObject>("Prefabs/BluePrint");
+    
+        if(scene.name=="Computer" && CanvasGroupController.Instance.usbConnected)//컴퓨터씬이고, usbConnected True이고
+        {
+            Debug.Log("Instantiate bluePrint");
+            Debug.Log("bluePrintPrefab: " + (bluePrintPrefab == null ? "NULL" : bluePrintPrefab.name));
+            GameObject bluePrint = Instantiate(bluePrintPrefab, Vector3.zero, Quaternion.identity);
+            // bluePrint.SetActive(true);
+        }
     }
 
     public void SaveSceneState(string sceneName = null)
