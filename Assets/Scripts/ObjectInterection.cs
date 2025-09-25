@@ -7,6 +7,8 @@ using System.Collections.Generic;
 
 public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
+    public GameObject SafeExpanded;
+
     #region BookDrag
     //책 드래그 기능 코드
     public List<Transform> allSlots = new List<Transform>();
@@ -99,11 +101,11 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
         {
             Debug.Log("퍼즐 완료");
             //locker버튼 활성화
-            KeyPad.GetComponent<Button>().interactable = true;
-            KeyPad.transform.GetChild(0).gameObject.SetActive(true);
-
-            //책 비활성화
-            KeyPad.transform.parent.Find("Book").gameObject.SetActive(false);
+            /*KeyPad.GetComponent<Button>().interactable = true;
+            KeyPad.transform.GetChild(0).gameObject.SetActive(true);*/
+            isSafeShow = true;
+            SafeExpanded = GameObject.Find("1_SafeExpanded");
+            SafeExpanded.transform.GetChild(3).gameObject.SetActive(false);
         }
     }
 
@@ -176,16 +178,17 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
     public Color ledOnColor = new Color(82/255, 204/255, 7/255);
     public Color ledOffColor = Color.gray;
     public Color errorColor = new Color(255/255, 44/255, 0/255);
+    public static bool isSafeShow = false;
 
     //비밀번호 입력 함수
     public void OnNumberPress(string number)
     {
-        if(input.Length < maxLength)
+        if (input.Length < maxLength)
         {
             input += number;
             leds[input.Length - 1].color = ledOnColor;
             //4개 입력 시 정답인지 확인함
-            if(input.Length == maxLength)
+            if (input.Length == maxLength)
             {
                 StartCoroutine(CheckPassword());
             }
@@ -210,9 +213,10 @@ public class ObjectInterection : MonoBehaviour, IBeginDragHandler, IEndDragHandl
                 }
                 yield return new WaitForSeconds(0.3f);
             }
+
             //OpendLocker활성화, ClosedLocker비활성화
-            GameObject.Find("1_SafeExpanded").transform.GetChild(2).gameObject.SetActive(true);
-            GameObject.Find("1_SafeExpanded").transform.GetChild(3).gameObject.SetActive(false);
+            SafeExpanded.transform.GetChild(1).gameObject.SetActive(true);
+            SafeExpanded.transform.GetChild(2).gameObject.SetActive(false);
         }
         else
         {

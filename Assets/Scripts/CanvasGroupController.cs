@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System;
 
 public class CanvasGroupController : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class CanvasGroupController : MonoBehaviour
     public int exitIndex;
     public static CanvasGroupController Instance = null;
     public Sprite[] switchImg = new Sprite[2];
+    public Sprite[] SafeImg = new Sprite[2];
     public bool usbConnected = false;
 
     void Awake()
@@ -78,11 +80,18 @@ public class CanvasGroupController : MonoBehaviour
             }
         }
 
-        //불꺼지면 비밀번호 보임
-        if (scene.name == "EastWall" && SwitchOverlay.IsActive())
+        try
         {
-            GameObject pwd = CanvasParent.transform.GetChild(2).gameObject;
-            pwd.SetActive(!pwd.activeSelf);
+            SwitchOverlay = GameObject.Find("BackgroundOverlay").GetComponent<Image>();
+            if (scene.name == "EastWall" && SwitchOverlay.IsActive())
+            {
+                GameObject pwd = CanvasParent.transform.GetChild(2).gameObject;
+                pwd.SetActive(!pwd.activeSelf);
+            }
+        }
+        catch (NullReferenceException)
+        {
+            Debug.Log("SwitchOverlay 없음");
         }
 
         foreach(var btn in buttons)
@@ -109,7 +118,6 @@ public class CanvasGroupController : MonoBehaviour
                     {
                         Image switchImage = btn.gameObject.GetComponent<Image>();
                         switchImage.sprite = switchImage.sprite == switchImg[0] ? switchImg[1] : switchImg[0];
-                        SwitchOverlay = GameObject.Find("BackgroundOverlay").GetComponent<Image>();
                         SwitchOverlay.color = new Color(10f / 255f, 10f / 255f, 25f / 255f, SwitchOverlay.color.a == 0.7f ? 0 : 0.7f);
                         SwitchOverlay.transform.SetParent(null);
                         DontDestroyOnLoad(SwitchOverlay.gameObject);
@@ -117,6 +125,11 @@ public class CanvasGroupController : MonoBehaviour
                         SwitchOverlay.transform.SetAsFirstSibling();
                         //SwitchOverlay.SetActive(!SwitchOverlay.activeSelf);
                     });
+                }
+                if (btn.name == "1_Safe")
+                {
+                    Image SafeImage = btn.gameObject.GetComponent<Image>();
+                    SafeImage.sprite = ObjectInterection.isSafeShow ? SafeImg[0] : SafeImg[1];
                 }
                 if (btn.name.StartsWith("Monitor"))
                 {
