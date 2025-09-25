@@ -21,13 +21,13 @@ public class StartButton : MonoBehaviour
     public void GameRuleOpen()
     {
         Debug.Log("GameRule");
-        canvas.transform.GetChild(2).gameObject.SetActive(true);
+        canvas.transform.GetChild(3).gameObject.SetActive(true);
     }
 
     public void GameRuleClose()
     {
         Debug.Log("Close");
-        canvas.transform.GetChild(2).gameObject.SetActive(false);
+        canvas.transform.GetChild(3).gameObject.SetActive(false);
     }
 
 }
